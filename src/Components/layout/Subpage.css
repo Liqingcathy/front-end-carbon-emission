@@ -1,0 +1,16 @@
+.more-info-ul {
+    /* display: flex;
+    flex-direction: column; */    
+}
+
+.sub-page{
+    width: 15%;
+  
+}
+
+.web-goals{
+  display: inline-block;
+  width: 90%;
+  font-size: xx-large;
+  /* border: 1px solid red; */
+}

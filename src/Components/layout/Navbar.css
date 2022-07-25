@@ -1,0 +1,25 @@
+*{
+    background-color: #F0F4F1;
+    margin: auto;
+    padding: 5px;
+    
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.logo-title {
+    /* border: 1px solid red; */
+    width: 60%;
+    font-size:xx-large;
+    text-align: left;
+    /* height: 100px;
+    align-items: center; */
+}
+
+.co2-icon img{
+   /* border: 1px solid red; */
+   width: 80px;
+}
