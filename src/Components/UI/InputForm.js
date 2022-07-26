@@ -19,37 +19,47 @@ const InputForm = (props) => {
     setInputData(newInputData);
   }
 
+  const handleNextStepInput = () => {
+    
+  }
+
   const handleInputSubmit = (event) => {
     event.preventDefault();
     props.handleInputSubmit(userData);//update userdata and lift up to app.js
   }
+
 
   return (
     <div>
       <form onSubmit={handleInputSubmit}>
         {/* <label>Zipcode</label> */}
         {/* <input type='text' /> <br/> */}
-        <label>vehicle  type</label>
+        <label>Vehicle Type</label>
         <input 
           type='text' 
           required name='type'
           value={props.type}
           onChange={handleFormInput}
           /> <br/>
-        <label>distance unit</label>
+          <ul className='btn-ul'>
+            <li><button className="back" onChange={handleNextStepInput}>back </button></li>
+            <li><button className="next">next</button></li>
+          </ul>
+        <br/>  
+        <label>Distance Unit</label>
         <input 
           type='text' 
           required name='unit'
           value={props.distance_unit}
           placeholder="enter mi or km"
           onChange={handleFormInput} /><br/>
-        <label>distance value</label>
+        <label>Distance Value</label>
         <input 
           type='text' 
           required name='value'
           value={props.distance_value} 
           onChange={handleFormInput}/><br/>
-         <input className="button" type="submit" value="estimate" />
+         <input className="btn-estimate" type="submit" value="Get Estimation Now" />
       </form>
     </div>
   )

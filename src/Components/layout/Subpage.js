@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'; //yarn add react-router-dom
+// import { Link } from 'react-router-dom'; //yarn add react-router-dom
 import './Subpage.css';
 
 const Header = () => {

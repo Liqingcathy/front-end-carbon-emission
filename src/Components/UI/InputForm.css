@@ -1,0 +1,32 @@
+.btn-ul{
+    /* align-content: space-between; */
+    /* border: 1px solid red; */
+    /* width: 400px; */
+    width: 50%;
+    /* margin-left: 20em; */
+}
+
+label, input {
+    /* border: 1px solid red; */
+    padding: 10px;
+    margin: auto;
+    width: 400px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.btn-estimate, .back, .next {
+    width: 200px;
+    background-color: #B1C3B5;
+    border: none;
+}
+
+.back{
+    margin-left: 100px;
+    width: 80px;
+} 
+
+.next{
+    margin-left: 200px;
+    width: 80px;
+}
