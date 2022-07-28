@@ -1,9 +1,6 @@
-*{
-    background-color: #F0F4F1;
-    margin: auto;
-    padding: 5px;
-    
-}
+
+
+
 ul {
     display: flex;
     flex-direction: row;
@@ -15,6 +12,10 @@ ul {
     width: 60%;
     font-size:xx-large;
     text-align: left;
+    font-weight: bolder;
+    margin-right: -50px;
+    align-items: center;
+    
     /* height: 100px;
     align-items: center; */
 }

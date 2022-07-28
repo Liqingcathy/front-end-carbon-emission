@@ -1,16 +1,17 @@
-.more-info-ul {
-    /* display: flex;
-    flex-direction: column; */    
+.sub-page h3{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(139, 26, 26);
+    border: 5px solid rgb(139, 26, 26);
+    color: white;
 }
 
-.sub-page{
-    width: 15%;
-  
-}
 
 .web-goals{
-  display: inline-block;
+  display: inline;
   width: 90%;
   font-size: xx-large;
+  font-weight:bolder;
   /* border: 1px solid red; */
 }
+

@@ -6,7 +6,8 @@ const Searchbar = () => {
   return (
     <div>
       <hr></hr>
-      <div className="search">🔍 search content, place</div>
+      <div className="search">🔍 search content, place<button className="search-btn">Search</button></div>
+      
     </div>
   )
 }

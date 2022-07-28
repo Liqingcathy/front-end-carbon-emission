@@ -1,8 +1,19 @@
 .search{
-    margin: 20px auto;
+    margin: 50px auto;
+    padding: 15px;
     height: 30px;
-    width: 700px;
+    width: 80%;
     border-radius: 0.4em;
     background: #B1C3B5;
     text-align: left;
+  
+}
+
+.search-btn {
+    margin-left: 50em;
+    border: none;
+    background-color: #607564;
+    color: white;
+    height: 30px;
+    border-radius: 0.3em;
 }

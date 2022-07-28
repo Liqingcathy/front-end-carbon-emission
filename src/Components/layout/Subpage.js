@@ -7,9 +7,10 @@ const Header = () => {
   return (
     <div>
       <ul className="more-info-ul">
-        <li className="sub-page"> <h3>Missions</h3></li>
-        <li className="sub-page"><h3>About</h3></li>
-        <h2 className="web-goals">Estimate | Search | Build Carbon Habit</h2>
+        <li className="sub-page"> 
+          <h3>Missions</h3>
+          <h3>About</h3></li>
+        <li><h1 className="web-goals">Estimate - Search - Build Carbon Habit</h1></li>
       </ul>
 
      
