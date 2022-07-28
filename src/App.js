@@ -9,9 +9,16 @@ import Missions from "./Components/UI/Missions";
 import axios from "axios";
 
 const API_URL = "http://127.0.0.1:5000";
-
+// const defaultEmissionData = {
+//       "Estimated Date": "",
+//       "Vehicle Make": "",
+//       "Vehicle Model":"",
+//       "Vehicle Year": "",
+//       "Carbon_g": null,
+//       "Carbon_lb": null}
 function App() {
   const [userData, setUserData] = useState([]);
+  const [emissionData, setEmissionData] = useState([])
   // const [vehicleMakeName, setVehicleMakeName] = useState(''); //car brand
   // // const [vehicleMakeId, setVehicleMakeId] = useState('');
   // // const [vehicleModelId, setVehicleModelId] = useState('');
@@ -25,6 +32,21 @@ function App() {
       .then((response) => {
         setUserData(response.data);
         console.log(response.data);
+
+        const emissionVal = response.data['data']['attributes']['carbon_g']
+        
+        // for (let data in response.data['data']['attributes']){
+        //   console.log(response.data[data])
+        //   newEmissionData.push(data)
+        // }
+        
+        // newEmissionData['Estimated Date'] = response.data['estimated_at']
+        // newEmissionData['Vehicle Make'] = response.data['vehicle_make']
+        // newEmissionData['Vehicle Model'] = response.data['vehicle_model']
+        // newEmissionData['Vehicle Year'] = response.data['vehicle_year']
+        // newEmissionData['Carbon_g'] = response.data['carbon_g']
+        // newEmissionData['Carbon_lb'] = response.data['carbon_lb']
+        setEmissionData(emissionVal)
 
         // axios.get(`${API_URL}/estimate`)
         //      .then((response) => {
@@ -76,7 +98,7 @@ function App() {
       <Header />
       <Searchbar />
       <InputForm handleFormSubmission={getEstimateData} />
-      <Result />
+      <Result data={emissionData}/>
       <Missions />
     </div>
   );

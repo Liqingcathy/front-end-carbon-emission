@@ -5,11 +5,12 @@ const Missions = () => {
 
   return (
     <div className="mission-container">
-      <h3>Mission1</h3>
+      <h3>Recommended Missions Based on Your Estimation</h3>
       <ul className="mission-card">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div>Insights
+        </div>
+        <div>Missions</div>
+        <div>Habits</div>
       </ul>
       </div>
   )
