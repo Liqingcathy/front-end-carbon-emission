@@ -1,4 +1,4 @@
-.result-container .emission-data{
+.result-container {
     margin: 40px, auto;
     padding: 30px;
     height: 200px;
@@ -6,3 +6,7 @@
     background-color: #B1C3B5;
 }
 
+.emission-data{
+    padding: 20px;
+    line-height: 2em;
+}

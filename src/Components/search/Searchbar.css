@@ -6,7 +6,8 @@
     border-radius: 0.4em;
     background: #B1C3B5;
     text-align: left;
-  
+    border: none;
+    font-size: large;
 }
 
 .search-btn {

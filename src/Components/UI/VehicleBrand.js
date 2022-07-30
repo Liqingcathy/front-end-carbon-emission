@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './InputForm.css';
 
+//need to validate input
 //pass down from input form for update userInput
 const VehicleBrand = ({userData, setUserData}) => {
   // console.log(userData)
