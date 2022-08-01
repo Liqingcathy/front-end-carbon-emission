@@ -11,11 +11,12 @@
 }
 
 .search-btn {
-    margin-left: 2em;
+    margin-left: 0.4em;
+
     border: none;
     background-color: #607564;
     color: white;
     width: 60px;
-    height: 30px;
+    height: 35px;
     border-radius: 0.3em;
 }

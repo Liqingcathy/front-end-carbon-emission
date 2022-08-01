@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate} from "react-router-dom";
 import Navbar from "./Components/layout/Navbar";
 import Subpage from "./Components/layout/Subpage";
 import Searchbar from "./Components/search/Searchbar";
@@ -60,30 +60,17 @@ function App() {
 return (
   <div className='App'>
     <Navbar />
-    <Subpage /> 
-      {/* <Router>
+    <Router>
       <Subpage /> 
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/search" element={<Search />}/>
-          <Route path="/missions" element={<Missions />}/>
-          <Route path='*' element={<ErrorPage />} />
-       </Routes>
-      </Router>  */}
+          <Route exact path='/' element={<Home getEstimateData={getEstimateData} emissionData={emissionData} getSearchResult={getSearchResult}/>} />
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/missions' element={<Missions/>} />
+          <Route exact path='/search' element={<Search searchResults={searchResults} getSearchResult={getSearchResult}/>} />
+        </Routes> 
+    </Router> 
     
-        {/* <Link to='/missions'> Missions </Link>  
-        <Link to='/about'> About </Link>   */}
-    <Router >
-    <Searchbar handleSearchSubmission={getSearchResult}/>
-    </Router>
-    <SearchResultList displaSearchRes={searchResults}/>
-      
-      {/* </div></Routes>
-      </Router> */}
-    <InputForm handleFormSubmission={getEstimateData} />
-    <Result data={emissionData} />
-    <MissionsRec />
+    
   </div>
 );
 }

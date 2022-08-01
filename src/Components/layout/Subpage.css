@@ -1,9 +1,5 @@
 .sub-page h3{
-    width: 200px;
-    height: 30px;
-    background-color: rgb(139, 26, 26);
-    border: 5px solid rgb(139, 26, 26);
-    color: white;
+    
 }
 
 
@@ -15,3 +11,11 @@
   /* border: 1px solid red; */
 }
 
+.sub-page-link{
+  text-decoration: none;
+  width: 200px;
+  height: 30px;
+  background-color: rgb(139, 26, 26);
+  border: 5px solid rgb(139, 26, 26);
+  color: white;
+}

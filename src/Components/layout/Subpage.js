@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from 'react-router-dom'; //yarn add react-router-dom
+import { NavLink } from 'react-router-dom'; //yarn add react-router-dom
 import './Subpage.css';
 
 const Header = () => {
@@ -8,11 +8,17 @@ const Header = () => {
     <div>
       <ul className="more-info-ul">
         <li className="sub-page"> 
-          <h3>Missions</h3>
-          <h3>About</h3></li>
+          {/* <h3>Missions</h3> */}
+          <NavLink className="sub-page-link" to="/missions">
+              Missions
+            </NavLink>< br/>
+          <NavLink className="sub-page-link" to="/about">
+              About
+            </NavLink>
+          </li>
+          
         <li><h1 className="web-goals">Estimate - Search - Build Carbon Habit</h1></li>
       </ul>
-
      
     </div>
   )

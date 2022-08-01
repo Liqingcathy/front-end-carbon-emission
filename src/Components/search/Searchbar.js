@@ -11,6 +11,7 @@ let navigate = useNavigate();
 const handleInputSubmission = (event) => {
   event.preventDefault();
   props.handleSearchSubmission(searchVal);//update userdata and lift up to app.js
+  navigate('/search')
   // console.log('after form submission' , userData);
 }
   return (
@@ -30,7 +31,9 @@ const handleInputSubmission = (event) => {
           }}
           />
           {/* <input className="search-btn" type='submit' /> */}
-          <button className="search-btn" onClick={() => {navigate('/search')}} />
+          {/* <button className="search-btn" onClick={() => {navigate('/search')}} />
+           */}
+           <button className="search-btn"  />
           </form> 
       </div>
     </div>

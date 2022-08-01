@@ -1,8 +1,16 @@
 import React from "react";
-
-const Home = () => {
+import InputForm from "../UI/InputForm";
+import Result from "../UI/Result";
+import MissionsRec from "../UI/MissionsRec";
+import Searchbar from "../search/Searchbar";
+const Home = ({getEstimateData, emissionData, getSearchResult}) => {
   return (
-    <div>This is search home page</div>
+    <div>This is home page
+    <Searchbar handleSearchSubmission={getSearchResult}/>
+    <InputForm handleFormSubmission={getEstimateData} />
+    <Result data={emissionData} />
+    <MissionsRec />
+    </div>
   )
 }
 

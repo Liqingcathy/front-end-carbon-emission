@@ -2,7 +2,7 @@ import React from "react";
 
 const Missions = () => {
   return (
-    <div>This is search Missions page</div>
+    <div>This is Missions page</div>
   )
 }
 
