@@ -1,21 +1,37 @@
 import React, { useState } from "react";
 import './Searchbar.css';
-
-const Searchbar = () => {
+import { BrowserRouter as Router, useNavigate } from "react-router-dom";
+// const defaultSearch = {"title" : ""}
+const Searchbar = (props) => {
   const [searchVal, setSearchVal] = useState("");
-  // console.log(searchVal);
+  console.log(searchVal);
+
+let navigate = useNavigate();
+
+const handleInputSubmission = (event) => {
+  event.preventDefault();
+  props.handleSearchSubmission(searchVal);//update userdata and lift up to app.js
+  // console.log('after form submission' , userData);
+}
   return (
     <div>
       <hr></hr>
       <div >
+       <form onSubmit={handleInputSubmission}>
         <input 
-          className="search" type="text" 
-          placeholder=" 🔍 search vehicle type, carbon emission, fuel efficiency..." 
+          className="search" 
+          type="text" 
+          placeholder=" 🔍 search..." 
+          name="title"
+          value={searchVal}
           onChange={(event) => {
-            setSearchVal(event.target.value);
+            // event.preventDefault();
+            setSearchVal( event.target.value);
           }}
           />
-        {/* <button className="search-btn">Search</button> */}
+          {/* <input className="search-btn" type='submit' /> */}
+          <button className="search-btn" onClick={() => {navigate('/search')}} />
+          </form> 
       </div>
     </div>
   )

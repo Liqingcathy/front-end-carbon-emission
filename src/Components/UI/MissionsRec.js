@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Missions.css';
+import './MissionsRec.css';
 
 const Missions = () => {
 

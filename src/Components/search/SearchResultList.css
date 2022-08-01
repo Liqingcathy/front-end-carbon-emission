@@ -1,0 +1,11 @@
+.result_list{
+    background-color: brown;
+    height: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.search-result-item{
+    background-color: rgb(16, 9, 48);
+    
+}
