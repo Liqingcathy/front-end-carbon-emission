@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Searchbar.css';
-import { BrowserRouter as Router, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // const defaultSearch = {"title" : ""}
 const Searchbar = (props) => {
   const [searchVal, setSearchVal] = useState("");
@@ -10,8 +10,8 @@ let navigate = useNavigate();
 
 const handleInputSubmission = (event) => {
   event.preventDefault();
-  props.handleSearchSubmission(searchVal);//update userdata and lift up to app.js
-  navigate('/search')
+  props.handleSearchSubmission(searchVal);//handle submit first
+  navigate('/search') //redirect second
   // console.log('after form submission' , userData);
 }
   return (
@@ -33,7 +33,7 @@ const handleInputSubmission = (event) => {
           {/* <input className="search-btn" type='submit' /> */}
           {/* <button className="search-btn" onClick={() => {navigate('/search')}} />
            */}
-           <button className="search-btn"  />
+           <button className="search-btn">search </button>
           </form> 
       </div>
     </div>

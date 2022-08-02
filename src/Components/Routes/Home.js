@@ -5,7 +5,7 @@ import MissionsRec from "../UI/MissionsRec";
 import Searchbar from "../search/Searchbar";
 const Home = ({getEstimateData, emissionData, getSearchResult}) => {
   return (
-    <div>This is home page
+    <div>
     <Searchbar handleSearchSubmission={getSearchResult}/>
     <InputForm handleFormSubmission={getEstimateData} />
     <Result data={emissionData} />

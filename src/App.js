@@ -1,13 +1,8 @@
 import "./App.css";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Navigate} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Navbar from "./Components/layout/Navbar";
 import Subpage from "./Components/layout/Subpage";
-import Searchbar from "./Components/search/Searchbar";
-import InputForm from "./Components/UI/InputForm";
-import Result from "./Components/UI/Result";
-import MissionsRec from "./Components/UI/MissionsRec";
-import SearchResultList from "./Components/search/SearchResultList";
 import Search from "./Components/Routes/Search";
 import Home from "./Components/Routes/Home";
 import About from "./Components/Routes/About";
@@ -59,8 +54,8 @@ function App() {
 
 return (
   <div className='App'>
-    <Navbar />
     <Router>
+     <Navbar />
       <Subpage /> 
         <Routes>
           <Route exact path='/' element={<Home getEstimateData={getEstimateData} emissionData={emissionData} getSearchResult={getSearchResult}/>} />
@@ -69,7 +64,6 @@ return (
           <Route exact path='/search' element={<Search searchResults={searchResults} getSearchResult={getSearchResult}/>} />
         </Routes> 
     </Router> 
-    
     
   </div>
 );
