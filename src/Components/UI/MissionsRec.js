@@ -5,12 +5,12 @@ const Missions = () => {
 
   return (
     <div className="mission-container">
-      <h3>Recommended Missions Based on Your Estimation</h3>
-      <ul className="mission-card">
-        <div>Insights
-        </div>
-        <div>Missions</div>
-        <div>Habits</div>
+      <h3>Recommendatios Based on Your Vechicle Info and CO2 Estimation</h3>
+      <ul className="mission-cards">
+        <div className="card-insights">Insights</div>
+        <div className="card-missions-1">Missions<div className="card-missions-2"></div></div>
+        
+        <div className="card-habbits">Habits</div>
       </ul>
       </div>
   )

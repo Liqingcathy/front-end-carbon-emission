@@ -1,0 +1,25 @@
+.category-container{
+    /* margin: 30px;
+    padding: 20px; */
+    /* border: 2px solid red; */
+    margin-top: 30px ;
+    padding-top: 30px;
+  
+}
+
+.category-items {
+    /* border: 2px solid rgb(51, 26, 141); */
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.category-items li{
+    /* border: 2px solid #B1C3B5; */
+    /* background-color: #cfd9d1; */
+    width: 425px;
+    border: 1px solid #aaadab;
+    height: 140px;
+    margin-left: -40px;
+    
+}

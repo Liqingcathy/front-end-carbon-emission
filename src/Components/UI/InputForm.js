@@ -6,15 +6,16 @@ import VehicleModel from "./VehicleModel";
 import UserName from "./UserName";
 import DistanceUnit from "./DistanceUnit";
 import DistanceValue from "./DistanceValue";
+import Frequency from "./Frequency";
 
 
-const inputData = {user_name: '', type:'vehicle', brand_name: '', model_name: '', distance_unit:'', distance_value: 0 }
+const inputData = {user_name: '', type:'vehicle', brand_name: '', model_name: '', distance_unit:'', distance_value: null , frequency: null}
 
 const InputForm = (props) => {
   //passed down userData
   const [userData, setInputData] = useState(inputData);
   const [page, setPages] = useState(0);
-  const FormTitle = ['User Name','Type', 'Vehicle Brand', 'Vehicle Model', 'Distance Unit', 'Distance Value'];
+  const FormTitle = ['User Name', 'Vehicle Brand', 'Vehicle Model', 'Distance Unit', 'Distance Value', 'Driving Frequency'];
 
 //when user enters input value is changed, handles event
 // const handleFormInput = (event) => {
@@ -38,17 +39,16 @@ const handleInputSubmission = (event) => {
 const pageDisplay = () => {
   if (page === 0){
     return <UserName userData={userData} setUserData={setInputData} /> 
-  }else if (page === 1){ //pass data props down to VehicleBrand component
-    // eslint-disable-next-line no-undef
-    return <Type/> 
-  }else if (page === 2){
+  }else if (page === 1){
     return <VehicleBrand userData={userData} setUserData={setInputData} />
-  }else if (page === 3){
+  }else if (page === 2){
     return <VehicleModel userData={userData} setUserData={setInputData}/>
-  }else if (page === 4){
+  }else if (page === 3){
     return <DistanceUnit userData={userData} setUserData={setInputData}/>
-  }else if (page === 5){
+  }else if (page === 4){
     return <DistanceValue userData={userData} setUserData={setInputData}/>
+  }else if (page === 5){
+  return <Frequency userData={userData} setUserData={setInputData}/>
   }
 }
 
