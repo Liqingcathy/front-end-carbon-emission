@@ -1,12 +1,28 @@
-.result_list{
-    width: 80%;
-    color: white;
+.result-list{
+    color: rgb(28, 26, 26);
+    height: 100%;
+    width: 90%;
+    border: 2px solid brown;
     display: flex;
     flex-direction: column;
-    background-color: #B1C3B5;
 }
-.search-result-item{
-    background-color:#B1C3B5 ;
-    height: 200px;
-    width: 80%;
+
+.search-result-items {
+    border: 2px solid rgb(27, 1, 1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 1000px;
+    align-items: baseline;
+}
+
+.search-result-titles{
+    border: 2px solid rgb(16, 211, 130);
+    padding: 10px;
+    text-align: left;
+}
+
+.search-result-content {
+    padding: 20px;
+    text-align: left;
 }
