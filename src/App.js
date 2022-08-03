@@ -9,13 +9,14 @@ import About from "./Components/Routes/About";
 import Missions from "./Components/Routes/Missions";
 import ErrorPage from "./Components/Routes/ErrorPage";
 import axios from "axios";
+import SearchResult from "./Components/search/SearchResult";
 
-const API_URL = "http://127.0.0.1:9000";
+const API_URL = "http://127.0.0.1:5000";
 
 function App() {
   const [userData, setUserData] = useState([]);
   const [emissionData, setEmissionData] = useState([]);
-  const [searchResults, setSearchResults] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   //API call to backend/db and return back to frontend to display estimation result
   const getEstimateData = (data) => {
@@ -39,16 +40,15 @@ function App() {
     console.log("get search result api call");
     axios.get(`${API_URL}/green_vehicle/${keyword}`) //send search keyword to flask/es
     .then((response) => {
-      try{
+      console.log(`response data print ${JSON.stringify(response.data)}`);
+      //{"_shards":{"failed":0,"skipped":0,"successful":1,"total":1},"hits":
+      //{"hits":[],"max_score":null,"total":{"relation":"eq","value":0}},"timed_out":false,"took":4}
         if (response.data['hits']['hits'].length === 0){
-          setSearchResults('error'); //doesn't set to error mesg
+          setSearchResults([]); //doesn't set to error mesg
         } else{
           setSearchResults(response.data['hits']['hits']);
           console.log(response.data['hits']['hits']); 
         }
-      } catch (error) { //?work?
-        setSearchResults(error); //display error is no result
-      }
     }).catch((error) => { console.log("error ", error);})
   }
 
