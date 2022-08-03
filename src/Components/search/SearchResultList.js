@@ -12,9 +12,9 @@ const SearchResultList = (props) => {
         <SearchResult
           key={value['_id']}
           id={value['_id']}
-          title={value['_source']['title']} 
-          url={value['_source']['url']}
-          content={value['_source']['content']}
+          title={value.highlight.title} 
+          url={value.highlight.url}
+          content={value.highlight.content}
         />
       );
   });
