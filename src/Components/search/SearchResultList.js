@@ -14,6 +14,7 @@ const SearchResultList = (props) => {
           id={value['_id']}
           title={value['_source']['title']} 
           url={value['_source']['url']}
+          content={value['_source']['content']}
         />
       );
   });
@@ -21,21 +22,10 @@ const SearchResultList = (props) => {
   return (
     <div>
       <h3>search result</h3>
-      <ul className='result_list'>{getResultList(props.displaSearchRes)}</ul>
+      <ul className='result-list'>{getResultList(props.displaSearchRes)}</ul>
     </div>
   );
-  // return (
+
 };
-//   <div className="result-container">
-//   <h2>Search result</h2>
-//   <div className="emission-data">
-//     {
-//       props.displaSearchRes.map(([key, value])=>
-//         <div>{key} is {value}</div>
-//        )
-//     }
-//     </div>
-// </div>
-// )
 
 export default SearchResultList;
