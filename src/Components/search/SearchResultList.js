@@ -4,10 +4,10 @@ import "./SearchResultList.css";
 
 const SearchResultList = (props) => {
   console.log("inside searchresultlist component");
-
+  const searchResultCount = (Object.entries(props.displaySearchRes)).length
   const getResultList = (res) => {
     //return props.displaSearchRes.map((result) => {
-    return  Object.entries(props.displaSearchRes).map(([key, value]) =>{
+    return  Object.entries(props.displaySearchRes).map(([key, value]) =>{
       return (
         <SearchResult
           key={value['_id']}
@@ -21,8 +21,8 @@ const SearchResultList = (props) => {
   };
   return (
     <div>
-      <h3>search result</h3>
-      <ul className='result-list'>{getResultList(props.displaSearchRes)}</ul>
+      <p className="count-search">Found total {searchResultCount} search result</p>
+      <ul className='result-list'>{getResultList(props.displaySearchRes)}</ul>
     </div>
   );
 

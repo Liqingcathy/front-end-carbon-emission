@@ -6,7 +6,7 @@ const Search = (props) => {
   return (
     <div>This is search result page 
       <Searchbar handleSearchSubmission={props.getSearchResult}/>
-      <SearchResultList displaSearchRes={props.searchResults} />
+      <SearchResultList displaySearchRes={props.searchResults} />
     </div>
   )
 }

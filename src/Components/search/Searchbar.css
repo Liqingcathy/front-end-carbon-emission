@@ -2,16 +2,16 @@
     margin: 50px auto;
     padding: 15px;
     height: 30px;
-    width: 80%;
+    width: 100%;
     border-radius: 0.4em;
-    background: #B1C3B5;
+    background: #cfd9d1;
+    border: 3px solid #B1C3B5;
     text-align: left;
     border: none;
     font-size: large;
 }
 
 .search-btn {
-    margin-left: 0.4em;
     border: none;
     background-color: #607564;
     color: white;

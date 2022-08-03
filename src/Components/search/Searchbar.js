@@ -22,7 +22,7 @@ const handleInputSubmission = (event) => {
         <input 
           className="search" 
           type="text" 
-          placeholder=" 🔍 search..." 
+          placeholder=" 🔍 type keywords and press enter" 
           name="title"
           value={searchVal}
           onChange={(event) => {
@@ -33,7 +33,8 @@ const handleInputSubmission = (event) => {
           {/* <input className="search-btn" type='submit' /> */}
           {/* <button className="search-btn" onClick={() => {navigate('/search')}} />
            */}
-           <button className="search-btn">search </button>
+           {/* <button className="search-btn">search </button> */}
+           
           </form> 
       </div>
     </div>
