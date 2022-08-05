@@ -1,18 +1,18 @@
 import React from "react";
 import InputForm from "../UI/InputForm";
 import Result from "../UI/Result";
-import MissionsRec from "../UI/MissionsRec";
+import RecMissionsList from "../UI/RecMissionsList";
 import Searchbar from "../search/Searchbar";
 import Categories from "../UI/Categories";
 
-const Home = ({getEstimateData, emissionData, getSearchResult}) => {
+const Home = ({userData, getEstimateData, emissionData, getSearchResult, getFuelEfficiencyInsight, efficiencyMPG }) => {
   return (
     <div>
     <Searchbar handleSearchSubmission={getSearchResult}/>
-    <InputForm handleFormSubmission={getEstimateData} />
+    <InputForm  handleFormSubmission={getEstimateData} />
     <Result data={emissionData} />
-    <Categories />
-    <MissionsRec />
+    <Categories userData={userData} getFuelEfficiencyInsight={getFuelEfficiencyInsight}/>
+    <RecMissionsList efficiencyMPG={efficiencyMPG}/>
     </div>
   )
 }

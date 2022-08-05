@@ -1,23 +1,30 @@
 import React, { useState } from "react";
-import './Categories.css';
+import "./Categories.css";
 
-const Categories = () => {
+const Categories = ({ getFuelEfficiencyInsight, userData }) => {
+  const [modelData, setModelData] = useState("");
+  console.log("inside of categories");
+  console.log(userData["data"]);
   return (
-    <div className="category-container">
-      <ul className="category-items">
-        <li>Same Makes, Different <br/> Models CO2 Emission<span><button>filter</button></span></li> 
-        <li>Different Makes, <br/> Similar CO2 Emission</li>
-        <li>Top 5 fuel-efficient vehicles</li>
-       
-        
+    <div className='category-container'>
+      <h3>Clicks each category to see insight based on your vechicle CO2 estimation</h3>
+      <ul className='category-items'>
+        <li>
+          <button
+            onClick={() => {
+              getFuelEfficiencyInsight(
+                userData["data"]["attributes"]["vehicle_make"]
+              );
+            }}
+          > Your Fuel Economy
+          </button>
+        </li>
+        <li><button>Personal Missions</button></li>
+        <li><button>Social Missions</button></li>
       </ul>
-      <ul className="category-items">
-        <li>Driving Frequency Per Week</li>
-        <li>Same Model MPG <br/> Fuel Economy</li>
-        <li>Save Money  </li>
-      </ul>
+      
     </div>
-  )
-}
+  );
+};
 
 export default Categories;

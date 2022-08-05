@@ -1,0 +1,26 @@
+.mission-container{
+    margin: 30px auto;
+}
+
+.mission-container h3{ 
+    padding: 20px;
+}
+
+.user-standard-comparison-ul {
+    background-color: #B0C2B4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.user-standard-comparison-ul li {
+    width: 400px;
+    height: 300px;
+    border: 2px solid #B0C2B4;
+}
+
+
+
+ 
+
