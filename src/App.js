@@ -7,11 +7,10 @@ import Search from "./Components/Routes/Search";
 import Home from "./Components/Routes/Home";
 import About from "./Components/Routes/About";
 import Missions from "./Components/Routes/Missions";
-import ErrorPage from "./Components/Routes/ErrorPage";
 import axios from "axios";
-import SearchResult from "./Components/search/SearchResult";
 
-const heroku_backend = "https://capstone-flask-server.herokuapp.com";
+// const heroku_backend = "https://capstone-flask-server.herokuapp.com";
+const heroku_backend = "http://localhost:5000"
 
 function App() {
   const [userData, setUserData] = useState([]);
