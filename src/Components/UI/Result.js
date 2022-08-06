@@ -1,5 +1,6 @@
 import React from "react";
 import './Result.css';
+
 const Result = (props) => {
   const emissionResult = props.data
   console.log(emissionResult)

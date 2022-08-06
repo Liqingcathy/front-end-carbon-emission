@@ -4,7 +4,6 @@
     /* border: 2px solid red; */
     margin-top: 30px ;
     padding-top: 30px;
-  
 }
 
 .category-container h3{
@@ -15,19 +14,12 @@
     /* border: 2px solid rgb(51, 26, 141); */
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
 }
 
-.category-items li{
+.category-items button{
     border: 2px solid brown;
-    /* background-color: #cfd9d1; */
-    width: 425px;
-    border: 1px solid #aaadab;
-    height: 150px;
     margin-left: -40px;
-    background-color: #B0C2B4;
-    text-align: center;
-}
-button{
     background-color: #B0C2B4;
     transition: all .2s ease-in-out;
     width: 425px;
