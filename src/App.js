@@ -11,7 +11,7 @@ import ErrorPage from "./Components/Routes/ErrorPage";
 import axios from "axios";
 import SearchResult from "./Components/search/SearchResult";
 
-const API_URL = "http://127.0.0.1:5000";
+const heroku_backend = "https://capstone-flask-server.herokuapp.com";
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -23,7 +23,7 @@ function App() {
     console.log("get estimate api call");
     console.log(data);
     axios
-      .post(`${API_URL}/estimate`, data)
+      .post(`${heroku_backend}/estimate`, data)
       .then((response) => {
         setUserData(response.data);
         console.log(response.data);
@@ -41,7 +41,7 @@ function App() {
     console.log("get getFuelEfficiencyInsight api call");
     console.log(`before model name ${JSON.stringify(model)}`);
     axios
-      .put(`${API_URL}/user/models_efficiency/${model}`)
+      .put(`${heroku_backend}/user/models_efficiency/${model}`)
       .then((response) => {
         console.log(`after model name ${JSON.stringify(response.data)}`);
         setEfficiencyMPG(response.data);
@@ -55,7 +55,7 @@ function App() {
   const getSearchResult = (keyword) => {
     console.log("get search result api call");
     axios
-      .get(`${API_URL}/green_vehicle/${keyword}`) //send search keyword to flask/es
+      .get(`${heroku_backend}/green_vehicle/${keyword}`) //send search keyword to flask/es
       .then((response) => {
         console.log(`response data print ${JSON.stringify(response.data)}`);
         //{"_shards":{"failed":0,"skipped":0,"successful":1,"total":1},"hits":
