@@ -9,8 +9,8 @@ import About from "./Components/Routes/About";
 import Missions from "./Components/Routes/Missions";
 import axios from "axios";
 
-const heroku_backend = "https://capstone-flask-server.herokuapp.com";
-// const heroku_backend = "http://localhost:5000"
+//const heroku_backend = "https://capstone-flask-server.herokuapp.com";
+const heroku_backend = "http://localhost:5000"
 
 function App() {
   const [userData, setUserData] = useState([]);
