@@ -29,8 +29,8 @@ const InputForm = ({ handleFormSubmission }) => {
     "Vehicle Brand",
     "Vehicle Model",
     "Model Year",
-    "Distance Value",
-    "Driving Frequency",
+    "Total miles planning to drive for this trip.",
+    "Total number of times drive per week",
   ];
 
   //when user enters input value is changed, handles event

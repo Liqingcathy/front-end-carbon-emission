@@ -1,7 +1,7 @@
 import React from "react";
 import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
-const RecMission = ({ name, year, combined, city, highway, fuelCost, annualFuelConsump }) => {
+const RecMission = ({ name, year, trany, combined, city, highway, fuelCost, annualFuelConsump, gallonPerHundredMile }) => {
   console.log(`combined ${combined}`);
   console.log(`city ${city}`);
  
@@ -22,10 +22,11 @@ const RecMission = ({ name, year, combined, city, highway, fuelCost, annualFuelC
           <Line type="monotone" dataKey="standard" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer> */}
-              <p>Your fuel economy -{name}({year})</p>
-              <p>Real-World MPG {combined}</p>
+              <p>Your fuel economy <br />{name}({year} {trany})</p>
+              <p>Real-World MPG Combined {combined}</p>
               <p>Real-World MPG City {city}</p>
               <p>Real-World MPG Highway {highway}</p>
+              <p>Gallon per 100 mile {gallonPerHundredMile}</p>
               <p>Annual Fuel Cost ${fuelCost}</p>
               <p>Annual Oil Consumption {annualFuelConsump} <br/>(unit:42 gallons)</p>
         </div>

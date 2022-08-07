@@ -13,7 +13,7 @@ const Categories = ({ getFuelEfficiencyInsight, userData }) => {
           <button
             onClick={() => {
               getFuelEfficiencyInsight(
-                userData["data"]["attributes"]["vehicle_model"]
+                userData["data"]["attributes"]["vehicle_model"] + "-" +userData["data"]["attributes"]["vehicle_year"] 
               );
             }}
           > Your Fuel Economy

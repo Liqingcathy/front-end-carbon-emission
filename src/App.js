@@ -9,8 +9,8 @@ import About from "./Components/Routes/About";
 import Missions from "./Components/Routes/Missions";
 import axios from "axios";
 
-//const heroku_backend = "https://capstone-flask-server.herokuapp.com";
-const heroku_backend = "http://localhost:5000"
+const heroku_backend = "https://capstone-flask-server.herokuapp.com";
+// const heroku_backend = "http://localhost:5000"
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -36,14 +36,15 @@ function App() {
   };
 
   //currently not getting result due to some model name is missing in db
-  const getFuelEfficiencyInsight = (model) => {
+  const getFuelEfficiencyInsight = (modelYear) => {
     console.log("get getFuelEfficiencyInsight api call");
-    console.log(`before model name ${JSON.stringify(model)}`);
+    console.log(`before model name ${JSON.stringify(modelYear)}`);
     axios
-      .put(`${heroku_backend}/user/models_efficiency/${model}`)
+      .put(`${heroku_backend}/user/models_efficiency/${modelYear}`)
       .then((response) => {
         console.log(`after model name ${JSON.stringify(response.data)}`);
         setEfficiencyMPG(response.data);
+        
       })
       .catch((error) => {
         console.log("error ", error);
