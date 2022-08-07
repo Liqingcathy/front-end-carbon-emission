@@ -16,7 +16,7 @@ const RecMissionsList = ({ efficiencyMPG }) => {
           combined={value['_source']["combMPGSF"]}
           city={value['_source']["singleFuelMpgCity"]}
           highway={value['_source']["highwayMPGSF"]}
-          gallonPerHundredMile={parseFloat(100/value['_source']["combMPGSF"].toFixed(2))}
+          // gallonPerHundredMile={parseFloat(100/value['_source']["combMPGSF"].toFixed(2))}
           fuelCost={value['_source']["annualFuelCostSF($)"]}
           costDrive25Mile={value['_source']["annualFuelCostSF($)"]/15000*25}
           annualFuelConsump={value['_source']["annualOilConsumption(42gallon)"]}

@@ -26,7 +26,7 @@ const RecMission = ({ name, year, trany, combined, city, highway, fuelCost, annu
               <p>Real-World MPG Combined {combined}</p>
               <p>Real-World MPG City {city}</p>
               <p>Real-World MPG Highway {highway}</p>
-              <p>Gallon per 100 mile {gallonPerHundredMile}</p>
+              {/* <p>Gallon per 100 mile {gallonPerHundredMile}</p> */}
               <p>Annual Fuel Cost ${fuelCost}</p>
               <p>Annual Oil Consumption {annualFuelConsump} <br/>(unit:42 gallons)</p>
         </div>
