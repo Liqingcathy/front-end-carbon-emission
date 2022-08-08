@@ -111,6 +111,7 @@ const InputForm = ({ handleFormSubmission }) => {
               if (page === FormTitle.length - 1) {
                 alert("Form is submitted.");
                 setInputData(inputData);
+            
                 handleFormSubmission(inputData);
               } else {
                 setPages((currPage) => currPage + 1);

@@ -1,15 +1,14 @@
-import React from "react";
-// import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
+// import React from "react";
+// // import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
-const DrivingHabbitResult = ({ fuelCost, costDrive25Mile, annualFuelConsumption}) => {
+// const DrivingHabbitResult = ({fuelCost, emissionData}) => {
+//   console.log(emissionData);
+//   console.log(fuelCost);
+//     return (
+//       <div className='recommendmpations'>
+ 
+//       </div>
+//     )
+//   };
   
-    return (
-      <div className='recommendmpations'>
-        <p>Annual Fuel Cost ${fuelCost}</p>
-        <p>Cost ${costDrive25Mile} to drive 25 mile</p>
-        <p>Annual Oil Consumption {annualFuelConsumption} <br/>(unit:42 gallons)</p>
-      </div>
-    )
-  };
-  
-export default DrivingHabbitResult;
+// export default DrivingHabbitResult;

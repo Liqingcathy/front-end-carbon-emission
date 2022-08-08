@@ -2,12 +2,14 @@ import React from "react";
 import MpgResult from "./MpgResult";
 
 const MpgFuelEconomy = ({efficiencyMPG}) => {
+  console.log('inside of mpg fuel economy: print efficiencyMPG');
+  console.log(efficiencyMPG)
   const displayFuelEconomy= (res) => {
         return Object.entries(efficiencyMPG).map(([key, value]) => {
           return (
             <MpgResult
-              key={value['_source']["model"]}
-              id={value['_source']["_id"]}
+              key={value['_source']["id"]}
+              id={value['_source']['id']}
               name={value['_source']["model"]}
               year={value['_source']["year"]}
               trany={value['_source']["trany"]}

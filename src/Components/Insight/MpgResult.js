@@ -1,7 +1,7 @@
 const MpgResult = ({ name, year, trany, combined, city, highway, fuelCost, annualFuelConsumption }) => {
   console.log("inside of Mpg result");
-  console.log(`combined ${combined}`);
-  console.log(`city ${city}`);
+  // console.log(`combined ${combined}`);
+  // console.log(`city ${city}`);
   return (
       <div className='recommendmpations'>   
         <p>Your fuel economy <br />{name}({year} {trany})</p>

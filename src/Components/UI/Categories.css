@@ -21,15 +21,15 @@
 .category-items button, .chart-one{
     
     margin-left: -40px;
-    background-color: #B0C2B4;
+    background-color: #B1C3B4;
     transition: all .2s ease-in-out;
     width: 430px;
     height: 350px;
     border: none;
 }
 
-button:hover {
-    background-color: #789D80;
+button:hover , button:focus{
+    background-color: #809986;
     transform: scale(1);
 }
 

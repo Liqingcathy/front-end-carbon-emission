@@ -7,7 +7,12 @@ const EstimateObject = ({emissionData}) => {
   console.log(emissionData);
 
   return (
+    <div>
       <div className="result-container">{emissionData[["vehicle_model"]]} {emissionData[["carbon_g"]]}</div>
+        <div>
+      
+        </div>
+    </div>
   )
 };
 
