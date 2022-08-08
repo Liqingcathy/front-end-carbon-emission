@@ -17,6 +17,8 @@ function App() {
   const [emissionData, setEmissionData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [efficiencyMPG, setEfficiencyMPG] = useState([]);
+  const [carbon_g, setCarbon_g] = useState(0);
+
   //API call to backend/db and return back to frontend to display estimation result
   const getEstimateData = (data) => {
     console.log("get estimate api call");
@@ -25,10 +27,12 @@ function App() {
       .post(`${heroku_backend}/estimate`, data)
       .then((response) => {
         setUserData(response.data);
-        console.log(response.data);
-
+        console.log(response.data["data"]);
+        console.log(response.data["data"]["attributes"]);
         const emissionVal = response.data["data"]["attributes"];
         setEmissionData(emissionVal);
+        setCarbon_g(response.data["data"]["attributes"]["carbon_g"]);
+        console.log(carbon_g);
       })
       .catch((error) => {
         console.log("error ", error);
@@ -37,8 +41,8 @@ function App() {
 
   //currently not getting result due to some model name is missing in db
   const getFuelEfficiencyInsight = (modelYear) => {
-    console.log("get getFuelEfficiencyInsight api call");
-    console.log(`before model name ${JSON.stringify(modelYear)}`);
+    // console.log("get getFuelEfficiencyInsight api call");
+    // console.log(`before model name ${JSON.stringify(modelYear)}`);
     axios
       .put(`${heroku_backend}/user/models_efficiency/${modelYear}`)
       .then((response) => {
@@ -50,6 +54,19 @@ function App() {
         console.log("error ", error);
       });
   };
+
+  const getUserEmission = (user) => {
+    console.log('inside of get user emission');
+    console.log(user);
+    axios
+    .put(`${heroku_backend}/user/${user}`)
+    .then((response) => {
+      console.log(`after getting user name ${JSON.stringify(response.data)}`);
+    })
+    .catch((error) => {
+      console.log("error ", error);
+    });
+  }
 
   //get search result from backend db and post to search result component
   const getSearchResult = (keyword) => {
@@ -86,9 +103,11 @@ function App() {
                 userData={userData}
                 getEstimateData={getEstimateData}
                 emissionData={emissionData}
+                carbon_g={carbon_g}
                 getSearchResult={getSearchResult}
                 getFuelEfficiencyInsight={getFuelEfficiencyInsight}
                 efficiencyMPG={efficiencyMPG}
+                getUserEmission={getUserEmission}
               />
             }
           />

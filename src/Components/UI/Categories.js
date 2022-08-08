@@ -1,29 +1,52 @@
 import React, { useState } from "react";
 import "./Categories.css";
 
-const Categories = ({ getFuelEfficiencyInsight, userData }) => {
-  const [modelData, setModelData] = useState("");
+const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, getUserEmission}) => {
   console.log("inside of categories");
   console.log(userData["data"]);
   return (
     <div className='category-container'>
-      <h3>Clicks each category to see insight based on your vechicle CO2 estimation</h3>
       <ul className='category-items'>
         <li>
           <button
             onClick={() => {
               getFuelEfficiencyInsight(
-                userData["data"]["attributes"]["vehicle_model"] + "-" +userData["data"]["attributes"]["vehicle_year"] 
-              );
+                userData["data"]["attributes"]["vehicle_model"] + "-" +userData["data"]["attributes"]["vehicle_year"]
+                
+                );
             }}
           > Your Fuel Economy
           </button>
+          <div className="chart-one">
+          
+          </div>
+          <hr></hr>
         </li>
-        <li><button>Personal Missions</button></li>
-        <li><button>Social Missions</button></li>
-      </ul>
-      
+        <li>
+          <button
+          
+          
+            > Driving Habit
+            </button>
+          <div className="chart-one">
+          
+          </div>
+          <hr></hr>
+        </li>
+        <li>
+          <button > Social Impact
+          </button>
+          <div className="chart-one">
+            
+          </div>
+          <hr></hr>
+        </li>
+        </ul>
     </div>
+
+    // <div className="category-title">
+    //   <p>{pageTitle[insightPage]}</p>
+    //   <div className="category-data">{displayPage()}</div>
   );
 };
 

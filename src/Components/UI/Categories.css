@@ -15,20 +15,29 @@
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
+
 }
 
-.category-items button{
-    border: 2px solid brown;
+.category-items button, .chart-one{
+    
     margin-left: -40px;
     background-color: #B0C2B4;
     transition: all .2s ease-in-out;
-    width: 425px;
-    height: 150px;
+    width: 430px;
+    height: 350px;
     border: none;
 }
 
 button:hover {
     background-color: #789D80;
     transform: scale(1);
-
 }
+
+hr{
+    display: block;
+    height: 2px;
+    border-top: 1px solid #aca7a9;
+  }
+  .chart-one{
+    border: 1px solid #d0d4d1;
+  }

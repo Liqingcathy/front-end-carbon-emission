@@ -1,0 +1,9 @@
+.recommendmpations {
+    margin-left: -40px;
+    background-color: #B0C2B4;
+    transition: all .2s ease-in-out;
+    width: 430px;
+    height: 350px;
+    border: none;
+    
+}
