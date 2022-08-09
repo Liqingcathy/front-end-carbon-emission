@@ -9,8 +9,8 @@ import About from "./Components/Routes/About";
 import Missions from "./Components/Routes/Missions";
 import axios from "axios";
 
-const heroku_backend = "https://capstone-flask-server.herokuapp.com";
-// const heroku_backend = "http://localhost:5000"
+// const heroku_backend = "https://capstone-flask-server.herokuapp.com";
+const heroku_backend = "http://localhost:5000"
 
 function App() {
   const [hasEmissionValue, setHasEmissionValue] = useState(false);
@@ -89,23 +89,28 @@ function App() {
   //get search result from backend db and post to search result component
   const getSearchResult = (keyword) => {
     console.log("get search result api call");
-    axios
-      .get(`${heroku_backend}/green_vehicle/${keyword}`) //send search keyword to flask/es
-      .then((response) => {
-        console.log(`response data print ${JSON.stringify(response.data)}`);
-        //{"_shards":{"failed":0,"skipped":0,"successful":1,"total":1},"hits":
-        //{"hits":[],"max_score":null,"total":{"relation":"eq","value":0}},"timed_out":false,"took":4}
-        if (response.data["hits"]["hits"].length === 0) {
-          setSearchResults([]); //doesn't set to error mesg
-        } else {
-          setSearchResults(response.data["hits"]["hits"]);
-          console.log(response.data["hits"]["hits"]);
-        }
-      })
-      .catch((error) => {
-        console.log("error ", error);
-      });
-  };
+    // axios.post(`${heroku_backend}/green_vehicle/${keyword}`)
+    //     .then((response) => {
+    //       console.log(`1. kw search as type analyzer ${JSON.stringify(response.data)}`);
+        
+        axios
+          .get(`${heroku_backend}/green_vehicle/${keyword}`) //send search keyword to flask/es
+          .then((response) => {
+            console.log(`2. get search result ${JSON.stringify(response.data)}`);
+            //{"_shards":{"failed":0,"skipped":0,"successful":1,"total":1},"hits":
+            //{"hits":[],"max_score":null,"total":{"relation":"eq","value":0}},"timed_out":false,"took":4}
+            if (response.data["hits"]["hits"].length === 0) {
+              setSearchResults([]); //doesn't set to error mesg
+            } else {
+              setSearchResults(response.data["hits"]["hits"]);
+              console.log(response.data["hits"]["hits"]);
+            }
+          })
+        //})
+          .catch((error) => {
+            console.log("error ", error);
+          });
+      };
 
   return (
     <div className='App'>

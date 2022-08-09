@@ -4,6 +4,7 @@ import "./SearchResultList.css";
 
 const SearchResultList = (props) => {
   console.log("inside searchresultlist component");
+  // console.log(props.Object);
   const searchResultCount = (Object.entries(props.displaySearchRes)).length
   const getResultList = (res) => {
     //return props.displaSearchRes.map((result) => {
@@ -13,16 +14,16 @@ const SearchResultList = (props) => {
           key={value['_id']}
           id={value['_id']}
           title={value.highlight.title} 
-          url={value.highlight.url}
+          url={value['_source']['url']}
           content={value.highlight.content}
         />
       );
   });
   };
   return (
-    <div>
+    <div className="search-section">
       <p className="count-search">Found total {searchResultCount} search result</p>
-      <ul className='result-list'>{getResultList(props.displaySearchRes)}</ul>
+      <div className='result-list'>{getResultList(props.displaySearchRes)}</div>
     </div>
   );
 
