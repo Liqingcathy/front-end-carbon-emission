@@ -1,6 +1,5 @@
 import React from "react";
-// import EstimateValue from "../UI/EstimateValue";
-
+// import EstimateValue from "../UI/EstimateValue"
 const EstimateObject = ({emissionData}) => {
   
   console.log("inside of estimate object");
@@ -9,9 +8,6 @@ const EstimateObject = ({emissionData}) => {
   return (
     <div>
       <div className="result-container">{emissionData[["vehicle_model"]]} {emissionData[["carbon_g"]]}</div>
-        <div>
-      
-        </div>
     </div>
   )
 };

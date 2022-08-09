@@ -13,27 +13,29 @@ const heroku_backend = "https://capstone-flask-server.herokuapp.com";
 // const heroku_backend = "http://localhost:5000"
 
 function App() {
+  const [hasEmissionValue, setHasEmissionValue] = useState(false);
+  const [userInput, setUserInput] = useState([]);
   const [userData, setUserData] = useState([]);
   const [emissionData, setEmissionData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [efficiencyMPG, setEfficiencyMPG] = useState([]);
   const [carbon_g, setCarbon_g] = useState(0);
-  // const [emissionPerMile, setEmissionPerMile] = useState(0);
-  
+  const [userDb, setUserDb] = useState([]);
+  // const [USHistoricalEmission, setUSHistoricalEmission] = useState([]);
   //API call to backend/db and return back to frontend to display estimation result
   const getEstimateData = (data) => {
     console.log("get estimate api call");
+    setUserInput(data);
     axios
       .post(`${heroku_backend}/estimate`, data)
       .then((response) => {
         setUserData(response.data);
         console.log(response.data["data"]);
         console.log(response.data["data"]["attributes"]);
-        const newEmission = {...emissionData};
         const emissionVal = response.data["data"]["attributes"];
         setEmissionData(emissionVal);
+        setHasEmissionValue(!hasEmissionValue);
         setCarbon_g(emissionData.carbon_g);
-
         console.log(carbon_g);
       })
       .catch((error) => {
@@ -58,18 +60,32 @@ function App() {
   };
 
   const getUserEmission = (user) => {
-    console.log('inside of get user emission');
+    console.log('inside of get user emission, user input from db');
     console.log(user);
     axios
     .get(`${heroku_backend}/user/${user}`)
     .then((response) => {
       console.log(`after getting user name ${JSON.stringify(response.data)}`);
+      setUserDb(response.data);
+      console.log(userDb);
     })
     .catch((error) => {
       console.log("error ", error);
     });
   }
 
+  // //get social impact insight
+  // const getUSHistoricalEmission = () => {
+  //   console.log("get us historical emission api call");
+  //   axios.get(`${heroku_backend}/us_historical_emission`)
+  //       .then((response) => {
+  //         console.log(`us emission response data ${JSON.stringify(response.data)}`);
+  //         setUSHistoricalEmission(response.data);
+  //       })
+  //       .catch((error) => {
+  //         console.log("error ", error);
+  //       })
+  // }
   //get search result from backend db and post to search result component
   const getSearchResult = (keyword) => {
     console.log("get search result api call");
@@ -110,6 +126,11 @@ function App() {
                 getFuelEfficiencyInsight={getFuelEfficiencyInsight}
                 efficiencyMPG={efficiencyMPG}
                 getUserEmission={getUserEmission}
+                userInput={userInput}
+                userDb={userDb}
+                hasEmissionValue={hasEmissionValue}
+                // getUSHistoricalEmission={getUSHistoricalEmission}
+                // USHistoricalEmission={USHistoricalEmission}
                 
               />
             }

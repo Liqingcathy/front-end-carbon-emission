@@ -29,7 +29,7 @@ const InputForm = ({ handleFormSubmission }) => {
     "Vehicle Brand",
     "Vehicle Model",
     "Model Year",
-    "Total miles planning to drive for this trip.",
+    "Miles Per Day",
     "Total number of times drive per week",
   ];
 
