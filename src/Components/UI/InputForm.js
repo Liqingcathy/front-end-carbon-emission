@@ -29,28 +29,15 @@ const InputForm = ({ handleFormSubmission }) => {
     "Vehicle Brand",
     "Vehicle Model",
     "Model Year",
-    "Miles Per Day",
+    "Miles to estimate for your vehicle's CO2 emission",
     "Total number of times drive per week",
   ];
 
-  //when user enters input value is changed, handles event
-  // const handleFormInput = (event) => {
-  //   const target = event.target;
-  //   const name = target.name;
-  //   const value = target.value;
-  //   console.log(name, value)
-  //   const newInputData = {...userData};
-  //   //type, unit, value, model id update
-  //   newInputData[name] = value;
-  //   setInputData(newInputData);
-  //   console.log('new input data', userData);
-  // }
-
-  const handleInputSubmission = (event) => {
-    event.preventDefault();
-    handleFormSubmission(inputData); //update userdata and lift up to app.js
-    // console.log('after form submission' , userData);
-  };
+  // const handleInputSubmission = (event) => {
+  //   event.preventDefault();
+  //   handleFormSubmission(inputData); //update userdata and lift up to app.js
+  //   // console.log('after form submission' , userData);
+  // };
 
   const pageDisplay = () => {
     if (page === 0) {

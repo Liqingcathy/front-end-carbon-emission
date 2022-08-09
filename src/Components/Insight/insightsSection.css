@@ -1,10 +1,32 @@
-.insight-result-section {
+.insight-result-section-mpg {
    height: 300px;
+   width: 400px;
    background-color: #B1C3B4;
+   border: 1px solid white;
+}
+
+.insight-result-section-mpg p{
+   width: 400px;
+}
+
+.insight-result-section-emit {
+   height: 300px;
+   width: 400px;
+   background-color: #B1C3B4;
+   
+   border: 1px solid white;
+}
+
+.insight-result-section-social {
+   border: 1px solid white;
+   height: 300px;
+   width: 400px;
+   background-color: #B1C3B4;
+}
+
+p{
+   background-color: #B1C3B4;
+   width: 400px;
     
 }
 
-.insight-result-section p{
-   background-color: #B1C3B4;
-    
-}

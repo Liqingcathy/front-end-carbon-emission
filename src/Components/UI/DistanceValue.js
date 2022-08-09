@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './InputForm.css';
 
 const DistanceValue = ({userData, setUserData}) => {

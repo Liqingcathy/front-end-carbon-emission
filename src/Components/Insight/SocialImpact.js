@@ -10,7 +10,7 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
   const electricityConsumed = parseFloat(emissionToSocialMT /5.139).toFixed(3) ;
   const homeEnergy = parseFloat(emissionToSocialMT / 7.94).toFixed(3);
   const switchToLED = parseFloat(emissionToSocialMT / 0.0264).toFixed(2);
-  const totalTreeSeedlingGrowTenYears = parseFloat(emissionToSocialMT / 0.00000822).toFixed(2);
+  const totalTreeSeedlingGrowTenYears = parseFloat(emissionToSocialMT / 0.00000822).toFixed(0);
   const acreForest_16tenniscourts = parseFloat(emissionToSocialMT / 0.84).toFixed(2);
   const coarBurnedPound = parseFloat(emissionToSocialMT / 0.000904).toFixed(2);
   //avoid
@@ -19,22 +19,22 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
   const trashBagWasteNumber = parseFloat(emissionToSocialMT / 0.0231).toFixed(3);
   const numberOfPhoneCharged = parseFloat(emissionToSocialMT / 0.00000822).toFixed(2);
 
-  if (emissionData.length === 0) {
-      return  <div className="insight-result-section"></div>
+  if (emissionToSocial === 0) {
+      return  <div className="insight-result-section-social"></div>
   }else{
   return (
-    <div className="insight-result-section">
-      <p>{emissionToSocialMT}</p>
-      <p>{electricityConsumed}</p>
-      <p>{homeEnergy}</p>
-      <p>{switchToLED}</p>
-      <p>{totalTreeSeedlingGrowTenYears}</p>
-      <p>{acreForest_16tenniscourts}</p>
-      <p>{coarBurnedPound}</p>
-      <p>{wasteRecycled}</p>
-      <p>{garbageTrucksWasteNumber}</p>
-      <p>{trashBagWasteNumber}</p>
-      <p>{numberOfPhoneCharged}</p>
+    <div className="insight-result-section-social">
+      <p>your annual vehicle co2 emission {emissionToSocialMT} mt</p>
+      <p>{electricityConsumed} mt annual electricity consumed</p>
+      <p>{homeEnergy} mt annual home energy consumed</p>
+      <p>{switchToLED} mt incandescent bulbs switched to LED </p>
+      <p>{totalTreeSeedlingGrowTenYears} urban tree seedlings grow for 10 years </p>
+      <p>{acreForest_16tenniscourts} acre forest preserved</p>
+      <p>{coarBurnedPound} pounds of carbon burned</p>
+      <p>{wasteRecycled} mt of wastes recycled</p>
+      <p>{garbageTrucksWasteNumber} mt garbage trucks waste</p>
+      <p>{trashBagWasteNumber}mt trash bags recycled</p>
+      <p>{numberOfPhoneCharged} of smart phone chared</p>
     </div>
     );
   }
