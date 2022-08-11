@@ -1,6 +1,6 @@
 import React from "react";
 import './insightsSection.css';
-import { BarChart, PieChart, Pie, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
 // import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
@@ -22,17 +22,17 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
   const numberOfPhoneCharged = parseFloat(emissionToSocialMT / 0.00000822).toFixed(2);
 
   const data = [
-    {'emission': emissionToSocialMT}, 
-    {'name': electricityConsumed }, 
-    {'name':homeEnergy }, 
-    {'name': switchToLED}, 
-    {'name': totalTreeSeedlingGrowTenYears}, 
-    {'name': acreForest_16tenniscourts},
-    {'name': coarBurnedPound},
-    {'name': wasteRecycled},
-    {'name': garbageTrucksWasteNumber},
-    {'name': trashBagWasteNumber},
-    {'name': numberOfPhoneCharged}
+    {'name': 'emission', 'val' : emissionToSocialMT}, 
+    {'name2': 'electricity', 'val': electricityConsumed }, 
+    {'name3': 'home', 'val': homeEnergy }, 
+    {'name4': 'LED', 'val':switchToLED}, 
+    {'name5': 'Tree', 'val': totalTreeSeedlingGrowTenYears}, 
+    {'name5': 'Forest', 'val':acreForest_16tenniscourts},
+    {'name5': 'Coar', 'val': coarBurnedPound},
+    {'name5': 'Waste', 'val': wasteRecycled},
+    {'name5': 'GarbageTruck', 'val': garbageTrucksWasteNumber},
+    {'name5': 'TrashBag', 'val': trashBagWasteNumber},
+    {'name5': 'Phone Charged', 'val':numberOfPhoneCharged}
 
  ];
 
@@ -42,14 +42,14 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
     return(
       <div className="chart-weight">
        <BarChart width={730} height={250} data={data}>
-  <CartesianGrid strokeDasharray="3 3" />
-  <XAxis dataKey="name" />
-  <YAxis />
-  <Tooltip />
-  <Legend />
-  <Bar dataKey="name" fill="#8884d8" />
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="val" fill="#8884d8" />
   {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
-</BarChart>
+      </BarChart>
     </div>
     
   );

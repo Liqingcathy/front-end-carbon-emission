@@ -8,7 +8,8 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
   // console.log(`userInput ${JSON.stringify(userInput)}`)
   console.log(`userInput-user_name ${JSON.stringify(userInput['user_name'])}`)
   console.log(emissionData['carbon_g']);
-  const [userEmission, setUserEmission] = useState([]);
+  const [userEmission, setUserEmission] = useState(0);
+  // const [userEmiDistanceVal, setUserEmiDistanceVal] = useState(0);
   const [emissionToSocial, setEmissionToSocial] = useState(0);
   return (
     <div className='category-container'>
@@ -31,12 +32,14 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
         <li className="category-list">
           <button 
             onClick={() => {
-              setUserEmission(emissionData);
+              setUserEmission(emissionData['carbon_g']);
+              // setUserEmiDistanceVal(emissionData['distance_value'])
+
             // getUserEmission(userInput['user_name'])
             }}
             > Your Vehicle's CO2 Emission 
           </button>
-          <EmissionInsight efficiencyMPG={efficiencyMPG} userEmission={userEmission} />
+          <EmissionInsight efficiencyMPG={efficiencyMPG} userEmission={userEmission}/>
           
           <hr></hr>
         </li>
