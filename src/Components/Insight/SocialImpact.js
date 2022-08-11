@@ -1,5 +1,7 @@
 import React from "react";
 import './insightsSection.css';
+import { BarChart, PieChart, Pie, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+
 // import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
 const SocialImpact = ({emissionToSocial, emissionData}) => {
@@ -19,25 +21,58 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
   const trashBagWasteNumber = parseFloat(emissionToSocialMT / 0.0231).toFixed(3);
   const numberOfPhoneCharged = parseFloat(emissionToSocialMT / 0.00000822).toFixed(2);
 
-  if (emissionToSocial === 0) {
-      return  <div className="insight-result-section-social"></div>
-  }else{
-  return (
-    <div className="insight-result-section-social">
-      <p>your annual vehicle co2 emission {emissionToSocialMT} mt</p>
-      <p>{electricityConsumed} mt annual electricity consumed</p>
-      <p>{homeEnergy} mt annual home energy consumed</p>
-      <p>{switchToLED} mt incandescent bulbs switched to LED </p>
-      <p>{totalTreeSeedlingGrowTenYears} urban tree seedlings grow for 10 years </p>
-      <p>{acreForest_16tenniscourts} acre forest preserved</p>
-      <p>{coarBurnedPound} pounds of carbon burned</p>
-      <p>{wasteRecycled} mt of wastes recycled</p>
-      <p>{garbageTrucksWasteNumber} mt garbage trucks waste</p>
-      <p>{trashBagWasteNumber}mt trash bags recycled</p>
-      <p>{numberOfPhoneCharged} of smart phone chared</p>
+  const data = [
+    {'emission': emissionToSocialMT}, 
+    {'name': electricityConsumed }, 
+    {'name':homeEnergy }, 
+    {'name': switchToLED}, 
+    {'name': totalTreeSeedlingGrowTenYears}, 
+    {'name': acreForest_16tenniscourts},
+    {'name': coarBurnedPound},
+    {'name': wasteRecycled},
+    {'name': garbageTrucksWasteNumber},
+    {'name': trashBagWasteNumber},
+    {'name': numberOfPhoneCharged}
+
+ ];
+
+ if (emissionToSocial === 0) {
+  return <div className="chart-weight"></div>
+ }else{
+    return(
+      <div className="chart-weight">
+       <BarChart width={730} height={250} data={data}>
+  <CartesianGrid strokeDasharray="3 3" />
+  <XAxis dataKey="name" />
+  <YAxis />
+  <Tooltip />
+  <Legend />
+  <Bar dataKey="name" fill="#8884d8" />
+  {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
+</BarChart>
     </div>
-    );
+    
+  );
   }
+  // if (emissionToSocial === 0) {
+  //     return  <div className="insight-result-section-social"></div>
+  // }else{
+  // return (
+  //   <div className="insight-result-section-social">
+  //     <p>your annual vehicle co2 emission {emissionToSocialMT} mt</p>
+  //     <p>{electricityConsumed} mt annual electricity consumed</p>
+  //     <p>{homeEnergy} mt annual home energy consumed</p>
+  //     <p>{switchToLED} mt incandescent bulbs switched to LED </p>
+  //     <p>{totalTreeSeedlingGrowTenYears} urban tree seedlings grow for 10 years </p>
+  //     <p>{acreForest_16tenniscourts} acre forest preserved</p>
+  //     <p>{coarBurnedPound} pounds of carbon burned</p>
+  //     <p>{wasteRecycled} mt of wastes recycled</p>
+  //     <p>{garbageTrucksWasteNumber} mt garbage trucks waste</p>
+  //     <p>{trashBagWasteNumber}mt trash bags recycled</p>
+  //     <p>{numberOfPhoneCharged} of smart phone chared</p>
+  //   </div>
+  //  );
+  //}
 };
 
 export default SocialImpact;

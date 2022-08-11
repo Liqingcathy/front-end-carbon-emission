@@ -1,3 +1,7 @@
+.sub-page {
+  background-color: #F0F4F1;
+}
+
 .more-info-ul{
   /* border: 1px solid red; */
   height: 60px;
@@ -5,7 +9,7 @@
 }
 
 .sub-page{
-  
+  background-color: #F0F4F1;
 }
 .web-goals{
   display: inline;

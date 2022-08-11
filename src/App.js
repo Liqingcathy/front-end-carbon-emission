@@ -8,7 +8,6 @@ import Home from "./Components/Routes/Home";
 import About from "./Components/Routes/About";
 import Missions from "./Components/Routes/Missions";
 import axios from "axios";
-
 // const heroku_backend = "https://capstone-flask-server.herokuapp.com";
 const heroku_backend = "http://localhost:5000"
 
@@ -21,6 +20,9 @@ function App() {
   const [efficiencyMPG, setEfficiencyMPG] = useState([]);
   const [carbon_g, setCarbon_g] = useState(0);
   const [userDb, setUserDb] = useState([]);
+  const [sortingResult, setSortingResult] = useState([]);
+
+
   // const [USHistoricalEmission, setUSHistoricalEmission] = useState([]);
   //API call to backend/db and return back to frontend to display estimation result
   const getEstimateData = (data) => {
@@ -74,18 +76,7 @@ function App() {
     });
   }
 
-  // //get social impact insight
-  // const getUSHistoricalEmission = () => {
-  //   console.log("get us historical emission api call");
-  //   axios.get(`${heroku_backend}/us_historical_emission`)
-  //       .then((response) => {
-  //         console.log(`us emission response data ${JSON.stringify(response.data)}`);
-  //         setUSHistoricalEmission(response.data);
-  //       })
-  //       .catch((error) => {
-  //         console.log("error ", error);
-  //       })
-  // }
+
   //get search result from backend db and post to search result component
   const getSearchResult = (keyword) => {
     console.log("get search result api call");
@@ -112,6 +103,17 @@ function App() {
           });
       };
 
+  const getFilteredData = (selectOption) => {
+    console.log('inside of samke make fuel api call');
+    axios.get(`${heroku_backend}/${selectOption}`)
+      .then((response) => {
+        console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
+        setSortingResult(response.data);
+      })
+      .catch((error) => {console.log('error', error)})
+  };
+
+
   return (
     <div className='App'>
       <Router>
@@ -134,8 +136,11 @@ function App() {
                 userInput={userInput}
                 userDb={userDb}
                 hasEmissionValue={hasEmissionValue}
+                getFilteredData={getFilteredData}
+                sortingResult={sortingResult}
                 // getUSHistoricalEmission={getUSHistoricalEmission}
                 // USHistoricalEmission={USHistoricalEmission}
+          
                 
               />
             }
@@ -154,6 +159,7 @@ function App() {
           />
         </Routes>
       </Router>
+      
     </div>
   );
 }

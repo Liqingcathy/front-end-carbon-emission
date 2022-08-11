@@ -15,7 +15,7 @@ const handleInputSubmission = (event) => {
   // console.log('after form submission' , userData);
 }
   return (
-    <div>
+    <div className="search-bar">
       <hr></hr>
       <div >
        <form onSubmit={handleInputSubmission}>
@@ -36,6 +36,10 @@ const handleInputSubmission = (event) => {
            {/* <button className="search-btn">search </button> */}
            
           </form> 
+      </div>
+      <div className="search-suggest">
+        <p>{searchVal}</p>
+        <p></p>
       </div>
     </div>
   )

@@ -1,0 +1,21 @@
+.select-options-bar {
+    width: 90%;
+    padding: 30px;
+    margin-left: 0;
+    background-color: #F0F4F1;
+      
+}
+
+.sorting-display-container{
+    background-color: #F0F4F1;
+}
+
+
+.popular-search-ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.popular-search-li{
+    height: 100px;
+}

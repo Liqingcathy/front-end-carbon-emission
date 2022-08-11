@@ -1,3 +1,6 @@
+.nav-bar {
+    background-color: #F0F4F1;
+}
 ul {
     display: flex;
     flex-direction: row;

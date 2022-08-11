@@ -13,7 +13,6 @@
    height: 300px;
    width: 400px;
    background-color: #B1C3B4;
-   
    border: 1px solid white;
 }
 
@@ -26,7 +25,16 @@
 
 p{
    background-color: #B1C3B4;
-   width: 400px;
+   width: 350px;
     
 }
 
+.plot-card {
+   background-color: #536d58;
+   color: black;
+}
+
+.chart-weight{
+   height: 300px;
+   background-color: #B1C3B4;
+}

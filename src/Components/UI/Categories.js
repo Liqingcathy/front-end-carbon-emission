@@ -20,7 +20,8 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
                 userData["data"]["attributes"]["vehicle_model"] + "-" +userData["data"]["attributes"]["vehicle_year"]
                 );
             }}
-          > Your Vehicle's Fuel Economy
+          > Your Vehicle's Fuel Economy <br />
+            the higher mpg, the more efficient your vehicle
           </button >
           
           <MpgFuelEconomy efficiencyMPG={efficiencyMPG} />

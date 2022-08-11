@@ -5,7 +5,7 @@ import './Subpage.css';
 const Header = () => {
 
   return (
-    <div>
+    <div className="sub-page">
       <ul className="more-info-ul">
         <li className="sub-page"> 
           {/* <h3>Missions</h3> */}
