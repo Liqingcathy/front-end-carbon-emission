@@ -14,13 +14,15 @@ const defaultInputData = {
   model_name: "",
   year: 0,
   distance_unit: "mi",
+  path_value: "",
+  freq_week: "",
   distance_value: 0,
   frequency: 0,
   emission: 0,
   emission_per_mile: 0,
 };
 
-const InputForm = ({ handleFormSubmission }) => {
+const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
   //passed down userData
   const [inputData, setInputData] = useState(defaultInputData);
   const [page, setPages] = useState(0);
@@ -29,7 +31,7 @@ const InputForm = ({ handleFormSubmission }) => {
     "Vehicle Brand",
     "Vehicle Model",
     "Model Year",
-    "Miles to estimate for your vehicle's CO2 emission",
+    "Approximate driving miles for per week",
     "Total number of times drive per week",
   ];
 
@@ -49,7 +51,7 @@ const InputForm = ({ handleFormSubmission }) => {
     } else if (page === 3) {
       return <Year userData={inputData} setUserData={setInputData} />;
     } else if (page === 4) {
-      return <DistanceValue userData={inputData} setUserData={setInputData} />;
+      return <DistanceValue userData={inputData} setUserData={setInputData}/>;
     } else if (page === 5) {
       return <Frequency userData={inputData} setUserData={setInputData} />;
     }
