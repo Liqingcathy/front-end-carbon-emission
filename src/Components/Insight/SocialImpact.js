@@ -5,8 +5,8 @@ import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, L
 // import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
 const SocialImpact = ({emissionToSocial, emissionData}) => {
-  console.log('inside of social impact');
-  console.log(emissionToSocial);
+  // console.log('inside of social impact');
+  // console.log(emissionToSocial);
   //caculate equivalent value based on epa caculation formula(unit:metric ton)
   const emissionToSocialMT = parseFloat(emissionToSocial / 1000000).toFixed(3);
   const electricityConsumed = parseFloat(emissionToSocialMT /5.139).toFixed(3) ;

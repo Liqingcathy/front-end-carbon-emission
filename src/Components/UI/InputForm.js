@@ -14,8 +14,6 @@ const defaultInputData = {
   model_name: "",
   year: 0,
   distance_unit: "mi",
-  path_value: "",
-  freq_week: "",
   distance_value: 0,
   frequency: 0,
   emission: 0,

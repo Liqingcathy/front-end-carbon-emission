@@ -5,8 +5,8 @@ import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, C
 import EmissionResult from "./EmissionResult";
 
 const EmissionInsight = ({efficiencyMPG, userEmission}) => {
-  console.log('inside emission insight category');
-  console.log(userEmission);
+  // console.log('inside emission insight category');
+  // console.log(userEmission);
   // console.log(`userEmission ${JSON.stringify(userEmission)}`)
   // console.log(`userEmission ${JSON.stringify(userEmission)}`)
   // console.log(`efficiencyMPG ${JSON.stringify(efficiencyMPG)}`)

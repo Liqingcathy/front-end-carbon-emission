@@ -2,7 +2,7 @@ import React from "react";
 // import EstimateValue from "../UI/EstimateValue"
 const EstimateObject = ({emissionData}) => {
   
-  console.log("inside of estimate object");
+  // console.log("inside of estimate object");
   console.log(emissionData);
 
   return (

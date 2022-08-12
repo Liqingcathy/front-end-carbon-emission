@@ -9,7 +9,7 @@ const DistanceValue = ({userData, setUserData}) => {
              value={userData.distance_value} 
              onChange={(event) => setUserData({...userData, distance_value: event.target.value})}/>
       <p></p>
-      <DistanceFromTo />
+      <DistanceFromTo userData={userData} setUserData={setUserData} />
     </div>)
 }
 

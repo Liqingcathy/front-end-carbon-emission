@@ -1,8 +1,8 @@
 import React from "react";
 
 const PopularModelSearch = ({sortingResult}) => {
-  console.log('inside of popular search');
-  console.log(sortingResult);
+  // console.log('inside of popular search');
+  // console.log(sortingResult);
   // const top_5_models = sortingResult;
   // console.log(top_5_models);
   const displayPS = () => {

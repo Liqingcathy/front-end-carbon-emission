@@ -1,8 +1,8 @@
 import React from "react";
 
 const PopularMakeSearch = ({sortingResult}) => {
-  console.log('inside of popular make search');
-  console.log(sortingResult);
+  // console.log('inside of popular make search');
+  // console.log(sortingResult);
 
   const displayPS = () => {
     return Object.values(sortingResult).map(( value) => {

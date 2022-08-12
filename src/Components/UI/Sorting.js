@@ -4,7 +4,7 @@ import AsyncSelect from 'react-select/async'
 import './Sorting.css';
 
 const Sorting = ({getFilteredData}) => {
-  console.log('inside of sortings component');
+  // console.log('inside of sortings component');
   // const [emission, setEmission] = useState([]);
   const options = [
     {value: 'high_efficient_vehicle_make', label: 'high efficient vehicle make'},

@@ -12,13 +12,11 @@ import axios from "axios";
 const heroku_backend = "http://localhost:5000"
 
 function App() {
-  const [hasEmissionValue, setHasEmissionValue] = useState(false);
   const [userInput, setUserInput] = useState([]);
   const [userData, setUserData] = useState([]);
   const [emissionData, setEmissionData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [efficiencyMPG, setEfficiencyMPG] = useState([]);
-  const [carbon_g, setCarbon_g] = useState(0);
   const [userDb, setUserDb] = useState([]);
   const [sortingResult, setSortingResult] = useState([]);
 
@@ -36,9 +34,6 @@ function App() {
         console.log(response.data["data"]["attributes"]);
         const emissionVal = response.data["data"]["attributes"];
         setEmissionData(emissionVal);
-        setHasEmissionValue(!hasEmissionValue);
-        setCarbon_g(emissionData.carbon_g);
-        console.log(carbon_g);
       })
       .catch((error) => {
         console.log("error ", error);
@@ -80,10 +75,6 @@ function App() {
   //get search result from backend db and post to search result component
   const getSearchResult = (keyword) => {
     console.log("get search result api call");
-    // axios.post(`${heroku_backend}/green_vehicle/${keyword}`)
-    //     .then((response) => {
-    //       console.log(`1. kw search as type analyzer ${JSON.stringify(response.data)}`);
-        
         axios
           .get(`${heroku_backend}/green_vehicle/${keyword}`) //send search keyword to flask/es
           .then((response) => {
@@ -97,7 +88,6 @@ function App() {
               console.log(response.data["hits"]["hits"]);
             }
           })
-        //})
           .catch((error) => {
             console.log("error ", error);
           });
@@ -116,24 +106,21 @@ function App() {
         console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
         setSortingResult(response.data);
       })
-    
       .catch((error) => {console.log('error', error)})
     }
   };
 
-  const dataUpToUserEmission = (userName) => {
-    console.log('inside of get user emission and similar data from db');
-    axios.get(`${heroku_backend}/${userName}`)
-      .then((response) => {
-        console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
-        setSortingResult(response.data);
-      })
-      .catch((error) => {console.log('error', error)})
+  // const dataUpToUserEmission = (userName) => {
+  //   console.log('inside of get user emission and similar data from db');
+  //   axios.get(`${heroku_backend}/${userName}`)
+  //     .then((response) => {
+  //       console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
+  //       setSortingResult(response.data);
+  //     })
+  //     .catch((error) => {console.log('error', error)})
 
-  }
-  // const getFromToDistance= () => {
-  //   console.log('inside of getFromToDistance')
   // }
+
   return (
     <div className='App'>
       <Router>
@@ -148,19 +135,15 @@ function App() {
                 userData={userData}
                 getEstimateData={getEstimateData}
                 emissionData={emissionData}
-                carbon_g={carbon_g}
                 getSearchResult={getSearchResult}
                 getFuelEfficiencyInsight={getFuelEfficiencyInsight}
                 efficiencyMPG={efficiencyMPG}
                 getUserEmission={getUserEmission}
+                setEmissionData={setEmissionData}
                 userInput={userInput}
                 userDb={userDb}
-                hasEmissionValue={hasEmissionValue}
                 getFilteredData={getFilteredData}
                 sortingResult={sortingResult}
-                // getFromToDistance={getFromToDistance}
-                // getUSHistoricalEmission={getUSHistoricalEmission}
-                // USHistoricalEmission={USHistoricalEmission}
           
                 
               />

@@ -4,7 +4,7 @@ import MpgFuelEconomy from "../Insight/MpgFuelEconomy";
 import EmissionInsight from "../Insight/EmissionInsight";
 import SocialImpact from "../Insight/SocialImpact";
 const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, userInput}) => {
-  console.log("inside of categories component");
+  // console.log("inside of categories component");
   // console.log(`userInput ${JSON.stringify(userInput)}`)
   console.log(`userInput-user_name ${JSON.stringify(userInput['user_name'])}`)
   console.log(`emissionData ${JSON.stringify(emissionData)}`);

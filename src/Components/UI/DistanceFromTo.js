@@ -8,18 +8,17 @@ import { useJsApiLoader, GoogleMap, useLoadScript, Marker, InfoWindow, Autocompl
 const center = {lat: -74, lng: 40.7};
 // const libraries = ['places'];
 
-const DistanceFromTo = () => {
+const DistanceFromTo = ({userData, setUserData }) => {
+  console.log('inside of distanceFromTo');
+  console.log(userData);
   const [ libraries ] = useState(['places']); //avoid warning
   const [freq, setFreq] = useState(1);
   const [routeCalResponse, setRouteCalResponse] = useState(null);
   const [distance, setDistance] = useState('');
   const [totalDistance, setTotalDistance] = useState(0);
-  // console.log(`freq ${freq}`);
+  
   //add/remove input form
   const [inputFormList, setInputFormList] = useState([{'path': ''}]);
-  // console.log('inputFormList');
-  // console.log(inputFormList);
-
   // gives the same ref object on every render.
   const originRef = useRef();
   const destinationRef = useRef();
@@ -57,10 +56,13 @@ const DistanceFromTo = () => {
     })
 
     setRouteCalResponse(results);
-    setDistance(results.routes[0].legs[0].distance.text); //choose first option route
-    console.log(`totalDistance before ${totalDistance}`);
-    setTotalDistance(totalDistance + (extractMileFromStr(distance)*freq));
-    console.log(`totalDistance after ${totalDistance}`)
+    // setDistance(results.routes[0].legs[0].distance.text); //choose first option route
+    const tempDistance = results.routes[0].legs[0].distance.text;
+    setDistance(tempDistance);
+    // debugger;
+    // console.log(`totalDistance before ${totalDistance}`);
+    // setTotalDistance(totalDistance + (extractMileFromStr(tempDistance)*freq));
+    // console.log(`totalDistance after ${totalDistance}`)
   }
 
   const extractMileFromStr = (str) => {
@@ -85,7 +87,9 @@ const DistanceFromTo = () => {
     const list = [...inputFormList];
     list.splice(index, 1);
     setInputFormList(list);
-    setTotalDistance(totalDistance - parseFloat(extractMileFromStr(distance)));
+    const pathVal = list[index].path
+    console.log(pathVal);
+    setTotalDistance(totalDistance - pathVal);
   }
 
   //update input form values after input value
@@ -94,13 +98,20 @@ const DistanceFromTo = () => {
     const list = [...inputFormList];
     list[index][name] = value;
     setInputFormList(list);
+  
   };
 
   const handleChange = (selectedOption) => {
     console.log("handleChange" , selectedOption);
     // setSortings(selectedOption);
     console.log(selectedOption['value']);
-    setFreq(parseInt(selectedOption));
+    const tempFrep = parseInt(selectedOption['value']);
+    setFreq(tempFrep);
+
+    const tempTotalDistance = totalDistance + (extractMileFromStr(distance)*tempFrep);
+    setTotalDistance(tempTotalDistance);
+    //want to update user's input field: total_path_value
+    setUserData({...userData,  distance_value: tempTotalDistance});
   };
 
   // console.log(`emission ${emission}`);
@@ -139,7 +150,9 @@ const DistanceFromTo = () => {
            options={frequencyWeek}
            value={freq}
            onChange={(event) => {setFreq(event.target.value)}} />  */}
-        <AsyncSelect loadOptions={loadOptions}  defaultOptions placeholder='select frequency/week for this path' onChange={handleChange} />
+        <AsyncSelect loadOptions={loadOptions}  
+        defaultOptions placeholder='select frequency/week for this path' 
+        onChange={handleChange} />
         </div>
         <div>
         {/* show add form box button only at the end */}
@@ -152,7 +165,8 @@ const DistanceFromTo = () => {
       </div>
       
       )} 
-      <div className="current-total-distance">Your current distance sum: {totalDistance}</div>
+      <div className="current-total-distance">
+        Your current distance sum: {totalDistance}</div>
       <div className="google-map-load">
           <GoogleMap
             center={center}
