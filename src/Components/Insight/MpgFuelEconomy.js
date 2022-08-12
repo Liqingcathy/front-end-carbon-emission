@@ -3,8 +3,8 @@ import MpgResult from "./MpgResult";
 import "./insightsSection.css";
 
 const MpgFuelEconomy = ({ efficiencyMPG }) => {
-  // console.log("inside of mpg fuel economy: print efficiencyMPG");
-  // console.log(efficiencyMPG);
+  console.log("inside of mpg fuel economy: print efficiencyMPG");
+  console.log(efficiencyMPG);
   const displayFuelEconomy = (res) => {
     return Object.entries(efficiencyMPG).map(([key, value]) => {
       return (
@@ -35,7 +35,7 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
   };
 
   return (
-    <div className='insight-result-section-mpg'>
+    <div className='chart-weight'>
       <li>{displayFuelEconomy(efficiencyMPG)}</li>
     </div>
   );

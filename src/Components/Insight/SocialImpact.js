@@ -32,7 +32,7 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
     {'name5': 'Waste', 'val': wasteRecycled},
     {'name5': 'GarbageTruck', 'val': garbageTrucksWasteNumber},
     {'name5': 'TrashBag', 'val': trashBagWasteNumber},
-    {'name5': 'Phone Charged', 'val':numberOfPhoneCharged}
+    {'name5': 'Phone Charge', 'val':numberOfPhoneCharged}
 
  ];
 
@@ -47,7 +47,8 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="val" fill="#8884d8" />
+        <Bar dataKey="val" fill="#913339" />
+        {/* <Bar dataKey="val" fill="#913339" /> */}
   {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
       </BarChart>
     </div>

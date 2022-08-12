@@ -1,7 +1,7 @@
 .insight-result-section-mpg {
    height: 300px;
    width: 400px;
-   background-color: #B1C3B4;
+
    border: 1px solid white;
 }
 
@@ -12,7 +12,7 @@
 .insight-result-section-emit {
    height: 300px;
    width: 400px;
-   background-color: #B1C3B4;
+ 
    border: 1px solid white;
 }
 
@@ -20,21 +20,11 @@
    border: 1px solid white;
    height: 300px;
    width: 400px;
-   background-color: #B1C3B4;
+
 }
 
-p{
-   background-color: #B1C3B4;
-   width: 350px;
-    
-}
-
-.plot-card {
-   background-color: #536d58;
-   color: black;
-}
 
 .chart-weight{
    height: 300px;
-   background-color: #B1C3B4;
+   background-color: #F0F4F1;
 }

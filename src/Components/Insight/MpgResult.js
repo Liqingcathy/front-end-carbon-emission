@@ -2,19 +2,19 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 // import './insightsSection.css';
 
 const MpgResult = ({ name, year, make, trany, combined, city, highway, fuelCost, annualFuelConsumption,  gallonPerMile }) => {
-  // console.log("inside of Mpg result");
-  // console.log(`combined ${combined}`);
-  // console.log(`city ${city}`);
+  console.log("inside of Mpg result");
+  console.log(`combined ${combined}`);
+  console.log(`city ${city}`);
   const data = [
-    {'name': 'mpg', 'mpg': combined}, 
-    {'name': 'mpg-city','mpg': city}, 
-    {'name': 'mpg-highway','mpg': highway}, 
-    {'name': 'standard-mpg', 'mpg': 54}];
+    {'name': 'mpg',  'mpg': combined}, 
+    {'name': 'city', 'mpg': city}, 
+    {'name': 'highway','mpg': highway}, 
+    {'name': 'standard', 'mpg': 54}];
   
     
     return(
       <LineChart width={400} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-      <Line type="monotone" dataKey="mpg" stroke="#8884d8" />
+      <Line type="monotone" dataKey="mpg" stroke="#913339" />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
       <XAxis dataKey="name" />
       <YAxis />

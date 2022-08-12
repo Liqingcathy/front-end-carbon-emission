@@ -7,11 +7,11 @@ const Sorting = ({getFilteredData}) => {
   // console.log('inside of sortings component');
   // const [emission, setEmission] = useState([]);
   const options = [
-    {value: 'high_efficient_vehicle_make', label: 'high efficient vehicle make'},
-    {value: 'high_efficient_vehicle_model', label: 'high efficient vehicle model' },
+    {value: 'same_make_diff_model', label: 'similar efficient models from your make based on your estimated emission'},
+    {value: 'same_model_diff_make_model', label: 'similar efficient vehicle makes based on your emission' },
     {value: 'popular_vehicle_make_search', label: 'popular vehicle make search/estimate'},
     {value: 'popular_vehicle_model_search', label: 'popular vehicle model search/estimate'},
-    {value: 'tailpipe_emission', label : 'tailpipe emission'}
+    {value: 'vehicle by tailpipe_emission', label : 'tailpipe emission'}
   ];
 
 

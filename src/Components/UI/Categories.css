@@ -17,17 +17,18 @@
 
 .category-list{
     /* border: 2px solid rgb(141, 26, 55); */
-    margin-left: -20px;
+    /* margin-left: -20px; */
     
 }
 
 .category-list button{
     /* border: 2px solid rgb(141, 26, 55); */
-    background-color: #c0ccc3;
+    background-color: #A6B9AA;
     transition: all .2s ease-in-out;
-    width: 400px;
+    width: 300px;
     height: 200px;
     border: none;
+    color: white;
     /* border-radius: 0.4em; */
 }
 

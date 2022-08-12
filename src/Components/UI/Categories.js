@@ -3,22 +3,22 @@ import "./Categories.css";
 import MpgFuelEconomy from "../Insight/MpgFuelEconomy";
 import EmissionInsight from "../Insight/EmissionInsight";
 import SocialImpact from "../Insight/SocialImpact";
-const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, userInput}) => {
-  // console.log("inside of categories component");
-  // console.log(`userInput ${JSON.stringify(userInput)}`)
-  console.log(`userInput-user_name ${JSON.stringify(userInput['user_name'])}`)
-  console.log(`emissionData ${JSON.stringify(emissionData)}`);
-  console.log(`userData ${JSON.stringify(userData)}`);
-  console.log(`userInput ${JSON.stringify(userInput)}`);
 
-  const [userEmission, setUserEmission] = useState(0);
-  // const [userEmiDistanceVal, setUserEmiDistanceVal] = useState(0);
+const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, userInput, setEmissionData}) => {
+  console.log("inside of categories component");
+  console.log(`userInput ${JSON.stringify(userInput)}`)
+  // console.log(`userInput-user_name ${JSON.stringify(userInput['user_name'])}`)
+  // console.log(`emissionData ${JSON.stringify(emissionData)}`);
+  // console.log(`userData ${JSON.stringify(userData)}`);
+  // console.log(`userInput ${JSON.stringify(userInput)}`);
+
+  // const [userEmission, setUserEmission] = useState(0);
   const [emissionToSocial, setEmissionToSocial] = useState(0);
   return (
     <div className='category-container'>
       <ul className='category-items'>
         <li className="category-list">
-          <button className="dark"
+          <button
             onClick={() => {
               getFuelEfficiencyInsight(
                 userData["data"]["attributes"]["vehicle_model"] + "-" +userData["data"]["attributes"]["vehicle_year"]
@@ -27,27 +27,22 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
           > Your Vehicle's Fuel Economy <br />
             the higher mpg, the more efficient your vehicle
           </button >
-          
           <MpgFuelEconomy efficiencyMPG={efficiencyMPG} />
-          
           <hr></hr>
         </li>
         <li className="category-list">
           <button 
             onClick={() => {
-              setUserEmission(emissionData['carbon_g']);
-              // setUserEmiDistanceVal(emissionData['distance_value'])
-
-            // getUserEmission(userInput['user_name'])
+              setEmissionData(emissionData);
             }}
             > Your Vehicle's CO2 Emission 
           </button>
-          <EmissionInsight efficiencyMPG={efficiencyMPG} userEmission={userEmission}/>
+          <EmissionInsight efficiencyMPG={efficiencyMPG} emissionData={emissionData} />
           
           <hr></hr>
         </li>
         <li className="category-list">
-          <button  className="dark"
+          <button 
             onClick={() => {
               setEmissionToSocial(emissionData['carbon_g']);
             }}

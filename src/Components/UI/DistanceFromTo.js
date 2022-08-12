@@ -9,8 +9,8 @@ const center = {lat: -74, lng: 40.7};
 // const libraries = ['places'];
 
 const DistanceFromTo = ({userData, setUserData }) => {
-  console.log('inside of distanceFromTo');
-  console.log(userData);
+  // console.log('inside of distanceFromTo');
+  // console.log(userData);
   const [ libraries ] = useState(['places']); //avoid warning
   const [freq, setFreq] = useState(1);
   const [routeCalResponse, setRouteCalResponse] = useState(null);

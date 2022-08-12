@@ -20,7 +20,6 @@ function App() {
   const [userDb, setUserDb] = useState([]);
   const [sortingResult, setSortingResult] = useState([]);
 
-
   // const [USHistoricalEmission, setUSHistoricalEmission] = useState([]);
   //API call to backend/db and return back to frontend to display estimation result
   const getEstimateData = (data) => {
@@ -43,13 +42,12 @@ function App() {
   //currently not getting result due to some model name is missing in db
   const getFuelEfficiencyInsight = (modelYear) => {
     console.log("get getFuelEfficiencyInsight api call");
-    // console.log(`before model name ${JSON.stringify(modelYear)}`);
+    console.log(`before model name ${JSON.stringify(modelYear)}`);
     axios
       .put(`${heroku_backend}/user/models_efficiency/${modelYear}`)
       .then((response) => {
         console.log(`after model name ${JSON.stringify(response.data)}`);
         setEfficiencyMPG(response.data);
-        
       })
       .catch((error) => {
         console.log("error ", error);
@@ -95,10 +93,10 @@ function App() {
   
   const getFilteredData = (selectOption, emissionData) => {
     console.log('inside of samke make fuel api call');
-    if (selectOption === 'make_fuel_economy'){
+    if (selectOption === 'same_make_diff_model'){
       console.log(`emissionData['vehicle_make'] ${emissionData['vehicle_make']}`)
       axios.get(`${heroku_backend}/${selectOption}/${emissionData['vehicle_make']}`)
-    }else if ( selectOption === 'model_fuel_economy'){
+    }else if ( selectOption === 'same_model_diff_make_model'){
       axios.get(`${heroku_backend}/${selectOption}/${emissionData['vehicle_model']}`)
     }else {
       axios.get(`${heroku_backend}/${selectOption}`)
