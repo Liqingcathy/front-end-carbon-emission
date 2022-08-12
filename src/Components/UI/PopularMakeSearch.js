@@ -1,19 +1,20 @@
 import React from "react";
 
-const PopularSearch = ({sortingResult}) => {
-  console.log('inside of popular search');
+const PopularMakeSearch = ({sortingResult}) => {
+  console.log('inside of popular make search');
   console.log(sortingResult);
-  // const top_5_models = sortingResult;
-  // console.log(top_5_models);
+
   const displayPS = () => {
     return Object.values(sortingResult).map(( value) => {
       return (
         <div className="popular-search-div">
           <ul className="popular-search-ul">
             <li className="popular-search-li">
-              
-              {value['key']}
-            
+              {value['_source']['brand_name']}
+              {value['_source']['model_name']}
+              {value['_source']['distance_value']}mile
+              {value['_source']['emission']}g
+              {value['_source']['emission_per_mile']}g
             </li>
           </ul>
         </div>
@@ -22,7 +23,6 @@ const PopularSearch = ({sortingResult}) => {
     )
   }
 
-
   return (
     <div className="popular-search">
     {displayPS()}
@@ -30,4 +30,4 @@ const PopularSearch = ({sortingResult}) => {
   )
 }
 
-export default PopularSearch;
+export default PopularMakeSearch;

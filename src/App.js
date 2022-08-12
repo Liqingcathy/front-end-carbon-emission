@@ -102,18 +102,38 @@ function App() {
             console.log("error ", error);
           });
       };
-
-  const getFilteredData = (selectOption) => {
+  
+  const getFilteredData = (selectOption, emissionData) => {
     console.log('inside of samke make fuel api call');
-    axios.get(`${heroku_backend}/${selectOption}`)
+    if (selectOption === 'make_fuel_economy'){
+      console.log(`emissionData['vehicle_make'] ${emissionData['vehicle_make']}`)
+      axios.get(`${heroku_backend}/${selectOption}/${emissionData['vehicle_make']}`)
+    }else if ( selectOption === 'model_fuel_economy'){
+      axios.get(`${heroku_backend}/${selectOption}/${emissionData['vehicle_model']}`)
+    }else {
+      axios.get(`${heroku_backend}/${selectOption}`)
+      .then((response) => {
+        console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
+        setSortingResult(response.data);
+      })
+    
+      .catch((error) => {console.log('error', error)})
+    }
+  };
+
+  const dataUpToUserEmission = (userName) => {
+    console.log('inside of get user emission and similar data from db');
+    axios.get(`${heroku_backend}/${userName}`)
       .then((response) => {
         console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
         setSortingResult(response.data);
       })
       .catch((error) => {console.log('error', error)})
-  };
 
-
+  }
+  // const getFromToDistance= () => {
+  //   console.log('inside of getFromToDistance')
+  // }
   return (
     <div className='App'>
       <Router>
@@ -138,6 +158,7 @@ function App() {
                 hasEmissionValue={hasEmissionValue}
                 getFilteredData={getFilteredData}
                 sortingResult={sortingResult}
+                // getFromToDistance={getFromToDistance}
                 // getUSHistoricalEmission={getUSHistoricalEmission}
                 // USHistoricalEmission={USHistoricalEmission}
           

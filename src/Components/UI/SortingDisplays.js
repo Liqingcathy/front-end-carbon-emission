@@ -1,5 +1,5 @@
 import React from "react";
-import PopularSearch from "./PopularSearch";
+import PopularSearch from "./PopularModelSearch";
 
 const SortingDisplays = ({sortingResult}) => {
   console.log('inside of sorting displays');

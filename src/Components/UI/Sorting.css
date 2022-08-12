@@ -8,14 +8,16 @@
 
 .sorting-display-container{
     background-color: #F0F4F1;
+    width: 90%;
+    
 }
 
-
 .popular-search-ul{
-    display: flex;
-    flex-direction: row;
+    border: 1px solid red;
+    width: 400px;
 }
 
 .popular-search-li{
     height: 100px;
+    
 }

@@ -3,11 +3,14 @@ import "./Categories.css";
 import MpgFuelEconomy from "../Insight/MpgFuelEconomy";
 import EmissionInsight from "../Insight/EmissionInsight";
 import SocialImpact from "../Insight/SocialImpact";
-const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, getUserEmission, userInput, userDb, getUSHistoricalEmission}) => {
-  console.log("inside of categories");
+const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, userInput}) => {
+  console.log("inside of categories component");
   // console.log(`userInput ${JSON.stringify(userInput)}`)
   console.log(`userInput-user_name ${JSON.stringify(userInput['user_name'])}`)
-  console.log(emissionData['carbon_g']);
+  console.log(`emissionData ${JSON.stringify(emissionData)}`);
+  console.log(`userData ${JSON.stringify(userData)}`);
+  console.log(`userInput ${JSON.stringify(userInput)}`);
+
   const [userEmission, setUserEmission] = useState(0);
   // const [userEmiDistanceVal, setUserEmiDistanceVal] = useState(0);
   const [emissionToSocial, setEmissionToSocial] = useState(0);
