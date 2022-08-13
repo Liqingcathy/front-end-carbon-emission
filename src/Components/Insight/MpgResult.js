@@ -2,9 +2,9 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 // import './insightsSection.css';
 
 const MpgResult = ({ name, year, make, trany, combined, city, highway, fuelCost, annualFuelConsumption,  gallonPerMile }) => {
-  console.log("inside of Mpg result");
-  console.log(`combined ${combined}`);
-  console.log(`city ${city}`);
+  // console.log("inside of Mpg result");
+  // console.log(`combined ${combined}`);
+  // console.log(`city ${city}`);
   const data = [
     {'name': 'mpg',  'mpg': combined}, 
     {'name': 'city', 'mpg': city}, 

@@ -19,6 +19,7 @@ function App() {
   const [efficiencyMPG, setEfficiencyMPG] = useState([]);
   const [userDb, setUserDb] = useState([]);
   const [sortingResult, setSortingResult] = useState([]);
+  const [selectedFilterVal, setSelectedFilterVal] = useState("");
 
   // const [USHistoricalEmission, setUSHistoricalEmission] = useState([]);
   //API call to backend/db and return back to frontend to display estimation result
@@ -91,19 +92,35 @@ function App() {
           });
       };
   
-  const getFilteredData = (selectOption, emissionData) => {
+  const getFilteredData = (selectOption, efficiencyMPG) => {
     console.log('inside of samke make fuel api call');
+    // console.log(efficiencyMPG);
+    const selected = selectOption;
+    console.log(selected);
+    setSelectedFilterVal(selected);
     if (selectOption === 'same_make_diff_model'){
-      console.log(`emissionData['vehicle_make'] ${emissionData['vehicle_make']}`)
-      axios.get(`${heroku_backend}/${selectOption}/${emissionData['vehicle_make']}`)
+      const param = efficiencyMPG[0]['_source']['make'] + "-" + efficiencyMPG[0]['_source']['model'] + "-" + efficiencyMPG[0]['_source']['combMPGSF'];
+        axios.get(`${heroku_backend}/${selectOption}/${param}`)
+        .then((response) => {
+          console.log(`same make diff model response from db ${JSON.stringify(response.data)}`)
+          setSortingResult(response.data);
+          
+      }).catch((error) => {console.log('error', error)})
     }else if ( selectOption === 'same_model_diff_make_model'){
-      axios.get(`${heroku_backend}/${selectOption}/${emissionData['vehicle_model']}`)
+      const param = efficiencyMPG[0]['_source']['make'] + "-" + efficiencyMPG[0]['_source']['model'] + "-" + efficiencyMPG[0]['_source']['combMPGSF'];
+        axios.get(`${heroku_backend}/${selectOption}/${param}`)
+        .then((response) => {
+          console.log(`same mpg diff make db ${JSON.stringify(response.data)}`)
+          setSortingResult(response.data);
+          
+      }).catch((error) => {console.log('error', error)})
     }else {
-      axios.get(`${heroku_backend}/${selectOption}`)
-      .then((response) => {
-        console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
-        setSortingResult(response.data);
-      })
+        axios.get(`${heroku_backend}/${selectOption}`)
+        .then((response) => {
+          console.log(`popular search ${JSON.stringify(response.data)}`)
+          setSortingResult(response.data);
+       
+        })
       .catch((error) => {console.log('error', error)})
     }
   };
@@ -142,6 +159,8 @@ function App() {
                 userDb={userDb}
                 getFilteredData={getFilteredData}
                 sortingResult={sortingResult}
+                setEfficiencyMPG={setEfficiencyMPG}
+                selectedFilterVal={selectedFilterVal}
           
                 
               />

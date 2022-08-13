@@ -1,18 +1,31 @@
 import React from "react";
-import PopularModelSearch from "../Filter/PopularModelSearch";
 import PopularMakeSearch  from "../Filter/PopularMakeSearch";
-import SameMakeDiffModel from "./SameMakeDiffModel";
+import PopularModelSearch from "../Filter/PopularModelSearch";
+import SameMakeDiffModel from "../Filter/SameMakeDiffModel";
+const SortingDisplays = ({sortingResult, selectedFilterVal}) => {
+  console.log('inside of sorting displays');
+  console.log('soring result');
+  console.log(sortingResult);
+  console.log(selectedFilterVal);
 
-const SortingDisplays = ({sortingResult, emissionData}) => {
-  // console.log('inside of sorting displays');
-  // console.log(sortingResult);
   return (
-    <div className="sorting-display-container"> 
-      <PopularModelSearch sortingResult={sortingResult}/>
-      <PopularMakeSearch sortingResult={sortingResult}/>
-      <SameMakeDiffModel sortingResult={sortingResult}  emissionData={emissionData}/>
+    <div>
+      <SameMakeDiffModel sortingResult={sortingResult}/>
+      <PopularMakeSearch sortingResult={sortingResult} />
+      <PopularModelSearch sortingResult={sortingResult} />
     </div>
   )
+//   if (selectedFilterVal === "same_make_diff_model") {
+//     return <SameMakeDiffModel sortingResult={sortingResult}/>
+//   }
+//   else if (selectedFilterVal === "same_model_diff_make_model") {
+//     return 
+//   }else if (selectedFilterVal === "popular_vehicle_make_search"){
+//     return <PopularMakeSearch sortingResult={sortingResult} />
+  
+//  }else if (selectedFilterVal === "popular_vehicle_model_search") {
+//    return <PopularModelSearch sortingResult={sortingResult}/>
+//  }
 }
 
 export default SortingDisplays;

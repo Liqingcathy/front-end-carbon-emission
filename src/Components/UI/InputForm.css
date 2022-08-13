@@ -83,3 +83,8 @@ label, input {
     display: flex;
     flex-direction: row;
   }
+
+  .google-map-load {
+    z-index: 9999;
+    position: relative;
+  }

@@ -11,6 +11,7 @@ const PopularModelSearch = ({sortingResult}) => {
         <div className="popular-search-div">
           <ul className="popular-search-ul">
             <li className="popular-search-li">
+              {value['id']}
               {value['_source']['brand_name']}
               {value['_source']['model_name']}
               {value['_source']['distance_value']}mile

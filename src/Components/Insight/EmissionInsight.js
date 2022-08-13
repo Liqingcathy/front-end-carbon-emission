@@ -40,10 +40,3 @@ const EmissionInsight = ({efficiencyMPG, emissionData}) => {
   };
 //};
 export default EmissionInsight;
-
- // <div>
-          //   <p>Annual Fuel Cost {value['_source']["annualFuelCostSF($)"]}</p>
-          //   <p>Annual Petroleum Consumption {parseFloat(value['_source']["annualOilConsumption(42gallon)"] * 42).toFixed(2)} gallons</p>
-          //   <p>8887 grams co2/gallon from a gallon of gasoline</p>
-          //   <p>Annual Emission {annualEmission} gram - {parseFloat(annualEmission/1000000).toFixed(2)} mt</p>
-          // </div>
