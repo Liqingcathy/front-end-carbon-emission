@@ -1,4 +1,5 @@
 import React from "react";
+import "./DisplayItems.css";
 
 const PopularMakeSearch = ({sortingResult}) => {
   // console.log('inside of popular make search');

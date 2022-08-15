@@ -5,8 +5,8 @@ import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, L
 
 
 const MpgFuelEconomy = ({ efficiencyMPG }) => {
-  // console.log("inside of mpg fuel economy: print efficiencyMPG");
-  // console.log(efficiencyMPG);
+  console.log("inside of mpg fuel economy: print efficiencyMPG");
+  console.log(efficiencyMPG);
   const displayFuelEconomy = (res) => {
     return Object.entries(efficiencyMPG).map(([key, value]) => {
       return (

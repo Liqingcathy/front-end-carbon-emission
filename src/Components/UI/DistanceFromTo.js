@@ -111,9 +111,9 @@ const DistanceFromTo = ({ userData, setUserData }) => {
     list.splice(index, 1);
     setInputFormList(list);
 
-    console.log('totalDistance-pathMile', totalDistance, pathMile);
-    console.log('totalDistance-pathMile', totalDistance, pathMile);
-    console.log('after subtraction' , totalDistance - pathMile);
+    // console.log('totalDistance-pathMile', totalDistance, pathMile);
+    // console.log('totalDistance-pathMile', totalDistance, pathMile);
+    // console.log('after subtraction' , totalDistance - pathMile);
     setTotalDistance(parseFloat(totalDistance - pathMile).toFixed(2));
   };
 
