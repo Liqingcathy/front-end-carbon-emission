@@ -26,13 +26,13 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
     {'name': 'electricity', 'val': electricityConsumed }, 
     {'name': 'home', 'val': homeEnergy }, 
     {'name': 'LED', 'val':switchToLED}, 
-    {'name': 'Tree', 'val': totalTreeSeedlingGrowTenYears}, 
+    // {'name': 'Tree', 'val': totalTreeSeedlingGrowTenYears}, 
     {'name': 'Forest', 'val':acreForest_16tenniscourts},
-    {'name': 'Coar', 'val': coarBurnedPound},
+    // {'name': 'Coar', 'val': coarBurnedPound},
     {'name': 'Waste', 'val': wasteRecycled},
     {'name': 'GarbageTruck', 'val': garbageTrucksWasteNumber},
     {'name': 'TrashBag', 'val': trashBagWasteNumber},
-    {'name': 'Phone Charge', 'val':numberOfPhoneCharged}
+    // {'name': 'Phone Charge', 'val':numberOfPhoneCharged}
 
  ];
 

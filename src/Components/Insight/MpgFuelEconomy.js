@@ -37,9 +37,10 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
   };
 
   const data = [
-    {'name': 'standard MPG',  'mpg': 25}, 
-    {'name': 'standard MPG city', 'mpg': 30}, 
-    {'name': 'MPG highway','mpg': 45}, 
+    {'name': '2023',  'mpg': 54}, 
+    {'name': '2024', 'mpg': 56}, 
+    {'name': '2025','mpg': 60}, 
+    {'name': '20236','mpg': 67}
     ];
   
   if (efficiencyMPG.length === 0 || efficiencyMPG === null) {

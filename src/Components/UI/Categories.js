@@ -25,7 +25,8 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
               setEmissionData(emissionData);
               setUserEmission(emissionData);
             }}
-            > Your Vehicle's CO2 Emission 
+            > Your Vehicle's CO2 Emission <br />
+            2023–2026 carbon dioxide (CO2) and fuel economy standards
           </button>
           <EmissionInsight userEmission={userEmission} emissionData={emissionData} />
           
@@ -40,7 +41,7 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
                 );
             }}
           > Your Vehicle's Fuel Economy <br />
-            Compared to below standard MPG data <br />
+            Compared to below standard CO2 equiv. mpg data <br />
             The Higher the data, The More Efficient the Vehicle
           </button >
           <MpgFuelEconomy efficiencyMPG={efficiencyMPG} />

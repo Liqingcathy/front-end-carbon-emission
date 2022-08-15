@@ -34,6 +34,8 @@ const DistanceFromTo = ({ userData, setUserData }) => {
   const destinationRef = useRef();
 
   console.log(inputFormList);
+  console.log(totalDistance);
+
   //load google map
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
@@ -100,14 +102,19 @@ const DistanceFromTo = ({ userData, setUserData }) => {
 
   const handleRemoveInputBox = (index) => {
     const list = [...inputFormList];
+
+    //try to substract current distance value from total when remove
+    const pathMile = list[index].mile;
+    console.log('pathMile')
+    console.log(pathMile);
+
     list.splice(index, 1);
     setInputFormList(list);
 
-    //try to substract current distance value from total when remove
-    const pathMile = list[index].distance;
-    console.log(pathMile);
-    setTotalDistance(totalDistance - pathMile);
-    
+    console.log('totalDistance-pathMile', totalDistance, pathMile);
+    console.log('totalDistance-pathMile', totalDistance, pathMile);
+    console.log('after subtraction' , totalDistance - pathMile);
+    setTotalDistance(parseFloat(totalDistance - pathMile).toFixed(2));
   };
 
   //update input form values after users' input value
@@ -119,23 +126,26 @@ const DistanceFromTo = ({ userData, setUserData }) => {
   };
 
   //select frequency changes
-  const handleChange = (event) => {
+  const handleChange = (event, index) => {
     console.log("Label 👉️", event.target.selectedOptions[0].label);
     console.log(event.target.value);
     setSelected(event.target.value);
 
     const tempFrep = parseInt(event.target["value"]);
     setFreq(tempFrep);
+
     const tempTotalDistance =
       totalDistance + extractMileFromStr(distance) * tempFrep;
     
-    //try to update inputform's distance value to current total distance
-    //setInputFormList({...inputFormList, distance: tempTotalDistance});
-      
+    const newList = [...inputFormList]
+    newList[index] = {...newList[index], mile: extractMileFromStr(distance) * tempFrep}
+      //try to update inputform's distance value to current total distance
+    // setInputFormList(inputFormList.map(item => (
+    //   {...item,  mile : tempTotalDistance
+    // })));
+    setInputFormList(newList);
     setTotalDistance(tempTotalDistance);
-
     //setInputFormList({...inputFormList, distance: tempTotalDistance})
-
     //want to update user's input field: total_path_value
     setUserData({ ...userData, distance_value: tempTotalDistance });
     setSelected("");
@@ -176,7 +186,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
                 className='select-bar'
                 name='mile'
                 value={selected}
-                onChange={handleChange} >
+                onChange={(event) => handleChange(event, index)} >
                 {frequencyWeek.map((option) => (
                   <option
                     disabled={option.disabled}
@@ -187,7 +197,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
                   </option>
                 ))}
               </select>
-              <span>distance {distance}</span>
+              <span>distance {inputFormList[index].mile}</span>
             </div>
             {/* <button className="google-map-api-btn" onClick={clearRoutes} >clear</button> */}
           </ul>

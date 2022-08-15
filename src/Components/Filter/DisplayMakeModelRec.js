@@ -2,6 +2,7 @@ import React from "react";
 import SameMakeDiffModel from "./SameMakeDiffModel"
 import SimilarModelDiffMake from "./SimilarModelDiffMake";
 
+
 const DisplayMakeModelRec = ({sortingResult, selectedFilterVal}) => {
   // console.log('inside of filter displays');
   // console.log('soring result');

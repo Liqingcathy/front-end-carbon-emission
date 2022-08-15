@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import car from '../../Assets/car.png'
 import ReactPaginate from 'react-paginate';
+import "./SoringList.css";
+
 
 const SimilarModelDiffMake = ({sortingResult}) => {
   // console.log('inside of SameMakeDiffModel');
@@ -18,18 +20,18 @@ const SimilarModelDiffMake = ({sortingResult}) => {
       <div className="car-result-top">
           {Object.values(sortingResult).map((value) => {
             return <div className="car-result-container" key={value['id']}>
-               <ul className="car-result-ul"> 
-                 <li className="car-result-li">
+               {/* <ul className="car-result-ul"> 
+                 <li className="car-result-li"> */}
                     <img alt='car-icon' src={car} />
-                    <div className="car-text-container">
+                    {/* <div className="car-text-container"> */}
                       <span>{value['_source']['make']}</span>
                       <span>{value['_source']['model']}</span>
                       <span>{value['_source']['combMPGSF']}</span>
                       <span>{value['_source']['year']}</span>
                       <span>{parseFloat(value['_source']['annualOilConsumption(42gallon)']).toFixed(2)}</span>
-                   </div>
-                  </li>
-               </ul> 
+                   {/* </div> */}
+                  {/* </li>
+               </ul>  */}
             </div>
           }
           )}
