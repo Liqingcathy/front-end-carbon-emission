@@ -41,7 +41,6 @@ const FilterPopularSearch = ({getFilteredData, efficiencyMPG}) => {
         defaultOptions
         isMulti
         // isSearchable 
-        placeholder="popular"
         onChange={handleChange} />
       {/* <PopularSearch sameMakeFuelEconomy={sameMakeFuelEconomy}/> */}
     

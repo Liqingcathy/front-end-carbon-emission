@@ -1,0 +1,26 @@
+.more-insights-container {
+    margin-top: 5%;
+    
+
+}
+
+.more-insights-ul {
+    margin-top: 40px;
+   
+
+}
+
+#dummy-square {
+    background-color: #597962;
+    width: 300px;
+}
+
+.more-insights-ul button {
+    background-color: #913339;
+    color: white;
+    height: 120px;
+    width: 160px;
+    margin: 2px;
+    border: none;
+    
+}

@@ -1,12 +1,8 @@
-.result-container {
-    margin: 40px, auto;
-    padding: 30px;
-    height: 400px;
-    width: 600px;
-    /* background-color: #B1C3B5; */
+.estimate-result-container {
+    border: 1px solid red;
 }
 
-.emission-data{
-    padding: 20px;
-    line-height: 2em;
+
+.co2-icon {
+    list-style: none;
 }

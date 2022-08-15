@@ -10,32 +10,42 @@
 .inputform {
     margin: 60px auto;
     /* background-color: #F0F4F1; */
-    /* border: 2px solid brown; */
+    border: 2px solid brown;
+    height: 1000px;
 }
 
 .inputform .header {
   padding: 20px;
   /* margin: 20px; */
 }
+
 .form-container {
     /* border: 1px solid blue; */
+    height: 400px;
     width: 70%;
+    margin-top: 20px;
 }
+.body {
+  /* background-color: #A7ACA7;  
+  border: 1px solid blue; */
+}
+
 
 label, input {
     padding: 10px;
-    margin: auto;
+    margin-top: 30px;
     width: 250px;
     height: 40px;
     margin: 20px auto;
     border: 1px solid #A7ACA7;
     border-radius: 0.3em;
+    
 }
 
 /* .progressbar {
     height: 10px;
     background-color: #99494D;
-    width: 60%;
+    width: 90%;
     margin-bottom: 20px;
   }
   
@@ -45,6 +55,11 @@ label, input {
     height: 10px;
     background-color: #A7ACA7;
   } */
+
+.footer {
+  /* border: 1px solid blue; */
+  
+}
 
 .form-container .footer button{
     border-radius: 0.4em;
@@ -88,9 +103,18 @@ label, input {
     /* border: 1px solid purple; */
 }
 
-
+.select-and-distance-val {
+  /* border: 1px solid green; */
+  width: 100%;
+  
+}
 .select-bar {
-  width: 100px;
+  margin-left: -5px;
+  margin-right: 50px;
+  width: 80%;
+  height: 30px;
+  border: 1px solid #A7ACA7;
+  border-radius: 0.3em;
 }
 
 .google-map-api-btn {
@@ -102,24 +126,36 @@ label, input {
   width: 100px;
 }
 
-/* .remove-input-box-btn, .add-input-box-btn {
+.remove-input-box-btn, .add-input-box-btn {
   border: none;
-  background-color: #99494D;
-  color: white;
+  /* background-color: #99494D; */
+  /* color: white; */
   width: 115px;
   padding: 20px;
-} */
+}
 
 .distance-add-path-btn-wrap{
   /* border: 1px solid orange; */
   /* width: 80%; */
+  /* border: 1px solid red; */
+  /* width: 100%; */
+  margin: 0;
   text-align: left;
-  margin: 5;
 }
 
-/* .one-path-distance {
-  margin: 0;
-} */
+.add-remove-btn-ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.add-input-box-btn{
+  width: 300px;
+  /* background-color: #A7ACA7; */
+  margin-left: -40px;
+ 
+}
+
+
 
 .current-total-distance {
   margin-top: 10px;

@@ -1,0 +1,32 @@
+.missions-container {
+    margin-top: 5%;
+    /* border: 1px solid blue; */
+    height: 100vh;
+    width: 90%;
+    
+}
+
+
+.missions-ul1 li {
+    background-color: #d4e0d7;
+    width: 600px;
+    height: 300px;
+    margin-left: -40px;
+    border: 1px solid #abb6ae;
+
+}
+
+.missions-ul2 .icons{
+    background-color: #d4e0d7;
+    height: 300px;
+    width: 700px;
+    border: 1px solid #abb6ae;
+    margin-left: -40px;
+} 
+
+.missions-ul2 .missions-text{
+    background-color: #d4e0d7;
+    height: 300px;
+    width: 900px;
+    border: 1px solid #abb6ae;
+} 

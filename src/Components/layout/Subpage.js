@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom'; //yarn add react-router-dom
 import './Subpage.css';
-
 const Header = () => {
 
   return (
@@ -16,7 +15,7 @@ const Header = () => {
               About
             </NavLink> */}
           </li>
-          
+       
         <li><h1 className="web-goals">Estimate - Search - Build Carbon Habit</h1></li>
       </ul>
       <hr></hr>

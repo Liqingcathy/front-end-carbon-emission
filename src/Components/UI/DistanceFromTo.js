@@ -9,13 +9,14 @@ const center = {lat: -74, lng: 40.7};
 // const libraries = ['places'];
 
 const DistanceFromTo = ({userData, setUserData }) => {
-  // console.log('inside of distanceFromTo');
+  console.log('inside of distanceFromTo');
   // console.log(userData);
   const [ libraries ] = useState(['places']); //avoid warning
   const [freq, setFreq] = useState(1);
   const [routeCalResponse, setRouteCalResponse] = useState(null);
   const [distance, setDistance] = useState('');
   const [totalDistance, setTotalDistance] = useState(0);
+  const [selected, setSelected] = useState('');
   
   //add/remove input form
   const [inputFormList, setInputFormList] = useState([{'path': ''}]);
@@ -23,7 +24,7 @@ const DistanceFromTo = ({userData, setUserData }) => {
   const originRef = useRef();
   const destinationRef = useRef();
 
-
+  //load google map
   const {isLoaded, loadError} = useLoadScript ({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
     libraries: libraries,
@@ -32,7 +33,9 @@ const DistanceFromTo = ({userData, setUserData }) => {
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Loading Maps";
 
+  //path frequency select options
   const frequencyWeek = [
+    {value: '', label:'choose frequency/week for this trip & display distance miles', disabled: true},
     {value: '1', label: '1/week'},
     {value: '2', label: '2/week'},
     {value: '3', label: '3/week'},
@@ -41,7 +44,8 @@ const DistanceFromTo = ({userData, setUserData }) => {
     {value: '6', label: '6/week'},
     {value: '7', label: '7/week'}
   ]
-  
+ 
+ //calculate from-to distance in mile and set distance to the result 
  async function calculateDistance() {
     if (originRef.current.value === '' || destinationRef.current.value === ''){
       return
@@ -56,28 +60,25 @@ const DistanceFromTo = ({userData, setUserData }) => {
     })
 
     setRouteCalResponse(results);
-    // setDistance(results.routes[0].legs[0].distance.text); //choose first option route
-    const tempDistance = results.routes[0].legs[0].distance.text;
+    const tempDistance = results.routes[0].legs[0].distance.text; //"xx mile" in string
     setDistance(tempDistance);
-    // debugger;
-    // console.log(`totalDistance before ${totalDistance}`);
-    // setTotalDistance(totalDistance + (extractMileFromStr(tempDistance)*freq));
-    // console.log(`totalDistance after ${totalDistance}`)
   }
 
+  //get float number from a string result
   const extractMileFromStr = (str) => {
     const str_list = str.split(' ');
     return parseFloat(str_list[0])
   }
 
-  const clearRoutes = () => {
-    setRouteCalResponse('');
-    setDistance('');
-    originRef.current.value = '';
-    destinationRef.current.value = '';
+  // const clearRoutes = () => {
+  //   setRouteCalResponse('');
+  //   setDistance('');
+  //   originRef.current.value = '';
+  //   destinationRef.current.value = '';
 
-  }
+  // }
 
+  //add from-to path box for more distance
   const handleAddInputBox= () => {
     setInputFormList([...inputFormList, {'path': ''}]);
     setDistance('');
@@ -87,12 +88,14 @@ const DistanceFromTo = ({userData, setUserData }) => {
     const list = [...inputFormList];
     list.splice(index, 1);
     setInputFormList(list);
+
+    //try to substract current distance value from total when remove
     const pathVal = list[index].path
     console.log(pathVal);
     setTotalDistance(totalDistance - pathVal);
   }
 
-  //update input form values after input value
+  //update input form values after users' input value
   const handleInputFormChange = (event, index) => {
     const {name, value} = event.target; //destruction
     const list = [...inputFormList];
@@ -101,28 +104,20 @@ const DistanceFromTo = ({userData, setUserData }) => {
   
   };
 
-  const handleChange = (selectedOption) => {
-    console.log("handleChange" , selectedOption);
-    // setSortings(selectedOption);
-    console.log(selectedOption['value']);
-    const tempFrep = parseInt(selectedOption['value']);
-    setFreq(tempFrep);
+  //select frequency changes
+  const handleChange = event => {
+    console.log('Label 👉️', event.target.selectedOptions[0].label);
+    console.log(event.target.value);
+    setSelected(event.target.value);
 
+    const tempFrep = parseInt(event.target['value']);
+    setFreq(tempFrep);
     const tempTotalDistance = totalDistance + (extractMileFromStr(distance)*tempFrep);
     setTotalDistance(tempTotalDistance);
+    
+
     //want to update user's input field: total_path_value
     setUserData({...userData,  distance_value: tempTotalDistance});
-  };
-
-  // console.log(`emission ${emission}`);
-  const loadOptions = (searchValue, callback) => {
-    setTimeout(() => {
-      const filteredOptions = frequencyWeek.filter(option => option.label.toLowerCase()
-      .includes(searchValue.toLowerCase())
-      );
-      // console.log(`loadOptions ${JSON.stringify(searchValue)}, ${JSON.stringify(filteredOptions)}`)
-      callback(filteredOptions)
-    }, 2000);
   };
 
 
@@ -141,23 +136,31 @@ const DistanceFromTo = ({userData, setUserData }) => {
            <input className="from-to-intput" type='text'  placeholder="to" ref={destinationRef} />
          </Autocomplete>  
          <button className="google-map-api-btn" onClick={calculateDistance} >calculate</button> 
-         <AsyncSelect className="select-bar"
-          loadOptions={loadOptions}  
-          defaultOptions 
-          placeholder='select frequency' 
-          onChange={handleChange} />
-         
+       <div className="select-and-distance-val">
+        <select className="select-bar" 
+            value={selected} onChange={handleChange}>
+            {frequencyWeek.map(option => (
+              <option
+                disabled={option.disabled}
+                key={option.value}
+                value={option.value}
+              >
+                {option.label}
+              </option>
+          ))}
+        </select>
+        <span>distance {distance}</span>
+        </div>  
         {/* <button className="google-map-api-btn" onClick={clearRoutes} >clear</button> */}
         </ul>
         <div className="distance-add-path-btn-wrap">
-         <ul>
-         Distance {distance}
-      
+         <ul className="add-remove-btn-ul">
         {/* show add form box button only at the end */}
         {inputFormList.length -1 === index && inputFormList.length >= 1 
-          && (<button className="add-input-box-btn" onClick={handleAddInputBox} >+ add path</button>)}
-        {inputFormList.length > 1 && (<button className="remove-input-box-btn" onClick={ () => 
-          handleRemoveInputBox(index)} ><span>remove path</span></button>)}
+          && (<button className="add-input-box-btn" onClick={handleAddInputBox} >+ Add Distance for Other Path</button>)}
+        {inputFormList.length > 1 && (<button className="remove-input-box-btn" 
+          onClick={ () => 
+            handleRemoveInputBox(index)} ><span>-remove path</span></button>)}
        {/* </ul>  */}
        </ul>
        </div>

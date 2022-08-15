@@ -12,7 +12,6 @@ const FilterEmitRecMakeModels = ({getFilteredData, efficiencyMPG, emissionData})
   const options = [
     {value: 'same_make_diff_model', label: 'similar efficient models from your make based on your estimated emission'},
     {value: 'same_model_diff_make_model', label: 'similar efficient vehicle makes based on your emission' },
-    {value: 'vehicle by tailpipe_emission', label : 'tailpipe emission'}
   ];
 
 

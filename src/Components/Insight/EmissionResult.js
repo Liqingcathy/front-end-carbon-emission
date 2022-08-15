@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import "./insightsSection.css";
 
 const EmissionResult = ({ fuelCost, oilConsume, emissionData, data}) => {
-  console.log('inside of emission result');
+  // console.log('inside of emission result');
   
 
   data = [

@@ -6,13 +6,13 @@ const SoringList = ({getFilteredData, efficiencyMPG, emissionData}) => {
 
   return (
     <div className='sorting-container'>
+     
       <ul className='sorting-items-ul'>
         <li className='sorting-items-li'>
           {/* <button >filter </button> */}
-          <p> 4000+ Vehicle Make, Models</p>
+          <p> 60+ Vehicle Make, 1100+ Vehicle Models Search</p>
           <FilterPopularSearch getFilteredData={getFilteredData} efficiencyMPG={efficiencyMPG}/>
           <FilterEmitRecMakeModels getFilteredData={getFilteredData} efficiencyMPG={efficiencyMPG} emissionData={emissionData}/>
-          <FilterPopularSearch getFilteredData={getFilteredData}/>
         </li>
       </ul>
     </div>

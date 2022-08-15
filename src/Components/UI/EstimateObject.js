@@ -1,4 +1,6 @@
 import React from "react";
+import carbonicon from '../../Assets/carbon-icon.png'
+
 // import EstimateValue from "../UI/EstimateValue"
 const EstimateObject = ({emissionData}) => {
   
@@ -6,11 +8,19 @@ const EstimateObject = ({emissionData}) => {
   // console.log(emissionData);
 
   return (
-    <div>
-      <div className="result-container">
+    <div className="estimate-result-container">
+      <hr></hr>
+      <li className="co2-icon">
+        <img alt='icon' src={carbonicon} /> 
+        <img alt='icon' src={carbonicon} /> 
+        <img alt='icon'src={carbonicon} />
+        <img alt='icon'src={carbonicon} />
+      </li>
+      <div className="estimate-result">
         {emissionData[["vehicle_model"]]} {emissionData[["carbon_g"]]}
       </div>
       
+      <hr></hr>
     </div>
   )
 };

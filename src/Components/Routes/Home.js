@@ -7,6 +7,7 @@ import Footer from "../layout/Footer";
 import SoringList from "../Filter/SortingList";
 import DisplayPopular from "../Filter/DisplayPopular";
 import DisplayMakeModelRec from "../Filter/DisplayMakeModelRec";
+import FilterButtons from "../Filter/FilterButtons";
 const Home = ({userData, getEstimateData, emissionData, setEmissionData, getSearchResult, getFuelEfficiencyInsight, efficiencyMPG, userInput, getFilteredData, sortingResult, selectedFilterVal}) => {
  
   return (
@@ -15,10 +16,11 @@ const Home = ({userData, getEstimateData, emissionData, setEmissionData, getSear
       {/* <Searchbar handleSearchSubmission={getSearchResult}/> */}
       <InputForm  handleFormSubmission={getEstimateData} />
       <EstimateObject  efficiencyMPG={efficiencyMPG} emissionData={emissionData} getFilteredData={getFilteredData} sortingResult={sortingResult} />
-      <SoringList getFilteredData={getFilteredData} efficiencyMPG={efficiencyMPG} emissionData={emissionData}/>
+      <Categories  userData={userData} emissionData={emissionData} setEmissionData={setEmissionData} efficiencyMPG={efficiencyMPG} getFuelEfficiencyInsight={getFuelEfficiencyInsight} userInput={userInput} />
+      <FilterButtons getFilteredData={getFilteredData} efficiencyMPG={efficiencyMPG} emissionData={emissionData} />
+      {/* <SoringList getFilteredData={getFilteredData} efficiencyMPG={efficiencyMPG} emissionData={emissionData}/> */}
       <DisplayPopular sortingResult={sortingResult} efficiencyMPG={efficiencyMPG} selectedFilterVal={selectedFilterVal} />
       <DisplayMakeModelRec sortingResult={sortingResult} efficiencyMPG={efficiencyMPG} selectedFilterVal={selectedFilterVal} />
-      <Categories  userData={userData} emissionData={emissionData} setEmissionData={setEmissionData} efficiencyMPG={efficiencyMPG} getFuelEfficiencyInsight={getFuelEfficiencyInsight} userInput={userInput} />
       
       <Footer />
     </div>

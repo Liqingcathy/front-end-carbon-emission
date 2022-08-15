@@ -12,11 +12,26 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
   // console.log(`userData ${JSON.stringify(userData)}`);
   // console.log(`userInput ${JSON.stringify(userInput)}`);
 
-  // const [userEmission, setUserEmission] = useState(0);
+  const [userEmission, setUserEmission] = useState([]);
   const [emissionToSocial, setEmissionToSocial] = useState(0);
   return (
     <div className='category-container'>
+      <p>Insights based on your vehicle's emission result:</p>
       <ul className='category-items'>
+        
+        <li className="category-list">
+          <button 
+            onClick={() => {
+              setEmissionData(emissionData);
+              setUserEmission(emissionData);
+            }}
+            > Your Vehicle's CO2 Emission 
+          </button>
+          <EmissionInsight userEmission={userEmission} emissionData={emissionData} />
+          
+          <hr></hr>
+        </li>
+
         <li className="category-list">
           <button
             onClick={() => {
@@ -31,17 +46,8 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
           <MpgFuelEconomy efficiencyMPG={efficiencyMPG} />
           <hr></hr>
         </li>
-        <li className="category-list">
-          <button 
-            onClick={() => {
-              setEmissionData(emissionData);
-            }}
-            > Your Vehicle's CO2 Emission 
-          </button>
-          <EmissionInsight efficiencyMPG={efficiencyMPG} emissionData={emissionData} />
-          
-          <hr></hr>
-        </li>
+
+
         <li className="category-list">
           <button 
             onClick={() => {

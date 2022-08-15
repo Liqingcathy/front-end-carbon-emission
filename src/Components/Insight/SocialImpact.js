@@ -5,8 +5,8 @@ import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, L
 // import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
 const SocialImpact = ({emissionToSocial, emissionData}) => {
-  console.log('inside of social impact');
-  console.log(emissionToSocial);
+  // console.log('inside of social impact');
+  // console.log(emissionToSocial);
   //caculate equivalent value based on epa caculation formula(unit:metric ton)
   const emissionToSocialMT = parseFloat(emissionToSocial / 1000000).toFixed(3);
   const electricityConsumed = parseFloat(emissionToSocialMT /5.139).toFixed(3) ;
@@ -23,16 +23,16 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
 
   const data = [
     {'name': 'emission', 'val' : emissionToSocialMT}, 
-    {'name2': 'electricity', 'val': electricityConsumed }, 
-    {'name3': 'home', 'val': homeEnergy }, 
-    {'name4': 'LED', 'val':switchToLED}, 
-    {'name5': 'Tree', 'val': totalTreeSeedlingGrowTenYears}, 
-    {'name5': 'Forest', 'val':acreForest_16tenniscourts},
-    {'name5': 'Coar', 'val': coarBurnedPound},
-    {'name5': 'Waste', 'val': wasteRecycled},
-    {'name5': 'GarbageTruck', 'val': garbageTrucksWasteNumber},
-    {'name5': 'TrashBag', 'val': trashBagWasteNumber},
-    {'name5': 'Phone Charge', 'val':numberOfPhoneCharged}
+    {'name': 'electricity', 'val': electricityConsumed }, 
+    {'name': 'home', 'val': homeEnergy }, 
+    {'name': 'LED', 'val':switchToLED}, 
+    {'name': 'Tree', 'val': totalTreeSeedlingGrowTenYears}, 
+    {'name': 'Forest', 'val':acreForest_16tenniscourts},
+    {'name': 'Coar', 'val': coarBurnedPound},
+    {'name': 'Waste', 'val': wasteRecycled},
+    {'name': 'GarbageTruck', 'val': garbageTrucksWasteNumber},
+    {'name': 'TrashBag', 'val': trashBagWasteNumber},
+    {'name': 'Phone Charge', 'val':numberOfPhoneCharged}
 
  ];
 

@@ -4,7 +4,7 @@ import ReactPaginate from 'react-paginate';
 
 const SimilarModelDiffMake = ({sortingResult}) => {
   // console.log('inside of SameMakeDiffModel');
-  console.log(sortingResult.length);
+  // console.log(sortingResult.length);
   // const displaySameMakeDiffModel= () => {
   // const [cars, setCars] = useState(sortingResult.slice(0, 30));
   const [pageNumber, setPageNumber] = useState(0);
