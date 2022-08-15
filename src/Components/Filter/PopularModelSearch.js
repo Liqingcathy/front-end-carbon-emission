@@ -10,14 +10,14 @@ const PopularModelSearch = ({sortingResult}) => {
       return (
         <div className="popular-search-div">
           <ul className="popular-search-ul">
-            <li className="popular-search-li">
+            {/* <li className="popular-search-li"> */}
               {value['id']}
               {value['_source']['brand_name']}
               {value['_source']['model_name']}
               {value['_source']['distance_value']}mile
               {value['_source']['emission']}g
               {value['_source']['emission_per_mile']}g
-            </li>
+            {/* </li> */}
           </ul>
         </div>
       )

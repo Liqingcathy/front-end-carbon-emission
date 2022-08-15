@@ -1,3 +1,6 @@
 .popular-search-li {
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
 }
