@@ -25,22 +25,15 @@
     /* border: 2px solid rgb(141, 26, 55); */
     background-color: #A6B9AA;
     transition: all .2s ease-in-out;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     border: none;
     color: white;
     /* border-radius: 0.4em; */
-}
-
-.category-list button.dark{
-    background-color: #809986;
+    
 }
 
 
-.category-list button.dark:hover , button.dark:focus{
-    background-color: #c0ccc3;
-    transform: scale(1);
-}
 .category-list button:hover, button:focus {
     background-color: #809986;
     transform: scale(1);

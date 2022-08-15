@@ -5,21 +5,21 @@ import './Subpage.css';
 const Header = () => {
 
   return (
-    <div className="sub-page">
+    <div>
       <ul className="more-info-ul">
         <li className="sub-page"> 
           {/* <h3>Missions</h3> */}
           <NavLink className="sub-page-link" to="/missions">
               Missions
             </NavLink>< br/>
-          <NavLink className="sub-page-link" to="/about">
+          {/* <NavLink className="sub-page-link" to="/about">
               About
-            </NavLink>
+            </NavLink> */}
           </li>
           
         <li><h1 className="web-goals">Estimate - Search - Build Carbon Habit</h1></li>
       </ul>
-     
+      <hr></hr>
     </div>
   )
 }

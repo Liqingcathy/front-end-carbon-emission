@@ -129,42 +129,42 @@ const DistanceFromTo = ({userData, setUserData }) => {
   return (
     <div className="from-to">
      {inputFormList.map((inputForm, index) => 
-      <div key={index} className="input-form-list-container"> 
-        <ul>
+      <div key={index} className="from-to-container"> 
+        <ul className="from-to-ul">
           <Autocomplete>
-            <input className="from-intput" type='text' placeholder="from" name='path' 
+            <input className="from-to-intput" type='text' placeholder="from" name='path' 
             ref={originRef} 
             value={inputFormList.path} 
             onChange= {(event) => handleInputFormChange(event, index)}/>
          </Autocomplete>   
          <Autocomplete>   
-           <input className="from-intput" type='text'  placeholder="to" ref={destinationRef} />
+           <input className="from-to-intput" type='text'  placeholder="to" ref={destinationRef} />
          </Autocomplete>  
-        <button className="google-map-api-btn" onClick={calculateDistance} >calculate distance </button> 
-        <button className="google-map-api-btn" onClick={clearRoutes} >clear route</button>
-        <span>result {distance}</span>
+         <button className="google-map-api-btn" onClick={calculateDistance} >calculate</button> 
+         <AsyncSelect className="select-bar"
+          loadOptions={loadOptions}  
+          defaultOptions 
+          placeholder='select frequency' 
+          onChange={handleChange} />
+         
+        {/* <button className="google-map-api-btn" onClick={clearRoutes} >clear</button> */}
         </ul>
-        <div>
-          {/* <Select className="select-bar"
-           placeholder="select frequency of above path"
-           options={frequencyWeek}
-           value={freq}
-           onChange={(event) => {setFreq(event.target.value)}} />  */}
-        <AsyncSelect loadOptions={loadOptions}  
-        defaultOptions placeholder='select frequency/week for this path' 
-        onChange={handleChange} />
-        </div>
-        <div>
+        <div className="distance-add-path-btn-wrap">
+         <ul>
+         Distance {distance}
+      
         {/* show add form box button only at the end */}
         {inputFormList.length -1 === index && inputFormList.length >= 1 
-          && (<button className="add-input-box-btn" onClick={handleAddInputBox} >add</button>)}
+          && (<button className="add-input-box-btn" onClick={handleAddInputBox} >+ add path</button>)}
         {inputFormList.length > 1 && (<button className="remove-input-box-btn" onClick={ () => 
-          handleRemoveInputBox(index)} ><span>remove</span></button>)}
-        </div> 
-        
+          handleRemoveInputBox(index)} ><span>remove path</span></button>)}
+       {/* </ul>  */}
+       </ul>
+       </div>
       </div>
       
       )} 
+      
       <div className="current-total-distance">
         Your current distance sum: {totalDistance}</div>
       {/* <div className="google-map-load">

@@ -4,7 +4,7 @@ import MpgFuelEconomy from "../Insight/MpgFuelEconomy";
 import EmissionInsight from "../Insight/EmissionInsight";
 import SocialImpact from "../Insight/SocialImpact";
 
-const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, userInput, setEmissionData}) => {
+const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, setEmissionData}) => {
   // console.log("inside of categories component");
   // console.log(`userInput ${JSON.stringify(userInput)}`)
   // console.log(`userInput-user_name ${JSON.stringify(userInput['user_name'])}`)
@@ -25,7 +25,8 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
                 );
             }}
           > Your Vehicle's Fuel Economy <br />
-            the higher mpg, the more efficient your vehicle
+            Compared to below standard MPG data <br />
+            The Higher the data, The More Efficient the Vehicle
           </button >
           <MpgFuelEconomy efficiencyMPG={efficiencyMPG} />
           <hr></hr>

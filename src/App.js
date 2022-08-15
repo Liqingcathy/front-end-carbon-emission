@@ -92,7 +92,7 @@ function App() {
           });
       };
   
-  const getFilteredData = (selectOption, efficiencyMPG) => {
+  const getFilteredData = (selectOption, efficiencyMPG, emissionData) => {
     console.log('inside of samke make fuel api call');
     // console.log(efficiencyMPG);
     const selected = selectOption;
@@ -106,8 +106,9 @@ function App() {
           setSortingResult(response.data);
           
       }).catch((error) => {console.log('error', error)})
-    }else if ( selectOption === 'same_model_diff_make_model'){
-      const param = efficiencyMPG[0]['_source']['make'] + "-" + efficiencyMPG[0]['_source']['model'] + "-" + efficiencyMPG[0]['_source']['combMPGSF'];
+    }else if ( selectOption === 'same_model_diff_make_model'){ //model-mpg-emissionpermile
+      const emissionPerMile =  parseFloat(emissionData['carbon_g']/emissionData['distance_value']).toFixed(2);
+      const param = efficiencyMPG[0]['_source']['make'] + "-" + efficiencyMPG[0]['_source']['model'] + "-" + efficiencyMPG[0]['_source']['combMPGSF'] + "-" + emissionPerMile;
         axios.get(`${heroku_backend}/${selectOption}/${param}`)
         .then((response) => {
           console.log(`same mpg diff make db ${JSON.stringify(response.data)}`)
@@ -125,16 +126,6 @@ function App() {
     }
   };
 
-  // const dataUpToUserEmission = (userName) => {
-  //   console.log('inside of get user emission and similar data from db');
-  //   axios.get(`${heroku_backend}/${userName}`)
-  //     .then((response) => {
-  //       console.log(`same make fuel response from db ${JSON.stringify(response.data)}`)
-  //       setSortingResult(response.data);
-  //     })
-  //     .catch((error) => {console.log('error', error)})
-
-  // }
 
   return (
     <div className='App'>

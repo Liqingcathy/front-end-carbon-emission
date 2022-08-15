@@ -1,6 +1,8 @@
 import React from "react";
 import MpgResult from "./MpgResult";
 import "./insightsSection.css";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+
 
 const MpgFuelEconomy = ({ efficiencyMPG }) => {
   // console.log("inside of mpg fuel economy: print efficiencyMPG");
@@ -34,11 +36,32 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
     });
   };
 
+  const data = [
+    {'name': 'MPG combined',  'mpg': 20}, 
+    {'name': 'MPG city', 'mpg': 30}, 
+    {'name': 'MPG highway','mpg': 40}, 
+    ];
+  
+  if (efficiencyMPG.length === 0 || efficiencyMPG === null) {
+    return (
+      <BarChart width={400} height={300} data={data}>
+        {/* <CartesianGrid strokeDasharray="1 1" /> */}
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="mpg" fill="#913339" />
+        <Bar dataKey="mpg" fill="#413330" />
+    </BarChart>
+    )
+  }else {
+
   return (
     <div className='chart-weight'>
       {displayFuelEconomy(efficiencyMPG)}
     </div>
   );
+  }
 };
 
 export default MpgFuelEconomy;

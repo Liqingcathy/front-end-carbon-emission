@@ -5,7 +5,7 @@ import './Navbar.css'
 const Navbar = () => {
 
   return (
-    <div className="nav-bar">
+    <div>
       <ul className="header-text">
         <li className="logo-title">
           <Link className='title' to='/'>CARbon E-mission </Link>

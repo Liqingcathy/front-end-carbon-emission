@@ -8,43 +8,45 @@
 }
 
 .inputform {
-    margin: 50px auto;
+    margin: 60px auto;
     /* background-color: #F0F4F1; */
-      
     /* border: 2px solid brown; */
 }
 
+.inputform .header {
+  padding: 20px;
+  /* margin: 20px; */
+}
 .form-container {
     /* border: 1px solid blue; */
     width: 70%;
 }
 
 label, input {
-    /* border: 1px solid red; */
     padding: 10px;
     margin: auto;
-    width: 300px;
+    width: 250px;
     height: 40px;
-    margin: 30px auto;
-    border: 2px solid #A7ACA7;
+    margin: 20px auto;
+    border: 1px solid #A7ACA7;
     border-radius: 0.3em;
 }
 
-.progressbar {
+/* .progressbar {
     height: 10px;
     background-color: #99494D;
-    width: 330px;
+    width: 60%;
     margin-bottom: 20px;
   }
   
-  .progressbar div {
+.progressbar div {
     margin-left: 0;
     width: 16%;
     height: 10px;
     background-color: #A7ACA7;
-  }
-  
-  .form-container .footer button{
+  } */
+
+.form-container .footer button{
     border-radius: 0.4em;
     width: 80px;
     height: 50px;
@@ -54,37 +56,82 @@ label, input {
     color:white;
     cursor: pointer;
     padding: 10px 5px;
-    margin:1em 6em;
+    margin:1em 12em;
   }
 
-  .google-map-api-btn {
-    border-radius: 0.4em;
-    width: 70px;
-    height: 50px;
-    background-color: #99494D;
-    border: none;
-    color:white;
-    margin: 10px;
-  }
+.approx-distance {
+  /* border: 1px solid green; */
+  width: 60%;
+}
+.approx-distance-wrap p {
+  margin-top: 10px;
+}
+  /* DistanceFromTo.js*/
 
-  .select-bar{
-    width: 400px;
-    border: 1px solid red;
-  }
+.from-to {
+  padding: 20px;
+}
 
+.from-to-container{
+  /* margin-top: 20px; */
+  padding: 20px;
+  /* border: 1px solid #A6B9AA; */
+  border-radius: 0.4em;
+  
+}
+
+.from-to-ul{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    
+    /* border: 1px solid purple; */
+}
+
+
+.select-bar {
+  width: 100px;
+}
+
+.google-map-api-btn {
+  border-radius: 0.4em;
+  background-color: #99494D;
+  color:white;
+  border: none;
+  height: 60px;
+  width: 100px;
+}
+
+/* .remove-input-box-btn, .add-input-box-btn {
+  border: none;
+  background-color: #99494D;
+  color: white;
+  width: 115px;
+  padding: 20px;
+} */
+
+.distance-add-path-btn-wrap{
+  /* border: 1px solid orange; */
+  /* width: 80%; */
+  text-align: left;
+  margin: 5;
+}
+
+/* .one-path-distance {
+  margin: 0;
+} */
+
+.current-total-distance {
+  margin-top: 10px;
+}
+
+.approx-distance input, .brand-name input, .year input, .user-name input{
+  width: 400px;
+}
+
+/* 
   .google-map-load {
     border: 1px solid red;
     width: 300px;
     height: 300px;
-  }
-
-  .from-intput{
-    width: 200px;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .google-map-load {
-    z-index: 9999;
-    position: relative;
-  }
+  } */

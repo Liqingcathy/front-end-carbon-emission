@@ -25,23 +25,17 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
   const [inputData, setInputData] = useState(defaultInputData);
   const [page, setPages] = useState(0);
   const FormTitle = [
-    "User Name",
+    "Estimate your vehicle's CO2 emission per trip or per week",
     "Vehicle Brand",
     "Vehicle Model",
-    "Model Year",
-    "Approximate driving miles for per week",
+    "Vehicle Model Year",
+    "User Name",
     "Total number of times drive per week",
   ];
 
-  // const handleInputSubmission = (event) => {
-  //   event.preventDefault();
-  //   handleFormSubmission(inputData); //update userdata and lift up to app.js
-  //   // console.log('after form submission' , userData);
-  // };
-
   const pageDisplay = () => {
     if (page === 0) {
-      return <UserName userData={inputData} setUserData={setInputData} />;
+      return <DistanceValue userData={inputData} setUserData={setInputData}/>;
     } else if (page === 1) {
       return <VehicleBrand userData={inputData} setUserData={setInputData} />;
     } else if (page === 2) {
@@ -49,7 +43,7 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
     } else if (page === 3) {
       return <Year userData={inputData} setUserData={setInputData} />;
     } else if (page === 4) {
-      return <DistanceValue userData={inputData} setUserData={setInputData}/>;
+      return <UserName userData={inputData} setUserData={setInputData} />;
     } else if (page === 5) {
       return <Frequency userData={inputData} setUserData={setInputData} />;
     }
@@ -59,7 +53,11 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
     // <form onSubmit={handleInputSubmission}>
     <div className='inputform'>
       <div className='form-container'>
-        <div className='progressbar'>
+        <div className='header'>
+          <h2>{FormTitle[page]}</h2>
+        </div>
+        <div className='body'>{pageDisplay()}</div>
+        {/* <div className='progressbar'>
           <div
             style={{
               width:
@@ -76,11 +74,7 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
                   : "100%",
             }}
           ></div>
-        </div>
-        <div className='header'>
-          <h2>{FormTitle[page]}</h2>
-        </div>
-        <div className='body'>{pageDisplay()}</div>
+        </div> */}
         <div className='footer'>
           <button
             className='prev-btn'

@@ -5,8 +5,8 @@ import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, L
 // import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
 const SocialImpact = ({emissionToSocial, emissionData}) => {
-  // console.log('inside of social impact');
-  // console.log(emissionToSocial);
+  console.log('inside of social impact');
+  console.log(emissionToSocial);
   //caculate equivalent value based on epa caculation formula(unit:metric ton)
   const emissionToSocialMT = parseFloat(emissionToSocial / 1000000).toFixed(3);
   const electricityConsumed = parseFloat(emissionToSocialMT /5.139).toFixed(3) ;
@@ -36,12 +36,37 @@ const SocialImpact = ({emissionToSocial, emissionData}) => {
 
  ];
 
+ const data2 = [
+    {'name': 'emission', 'val' : 33}, 
+    {'name': 'electricity', 'val': 44 }, 
+    {'name': 'home', 'val': 55 }, 
+    {'name': 'LED', 'val':66}, 
+    {'name': 'Tree', 'val': 55}, 
+    {'name': 'Forest', 'val':9},
+    {'name': 'Coar', 'val': 890},
+    {'name': 'Waste', 'val': 333},
+    {'name': 'GarbageTruck', 'val': 333},
+    {'name': 'TrashBag', 'val': 222},
+    {'name': 'Phone Charge', 'val': 678}
+ ]
+
  if (emissionToSocial === 0) {
-  return <div className="chart-weight"></div>
+  return <div className="chart-weight">
+     <BarChart width={400} height={300} data={data2}>
+        {/* <CartesianGrid strokeDasharray="1 1" /> */}
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="val" fill="#913339" />
+        {/* <Bar dataKey="val" fill="#913339" /> */}
+  {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
+      </BarChart>
+  </div>
  }else{
     return(
       <div className="chart-weight">
-       <BarChart width={730} height={250} data={data}>
+       <BarChart width={400} height={300} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

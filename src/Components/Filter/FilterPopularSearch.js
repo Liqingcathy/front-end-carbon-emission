@@ -1,19 +1,15 @@
 import React, {useState} from 'react';
 // import Select from 'react-select';
 import AsyncSelect from 'react-select/async'
-import './Sorting.css';
 
-const Sorting = ({getFilteredData, efficiencyMPG}) => {
-  console.log('inside of sortings component');
+const FilterPopularSearch = ({getFilteredData, efficiencyMPG}) => {
+  // console.log('inside of sortings FilterPopularSearch');
   // console.log('efficient mpg');
   // console.log(efficiencyMPG);
 
   const options = [
-    {value: 'same_make_diff_model', label: 'similar efficient models from your make based on your estimated emission'},
-    {value: 'same_model_diff_make_model', label: 'similar efficient vehicle makes based on your emission' },
     {value: 'popular_vehicle_make_search', label: 'popular vehicle make search/estimate'},
     {value: 'popular_vehicle_model_search', label: 'popular vehicle model search/estimate'},
-    {value: 'vehicle by tailpipe_emission', label : 'tailpipe emission'}
   ];
 
 
@@ -36,14 +32,16 @@ const Sorting = ({getFilteredData, efficiencyMPG}) => {
     }, 2000);
   };
 
+
   return (
     <div className='select-options-bar'>
       {/* <Select options={options} onChange={handleChange} isMulti/> */}
       <AsyncSelect 
         loadOptions={loadOptions} 
-        defaultOptions 
+        defaultOptions
         isMulti
-        isSearchable 
+        // isSearchable 
+        placeholder="popular"
         onChange={handleChange} />
       {/* <PopularSearch sameMakeFuelEconomy={sameMakeFuelEconomy}/> */}
     
@@ -52,4 +50,4 @@ const Sorting = ({getFilteredData, efficiencyMPG}) => {
   )
 }
 
-export default Sorting;
+export default FilterPopularSearch;

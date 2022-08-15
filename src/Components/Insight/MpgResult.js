@@ -15,7 +15,7 @@ const MpgResult = ({ name, year, make, trany, combined, city, highway, fuelCost,
     return(
       <LineChart width={400} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
       <Line type="monotone" dataKey="mpg" stroke="#913339" />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+      {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
