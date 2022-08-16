@@ -42,6 +42,9 @@ const DistanceFromTo = ({ userData, setUserData }) => {
     libraries: libraries,
   });
 
+  console.log('google api key')
+  console.log(process.env.REACT_APP_GOOGLE_MAP_API_KEY)
+
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Loading Maps";
 

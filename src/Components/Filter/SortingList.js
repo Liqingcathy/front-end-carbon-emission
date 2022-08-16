@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterPopularSearch from './FilterPopularSearch';
 import FilterEmitRecMakeModels from './FilterEmitRecMakeModels';
-import './SoringList.css';
+
 const SoringList = ({getFilteredData, efficiencyMPG, emissionData}) => {
 
   return (

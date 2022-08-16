@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./DisplayItems.css";
 const PopularModelSearch = ({sortingResult}) => {
   // console.log('inside of popular search');
   // console.log(sortingResult);
@@ -8,7 +8,7 @@ const PopularModelSearch = ({sortingResult}) => {
   const displayPS = () => {
     return Object.values(sortingResult).map(( value) => {
       return (
-        <div className="popular-search-div">
+        // <div className="popular-search-div">
           <ul className="popular-search-ul">
             {/* <li className="popular-search-li"> */}
               {value['id']}
@@ -19,7 +19,7 @@ const PopularModelSearch = ({sortingResult}) => {
               {value['_source']['emission_per_mile']}g
             {/* </li> */}
           </ul>
-        </div>
+        // </div>
       )
       }
     )
