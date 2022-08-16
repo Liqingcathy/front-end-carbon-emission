@@ -1,5 +1,7 @@
 import React from "react";
 import "./FilterButtons.css";
+import {FaPrescriptionBottle} from "react-icons/fa"
+
 
 const FilterButtons = ({getFilteredData, efficiencyMPG, emissionData}) => {
   const handleMakeChange = () => {
@@ -23,11 +25,13 @@ const FilterButtons = ({getFilteredData, efficiencyMPG, emissionData}) => {
     <div className="more-insights-container">
       <hr></hr>
       <ul className="more-insights-ul">
-        <button onClick={handleMakeChange} > Popular Search - Make</button>
-        <button onClick={handleModelChange} >Popular Search: Model</button>
-        <button onClick={handleSimilarModelChange} >Models with same fuel economy <br /> from same make</button>
-        <button onClick={handleSimilarMakeChange} >Models with similar fuel economy <br /> from diff. make</button>
-        <button id="dummy-square">add icon</button>
+        <button className="btn" onClick={handleMakeChange} > Popular Make Search</button>
+        <button className="btn" onClick={handleModelChange} >Popular Model Search </button>
+        <button className="btn" onClick={handleSimilarModelChange} >Models with same <br /> fuel economy  <br />from same make</button>
+        <button className="btn" onClick={handleSimilarMakeChange} >Models with same <br />fuel economy <br /> from diff. make</button>
+        <button id="dummy-square">
+          <FaPrescriptionBottle className="filter-icon" size={40}/>
+        </button>
       </ul>
     </div>
   )

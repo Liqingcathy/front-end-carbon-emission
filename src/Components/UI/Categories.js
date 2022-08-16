@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import "./Categories.css";
+import {FaCarSide, FaHandPointUp} from "react-icons/fa"
+
 import MpgFuelEconomy from "../Insight/MpgFuelEconomy";
 import EmissionInsight from "../Insight/EmissionInsight";
 import SocialImpact from "../Insight/SocialImpact";
@@ -20,29 +22,30 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
       <ul className='category-items'>
         
         <li className="category-list">
-          <button 
+          <button className="category-text"
             onClick={() => {
               setEmissionData(emissionData);
               setUserEmission(emissionData);
             }}
-            > Your Vehicle's CO2 Emission <br />
-            2023–2026 carbon dioxide (CO2) and fuel economy standards
-          </button>
+            > Carbon dioxide (CO2) emission standards <br /> 
+            Click to see your vehicle's emission <br /> 
+            {/* <FaHandPointUp className="click-to-see-chart" size={30}/>  */}
+             </button> 
           <EmissionInsight userEmission={userEmission} emissionData={emissionData} />
           
           <hr></hr>
         </li>
 
         <li className="category-list">
-          <button
+          <button className="category-text"
             onClick={() => {
               getFuelEfficiencyInsight(
                 userData["data"]["attributes"]["vehicle_model"] + "-" +userData["data"]["attributes"]["vehicle_year"]
                 );
             }}
           > Your Vehicle's Fuel Economy <br />
-            Compared to below standard CO2 equiv. mpg data <br />
-            The Higher the data, The More Efficient the Vehicle
+            Standard CO2 equiv. mpg data <br />
+            Click to see your vehicle's emission <br /> 
           </button >
           <MpgFuelEconomy efficiencyMPG={efficiencyMPG} />
           <hr></hr>

@@ -10,16 +10,29 @@
 }
 
 #dummy-square {
-    background-color: #96ad9c;
+    background-color: #1E2B22;
     width: 400px;
 }
 
-.more-insights-ul button {
+.more-insights-ul .btn , .more-insights-ul button{
     background-color: #913339;
     color: white;
     height: 120px;
     width: 160px;
-    margin: 8px;
+    margin: 15px;
     border: none;
-    
+    transition: all 2s ease;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.more-insights-ul .btn:hover {
+    transform: scale(1.1);
+    background-color: #7b1c22 ;
+}
+
+.filter-icon {
+    background-color: unset;
 }

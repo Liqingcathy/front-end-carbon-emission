@@ -1,7 +1,7 @@
 import React from "react";
 import car from "../../Assets/car.png";
 import "./DisplayItems.css";
-
+import {FaCarSide} from "react-icons/fa";
 const SameMakeDiffModel = ({sortingResult}) => {
   // console.log('inside of SameMakeDiffModel');
   // console.log(sortingResult);
@@ -12,7 +12,7 @@ const SameMakeDiffModel = ({sortingResult}) => {
         <ul className='popular-search-ul' key={value["id"]}>
           {/* <ul className="car-result-ul"> 
               <li className="car-result-li"> */}
-          <img alt='car-icon' src={car} />
+          <FaCarSide className="car-icon" size={50} />
           <div className="car-text-container">
             <p className="title-h2">
               <span>{value["_source"]["make"]}</span>

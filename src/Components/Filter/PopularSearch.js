@@ -1,4 +1,6 @@
 import React from "react";
+import {FaCarSide} from "react-icons/fa";
+
 import "./DisplayItems.css";
 const PopularModelSearch = ({sortingResult}) => {
   // console.log('inside of popular search');
@@ -12,15 +14,25 @@ const PopularModelSearch = ({sortingResult}) => {
           <ul className="popular-search-ul">
             {/* <li className="popular-search-li"> */}
               {/* {value['id']} */}
-              <p className="title-h2">
+              <p className="icon-p"><FaCarSide className="car-icon" size={50}/></p>
+              <h2 className="title-h2">
                 <span>{value['_source']['brand_name']}</span>
                 <span>{value['_source']['model_name']}</span>
-              </p>
-              <p className="title-h3">
-                <span>{value['_source']['distance_value']} mile</span>
-                <span>{value['_source']['emission']} g</span>
-                <span>{value['_source']['emission_per_mile']} g</span>
-              </p>
+              </h2>
+              <div className="car-desc-content">
+               <div className="car-desc-ul">
+                <p className="data">{value['_source']['emission']}g </p>
+                <p>emission</p> 
+              </div> 
+              <div className="car-desc-ul">
+                <p className="data">{value['_source']['distance_value']}</p>
+                <p>mile</p>
+              </div>
+              <div className="car-desc-ul">
+                <p className="data">{value['_source']['emission_per_mile']}g</p>
+                <p>per mile</p>
+              </div>
+            </div>
             {/* </li> */}
           </ul>
         // </div>

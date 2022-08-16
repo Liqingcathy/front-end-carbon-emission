@@ -6,21 +6,22 @@
 .inputform {
     margin: 60px auto;
     /* height: 700px; */
-   
+
 }
 
 .inputform .header {
   padding: 30px;
-
+ 
 }
+
 
 .form-container {
     /* height: 400px; */
     width: 70%;
     margin-top: 20px;
-
+    /* border: 1px solid green; */
+   
 }
-
 
 
 label, input {
@@ -29,9 +30,10 @@ label, input {
     width: 250px;
     height: 40px;
     margin: 20px auto;
-    border: 1px solid #A7ACA7;
+    border: 1px solid white;
     border-radius: 0.3em;
-    
+    background-color: #1E2B22;
+    color: white;
 }
 
 
@@ -40,23 +42,33 @@ label, input {
     border-radius: 0.4em;
     width: 80px;
     height: 50px;
-    background-color: #99494D;
+    background-color: #913339;
     border: none;
     font-weight: bold;
     color:white;
     cursor: pointer;
     padding: 10px 5px;
-    margin:1em 12em;
+    /* margin:1em 12em; */
+    margin: 0;
   }
 
 
 
-.distance-add-path-btn-wrap{
-
-  margin: 0;
-  text-align: left;
+.footer {
+  width: 100%;
+  /* border: 1px solid green; */
+  display: flex;
 }
 
+.footer-btn-sep1 {
+  width: 80px;
+  margin: 0;
+}
+
+.footer-btn-sep2 {
+  width: 80px;
+  margin-right: 0;
+}
 
 .current-total-distance {
   margin-top: 10px;

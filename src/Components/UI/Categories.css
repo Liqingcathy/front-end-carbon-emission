@@ -46,9 +46,19 @@
     transform: scale(1);
 }
 
+
 /* hr { 
     display: block;
     width: 300px;
     height: 2px;
     border-top: 1px solid #b3aeb0;
   } */
+
+  .click-to-see-chart {
+    background-color: unset;
+    
+  }
+
+  .category-text {
+    font-size: x-large;
+  }

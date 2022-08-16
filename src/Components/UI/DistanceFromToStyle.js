@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import {FaRegPlusSquare, FaRegTimesCircle} from "react-icons/fa"
 // import "./InputForm.css";
 // import Select from 'react-select';
 import "./DistanceFromTo.css";
@@ -223,7 +224,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
                   className='add-input-box-btn'
                   onClick={handleAddInputBox}
                 >
-                  +
+                  <FaRegPlusSquare className="plus-icon"/>
                 </button>
               )}
               {inputFormList.length > 1 && (
@@ -231,7 +232,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
                   className='remove-input-box-btn'
                   onClick={() => handleRemoveInputBox(index)}
                 >
-                  <span>-remove path</span>
+                  <FaRegTimesCircle className="remove-icon" />
                 </button>
               )}
               {/* </ul>  */}

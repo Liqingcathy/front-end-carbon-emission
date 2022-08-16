@@ -74,15 +74,18 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
           ></div>
         </div>
         <div className='footer'>
-          <button
-            className='prev-btn'
-            disabled={page === 0}
-            onClick={() => {
-              setPages((currPage) => currPage - 1);
-            }}
-          >
-            Prev
-          </button>
+          <div className="footer-btn-sep1">
+            <button
+              className='prev-btn'
+              disabled={page === 0}
+              onClick={() => {
+                setPages((currPage) => currPage - 1);
+              }}
+            >
+              Prev
+            </button>
+          </div>
+          <div className="footer-btn-sep2"> 
           <button
             className='next-btn'
             // disabled={page === FormTitle.length - 1}
@@ -100,6 +103,7 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
             {" "}
             {page === FormTitle.length - 1 ? "Submit" : "Next"}
           </button>
+          </div>
           {/* >Next</button> */}
           {/* <button type="submit" value="Get Estimation Now">Submit</button> */}
         </div>

@@ -1,46 +1,54 @@
 
 .top-form-wrapper {
-    border: 2px solid greenyellow;   
+    /* border: 2px solid greenyellow;    */
     width: 100%;
     margin-top: 2rem ;
+    
 }
 
 .calculate {
-    border: 2px solid red;   
-    height: 100%;
+    /* border: 2px solid red;    */
+    height: 190px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: #B1C3B5;
+    background-color: #1E2B22;
+    border-radius: 1.3em;
+    margin-top: 20px;
+    /* border: 2px solid red; */
 }
 
 .container {
     display: flex;
     align-items: center;
     background-color: transparent;
-
+    margin-left: 20px;
 }
 
 .container select {
     width: 100px;
     height: 60px;
     background-color: transparent;
-
+    border-radius: 0.3em;
+    border: 1px solid white;
+    color: white;
 }
 
 .container input {
     background-color: transparent;
     /* border: none; */
-    text-align: center;
+    /* text-align: center; */
+    width: 220px;
     /* background-color: transparent; */
     
     
 }
 .autocomplete-div {
     background-color: unset;
+
 }
 
 .calculate-btn {
@@ -53,18 +61,52 @@
     text-transform: uppercase;
     transition: 0.3s ease-in-out;
     margin-left: 1rem;
+    border: none;
 
 
 }
 
 .calculate-btn:hover {
-    background-color: #1E2B22;
+    background-color: #719f7f;
 }
 
-.add-input-box-btn {
-    width: 20px;
+.distance-add-path-btn-wrap {
+    /* border: 1px solid green; */
+    background-color: unset;
+}
+
+.add-remove-btn-ul{
+    /* margin: 0; */
+    /* text-align: left; */
+    /* border: 1px solid greenyellow; */
+    background-color: unset;
+    
+  }
+  
+.add-input-box-btn{
+    /* width: 20px; */
     border: none;
-    background: transparent;
     font-size: x-large;
-    margin-left: -2rem;
+    margin-left: -3rem;
+    /* border: 1px solid purple; */
+    background-color: unset;
+    color: white;
+}
+
+.remove-input-box-btn {
+    /* width: 20px; */
+    border: none;
+    font-size: x-large;
+    background: unset;
+    /* border: 1px solid purple; */
+    background-color: unset;
+    color: white;
+}
+
+.plus-icon {
+    background-color: unset;
+}
+
+.remove-icon {
+    background-color: unset;
 }

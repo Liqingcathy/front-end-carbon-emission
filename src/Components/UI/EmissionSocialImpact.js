@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import { BarChart, Bar, AreaChart, Area, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
 // import { ResponsiveContainer, LineChart, Line,  XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
@@ -51,20 +51,20 @@ const EmissionSocialImpact = ({emissionToSocial, emissionData}) => {
     {'name': 'Phone Charge', 'val': 678}
  ]
 
- console.log('check if emission data or tosocial is null');
- console.log(emissionToSocial);
- console.log(emissionData);
+//  console.log('check if emission data or tosocial is null');
+//  console.log(emissionToSocial);
+//  console.log(emissionData);
  if (typeof emissionToSocial === 'undefined' || emissionData.length === 0) {
   return <div className="chart-weight">
      <BarChart width={800} height={300} data={data2}>
-        {/* <CartesianGrid strokeDasharray="1 1" /> */}
+        {/* <CartesianGrid strokeDasharray="3 3" /> */}
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
         <Legend />
         <Bar dataKey="val" fill="#913339" />
         {/* <Bar dataKey="val" fill="#913339" /> */}
-  {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
+          {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
       </BarChart>
   </div>
  }else{
