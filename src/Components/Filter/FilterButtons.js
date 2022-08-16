@@ -27,7 +27,7 @@ const FilterButtons = ({getFilteredData, efficiencyMPG, emissionData}) => {
         <button onClick={handleModelChange} >Popular Search: Model</button>
         <button onClick={handleSimilarModelChange} >Models with same fuel economy <br /> from same make</button>
         <button onClick={handleSimilarMakeChange} >Models with similar fuel economy <br /> from diff. make</button>
-        <li id="dummy-square"></li>
+        <button id="dummy-square">add icon</button>
       </ul>
     </div>
   )

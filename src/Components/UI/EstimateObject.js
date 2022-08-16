@@ -11,9 +11,6 @@ const EstimateObject = ({emissionData}) => {
     <div className="estimate-result-container">
       <hr></hr>
       <li className="co2-icon">
-        <img alt='icon' src={carbonicon} /> 
-        <img alt='icon' src={carbonicon} /> 
-        <img alt='icon'src={carbonicon} />
         <img alt='icon'src={carbonicon} />
       </li>
       <div className="estimate-result">

@@ -11,20 +11,24 @@ const SimilarModelDiffMake = ({ sortingResult }) => {
   const displayCars = () => {
     return Object.values(sortingResult).map((value) => {
       return (
-        <ul className='popular-search-ul' key={value["id"]}>
-          {/* <ul className="car-result-ul"> 
-              <li className="car-result-li"> */}
-          <img alt='car-icon' src={car} />
-          <div className="car-text-container">
-            {value["_source"]["make"]}
-            {value["_source"]["model"]}
-            {value["_source"]["combMPGSF"]}
-            {value["_source"]["year"]}
-            {parseFloat(
-              value["_source"]["annualOilConsumption(42gallon)"]
-            ).toFixed(2)}
-          </div>
-        </ul>
+        <div>
+          <ul className='popular-search-ul' key={value["id"]}>
+            <li className="car-icon"><img alt='car-icon' src={car}/></li>
+              <li className="car-desc">
+                <p>
+                  <span>{value["_source"]["make"]}</span>
+                  <span>{value["_source"]["model"]}</span>
+                  <span>{value["_source"]["year"]}</span>
+                </p>
+                <p>
+                  <span>{value["_source"]["combMPGSF"]}</span>
+                  <span>{parseFloat(
+                  value["_source"]["annualOilConsumption(42gallon)"]
+                ).toFixed(2)}</span>
+                </p>
+            </li>
+          </ul>
+        </div>
       );
     });
   };

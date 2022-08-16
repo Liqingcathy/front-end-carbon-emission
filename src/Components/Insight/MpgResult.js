@@ -5,13 +5,14 @@ const MpgResult = ({ name, year, make, trany, combined, city, highway, fuelCost,
   // console.log("inside of Mpg result");
   // console.log(`combined ${combined}`);
   // console.log(`city ${city}`);
+
   const data = [
     {'name': 'mpg',  'mpg': combined}, 
     {'name': 'city', 'mpg': city}, 
     {'name': 'highway','mpg': highway}, 
     {'name': 'standard', 'mpg': 54}];
   
-    
+  // console.log(data)  
     return(
       <LineChart width={400} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
       <Line type="monotone" dataKey="mpg" stroke="#913339" />

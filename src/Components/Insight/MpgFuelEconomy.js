@@ -7,29 +7,29 @@ import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, L
 const MpgFuelEconomy = ({ efficiencyMPG }) => {
   console.log("inside of mpg fuel economy: print efficiencyMPG");
   console.log(efficiencyMPG);
-  const displayFuelEconomy = (res) => {
+  const displayFuelEconomy = () => {
     return Object.entries(efficiencyMPG).map(([key, value]) => {
       return (
         <MpgResult
-          key={value["_source"]["id"]}
-          id={value["_source"]["id"]}
-          make={value["_source"]["make"]}
-          name={value["_source"]["model"]}
-          year={value["_source"]["year"]}
-          trany={value["_source"]["trany"]}
-          combined={value["_source"]["combMPGSF"]}
-          city={value["_source"]["singleFuelMpgCity"]}
-          highway={value["_source"]["highwayMPGSF"]}
+          key={value["id"]}
+          id={value["id"]}
+          make={value["make"]}
+          name={value["model"]}
+          year={value["year"]}
+          trany={value["trany"]}
+          combined={value["combMPGSF"]}
+          city={value["singleFuelMpgCity"]}
+          highway={value["highwayMPGSF"]}
           gallonPerMile={parseFloat(
-            100 / value["_source"]["combMPGSF"]
+            100 / value["combMPGSF"]
           ).toFixed(2)}
           // gallonPerHundredMile={parseFloat(100/value['_source']["combMPGSF"].toFixed(2))}
-          fuelCost={value["_source"]["annualFuelCostSF($)"]}
+          fuelCost={value["annualFuelCostSF($)"]}
           costDrive25Mile={
-            (value["_source"]["annualFuelCostSF($)"] / 15000) * 25
+            (value["annualFuelCostSF($)"] / 15000) * 25
           }
           annualFuelConsumption={parseFloat(
-            value["_source"]["annualOilConsumption(42gallon)"]
+            value["annualOilConsumption(42gallon)"]
           ).toFixed(2)}
         />
       );
@@ -57,7 +57,7 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
 
   return (
     <div className='chart-weight'>
-      {displayFuelEconomy(efficiencyMPG)}
+      {displayFuelEconomy()}
     </div>
   );
   }

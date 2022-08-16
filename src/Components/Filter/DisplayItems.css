@@ -1,7 +1,8 @@
 
 .popular-search-ul {
     list-style: none;
-    
+    display: flex;
+    flex-direction: column;
     border: 4px solid black;
     padding: 20px;
     width: 260px;
@@ -10,7 +11,7 @@
 }
 
 .popular-search {
-    border: 4px solid red;
+    border: 1px solid red;
     margin: 3%;
     display: flex;
     flex-direction: row;
@@ -19,9 +20,16 @@
 }
 
 .popular-search-ul img {
-    width: 100px;
+    width: 150px;
+    /* border: 4px solid green; */
+    
 }
 
-.car-text-container {
+.car-icon {
     
+}
+
+.car-desc {
+  
+    /* border: 4px solid gray; */
 }

@@ -42,8 +42,6 @@ const DistanceFromTo = ({ userData, setUserData }) => {
     libraries: libraries,
   });
 
-  console.log('google api key')
-  console.log(process.env.REACT_APP_GOOGLE_MAP_API_KEY)
 
   if (loadError) return "Error loading maps";
   if (!isLoaded) return "Loading Maps";
@@ -78,6 +76,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
       travelMode: google.maps.TravelMode.DRIVING, //traffic
     });
 
+    // debugger;
     setRouteCalResponse(results);
     const tempDistance = results.routes[0].legs[0].distance.text; //"xx mile" in string
     setDistance(tempDistance);
