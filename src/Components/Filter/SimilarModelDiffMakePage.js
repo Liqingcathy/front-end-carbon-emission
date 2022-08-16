@@ -47,8 +47,10 @@ const SimilarModelDiffMake = ({sortingResult}) => {
   }
 
   return (
+    <div>
     <div id="cat-four" className="filter-result-display">
       {displayCars()} 
+      </div>
       <ReactPaginate 
         previousLabel={"Previous"}
         nextLabel={"Next"}
@@ -60,6 +62,8 @@ const SimilarModelDiffMake = ({sortingResult}) => {
         disabledClassName={"paginationDisabled"}
         activeClassName={"paginationActive"}
         />
+        
+    
     </div>
   )
    

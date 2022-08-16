@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    list-style: none;
 }
 
 .category-list{
@@ -31,8 +32,8 @@
     /* border: 2px solid rgb(141, 26, 55); */
     background-color: #A6B9AA;
     transition: all .2s ease-in-out;
-    width: 400px;
-    height: 100px;
+    width: 600px;
+    height: 240px;
     border: none;
     color: white;
     /* border-radius: 0.4em; */

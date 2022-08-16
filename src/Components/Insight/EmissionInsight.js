@@ -43,7 +43,7 @@ const EmissionInsight = ({efficiencyMPG, userEmission}) => {
     return (
       <div className="chart-weight">
         {/* {displayEconomy()} */}
-      <LineChart width={400} height={300} data={data2} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+      <LineChart width={600} height={300} data={data2} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
         <Line type="monotone" dataKey="val" stroke="#913339" />
         <Line type="monotone" dataKey="sval" stroke="#913339" />
         {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
@@ -58,7 +58,7 @@ const EmissionInsight = ({efficiencyMPG, userEmission}) => {
     return (
       <div className="chart-weight">
         {/* {displayEconomy()} */}
-      <LineChart width={400} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+      <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
       <Line type="monotone" dataKey="val" stroke="#913339" />
       <Line type="monotone" dataKey="sval" stroke="#213330" />
       {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./InputForm.css";
+// import "./InputForm.css";
+import "./DistanceFromTo.css";
 import VehicleBrand from "./VehicleBrand";
 import VehicleModel from "./VehicleModel";
 import Year from "./Year";
 // import DistanceValue from "./DistanceValue";
-import Frequency from "./Frequency";
-import DistanceFromTo from "./DistanceFromTo";
+import DistanceFromToStyle from "./DistanceFromToStyle";
 
 const defaultInputData = {
   // user_name: "",
@@ -33,7 +33,7 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
 
   const pageDisplay = () => {
     if (page === 0) {
-      return <DistanceFromTo userData={inputData} setUserData={setInputData}/>;
+      return <DistanceFromToStyle userData={inputData} setUserData={setInputData}/>;
     } else if (page === 1) {
       return <VehicleBrand userData={inputData} setUserData={setInputData} />;
     } else if (page === 2) {

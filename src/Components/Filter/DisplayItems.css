@@ -1,4 +1,8 @@
-
+.filter-result-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .popular-search-ul {
     list-style: none;
     display: flex;
@@ -48,9 +52,6 @@
     margin-left: 50px;
 }
 
-#cat-four {
-    
-}
 
 /* #cat-FOUR{
     margin-top: 5%;

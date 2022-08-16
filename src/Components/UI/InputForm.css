@@ -1,34 +1,26 @@
-.btn-ul{
-    /* align-content: space-between; */
-    /* border: 1px solid red; */
-    /* width: 400px; */
-    width: 50%;
-    /* margin-left: 20em; */
 
+.btn-ul{
+    width: 50%;
 }
 
 .inputform {
     margin: 60px auto;
-    /* background-color: #F0F4F1; */
-    /* border: 2px solid brown; */
-    height: 700px;
+    /* height: 700px; */
+   
 }
 
 .inputform .header {
-  padding: 20px;
-  /* margin: 20px; */
+  padding: 30px;
+
 }
 
 .form-container {
-    /* border: 1px solid blue; */
-    height: 400px;
+    /* height: 400px; */
     width: 70%;
     margin-top: 20px;
+
 }
-.body {
-  /* background-color: #A7ACA7;  
-  border: 1px solid blue; */
-}
+
 
 
 label, input {
@@ -42,24 +34,7 @@ label, input {
     
 }
 
-/* .progressbar {
-    height: 10px;
-    background-color: #99494D;
-    width: 90%;
-    margin-bottom: 20px;
-  }
-  
-.progressbar div {
-    margin-left: 0;
-    width: 16%;
-    height: 10px;
-    background-color: #A7ACA7;
-  } */
 
-.footer {
-  /* border: 1px solid blue; */
-  
-}
 
 .form-container .footer button{
     border-radius: 0.4em;
@@ -74,88 +49,13 @@ label, input {
     margin:1em 12em;
   }
 
-.approx-distance {
-  /* border: 1px solid green; */
-  width: 60%;
-}
-.approx-distance-wrap p {
-  margin-top: 10px;
-}
-  /* DistanceFromTo.js*/
 
-.from-to {
-  padding: 20px;
-  background-color: white;
-}
-
-.from-to-container{
-  /* margin-top: 20px; */
-  padding: 20px;
-  /* border: 1px solid #A6B9AA; */
-  border-radius: 0.4em;
-  
-}
-
-.from-to-ul{
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    
-    /* border: 1px solid purple; */
-}
-
-.select-and-distance-val {
-  /* border: 1px solid green; */
-  width: 100%;
-  
-}
-.select-bar {
-  margin-left: -5px;
-  margin-right: 50px;
-  width: 80%;
-  height: 30px;
-  border: 1px solid #A7ACA7;
-  border-radius: 0.3em;
-}
-
-.google-map-api-btn {
-  border-radius: 0.4em;
-  background-color: #99494D;
-  color:white;
-  border: none;
-  height: 60px;
-  width: 100px;
-}
-
-.remove-input-box-btn, .add-input-box-btn {
-  border: none;
-  /* background-color: #99494D; */
-  /* color: white; */
-  width: 115px;
-  padding: 20px;
-}
 
 .distance-add-path-btn-wrap{
-  /* border: 1px solid orange; */
-  /* width: 80%; */
-  /* border: 1px solid red; */
-  /* width: 100%; */
+
   margin: 0;
   text-align: left;
 }
-
-.add-remove-btn-ul{
-  display: flex;
-  flex-direction: row;
-}
-
-.add-input-box-btn{
-  width: 300px;
-  /* background-color: #A7ACA7; */
-  margin-left: -40px;
- 
-}
-
 
 
 .current-total-distance {
@@ -166,9 +66,5 @@ label, input {
   width: 400px;
 }
 
-/* 
-  .google-map-load {
-    border: 1px solid red;
-    width: 300px;
-    height: 300px;
-  } */
+
+  

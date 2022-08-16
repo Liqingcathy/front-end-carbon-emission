@@ -8,15 +8,6 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
   console.log("inside of mpg fuel economy: efficiencyMPG");
   console.log(efficiencyMPG);
 
-  const copyEfficiencyMpg = {...efficiencyMPG[0]};
-
-  // console.log(copyEfficiencyMpg['combMPGSF']);
-  // const data2 = [
-  //   {'name': 'mpg',  'mpg': efficiencyMPG[0]['combMPGSF']}, 
-  //   {'name': 'city', 'mpg': copyEfficiencyMpg['_source']['singleFuelMpgCity']}, 
-  //   {'name': 'highway','mpg': copyEfficiencyMpg['_source']['highwayMPGSF']}, 
-  //   {'name': 'standard', 'mpg': 54}
-  // ];
 
 
   // console.log(data2);
@@ -53,12 +44,12 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
     {'name': '2023',  'mpg': 54}, 
     {'name': '2024', 'mpg': 56}, 
     {'name': '2025','mpg': 60}, 
-    {'name': '20236','mpg': 67}
+    {'name': '2026','mpg': 67}
     ];
   
   if (efficiencyMPG.length === 0) {
     return (
-      <LineChart width={400} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+      <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
       <Line type="monotone" dataKey="mpg" stroke="#913339" />
       {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
       <XAxis dataKey="name" />
@@ -66,16 +57,22 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
       <Tooltip />
     </LineChart>
     )
-  }else {
-
-  return (
-    <LineChart width={400} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-    <Line type="monotone" dataKey="mpg" stroke="#913339" />
-    {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
-    <XAxis dataKey="name" />
-    <YAxis />
-    <Tooltip />
-  </LineChart>
+  } else {
+    const data2 = [
+      {'name': 'mpg',  'mpg': efficiencyMPG[0]['_source']['combMPGSF']}, 
+      {'name': 'city', 'mpg': efficiencyMPG[0]['_source']['singleFuelMpgCity']}, 
+      {'name': 'highway','mpg': efficiencyMPG[0]['_source']['highwayMPGSF']}, 
+      {'name': 'standard', 'mpg': 54}
+    ];
+    
+    return (
+      <LineChart width={600} height={300} data={data2} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+      <Line type="monotone" dataKey="mpg" stroke="#913339" />
+      {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Tooltip />
+    </LineChart>
   );
   }
 };

@@ -49,7 +49,7 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
         </li>
 
 
-        <li className="category-list">
+        {/* <li className="category-list">
           <button 
             onClick={() => {
               setEmissionToSocial(emissionData['carbon_g']);
@@ -58,7 +58,7 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
           </button>
           <SocialImpact emissionData={emissionData}  emissionToSocial={emissionToSocial} />  
           <hr></hr>
-        </li>
+        </li> */}
         </ul>
         
     </div>

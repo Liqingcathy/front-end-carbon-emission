@@ -11,15 +11,21 @@
 
 .logo-title {
     width: 60%;
-    font-size:3em;
+    font-size:5em;
     text-align: left;
     font-weight: bolder;
     margin-right: -50px;
     align-items: center;
-    
-    
+    letter-spacing: 2px;
     /* height: 100px;
     align-items: center; */
+}
+
+.vertical-hr {
+  border-left: 1px solid rgb(194, 184, 184);
+  height: 100px;
+  top: 0;
+  margin-right: -20px;
 }
 
 .title{

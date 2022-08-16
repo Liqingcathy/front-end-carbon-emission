@@ -1,27 +1,25 @@
-.sub-page {
-  background-color: #F0F4F1;
-}
 
 .more-info-ul{
   /* border: 1px solid red; */
-  height: 60px;
+  /* height: 60px; */
   padding: 1.5%;
- 
+  list-style: none;
+  text-align: right;
+  font-size: 4em;
+  display: flex;
+  
 }
 
-.sub-page{
-  background-color: #F0F4F1;
-  list-style: none;
-}
 .web-goals{
-  display: inline;
+  /* display: inline; */
   /* width: 90%; */
-  font-size: xx-large;
+  font-size: 0.6em;
   font-weight:bolder;
 }
 
 .sub-page-link{
   text-decoration: none;
-  color: black;
+  color: gray;
+
   
 }

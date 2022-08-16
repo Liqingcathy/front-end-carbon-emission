@@ -4,8 +4,9 @@
 
 .more-insights-ul {
     margin-top: 40px;
-   
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #dummy-square {

@@ -47,7 +47,7 @@ function App() {
     axios
       .put(`${heroku_backend}/user/models_efficiency/${modelYear}`)
       .then((response) => {
-        console.log(`after model name ${JSON.stringify(response.data)}`);
+        console.log(`getFuelEfficiencyInsight response data ${JSON.stringify(response.data)}`);
         setEfficiencyMPG(response.data);
       })
       .catch((error) => {
@@ -130,7 +130,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Navbar />
+        <Navbar handleSearchSubmission={getSearchResult}/>
         <Subpage />
         <Routes>
           <Route
@@ -152,7 +152,7 @@ function App() {
                 sortingResult={sortingResult}
                 setEfficiencyMPG={setEfficiencyMPG}
                 selectedFilterVal={selectedFilterVal}
-          
+                
                 
               />
             }

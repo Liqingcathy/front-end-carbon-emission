@@ -1,5 +1,5 @@
 import React from "react";
-import './InputForm.css';
+// import './InputForm.css';
 
 const UserName = ({userData, setUserData}) => {
   return (
