@@ -11,12 +11,16 @@ const PopularModelSearch = ({sortingResult}) => {
         // <div className="popular-search-div">
           <ul className="popular-search-ul">
             {/* <li className="popular-search-li"> */}
-              {value['id']}
-              {value['_source']['brand_name']}
-              {value['_source']['model_name']}
-              {value['_source']['distance_value']}mile
-              {value['_source']['emission']}g
-              {value['_source']['emission_per_mile']}g
+              {/* {value['id']} */}
+              <p className="title-h2">
+                <span>{value['_source']['brand_name']}</span>
+                <span>{value['_source']['model_name']}</span>
+              </p>
+              <p className="title-h3">
+                <span>{value['_source']['distance_value']} mile</span>
+                <span>{value['_source']['emission']} g</span>
+                <span>{value['_source']['emission_per_mile']} g</span>
+              </p>
             {/* </li> */}
           </ul>
         // </div>

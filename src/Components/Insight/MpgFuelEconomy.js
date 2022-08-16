@@ -10,16 +10,16 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
 
   const copyEfficiencyMpg = {...efficiencyMPG[0]};
 
-  console.log(copyEfficiencyMpg['_source'][['combMPGSF']]);
-  const data2 = [
-    {'name': 'mpg',  'mpg': copyEfficiencyMpg['_source']['combMPGSF']}, 
-    {'name': 'city', 'mpg': copyEfficiencyMpg['_source']['singleFuelMpgCity']}, 
-    {'name': 'highway','mpg': copyEfficiencyMpg['_source']['highwayMPGSF']}, 
-    {'name': 'standard', 'mpg': 54}
-  ];
+  // console.log(copyEfficiencyMpg['combMPGSF']);
+  // const data2 = [
+  //   {'name': 'mpg',  'mpg': efficiencyMPG[0]['combMPGSF']}, 
+  //   {'name': 'city', 'mpg': copyEfficiencyMpg['_source']['singleFuelMpgCity']}, 
+  //   {'name': 'highway','mpg': copyEfficiencyMpg['_source']['highwayMPGSF']}, 
+  //   {'name': 'standard', 'mpg': 54}
+  // ];
 
 
-  console.log(data2);
+  // console.log(data2);
   // const displayFuelEconomy = () => {
   //   return Object.entries(efficiencyMPG).map(([key, value]) => {
   //     return (
@@ -69,7 +69,7 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
   }else {
 
   return (
-    <LineChart width={400} height={300} data={data2} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+    <LineChart width={400} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
     <Line type="monotone" dataKey="mpg" stroke="#913339" />
     {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
     <XAxis dataKey="name" />

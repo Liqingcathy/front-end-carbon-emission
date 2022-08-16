@@ -5,11 +5,13 @@
 .more-info-ul{
   /* border: 1px solid red; */
   height: 60px;
+  padding: 1.5%;
  
 }
 
 .sub-page{
   background-color: #F0F4F1;
+  list-style: none;
 }
 .web-goals{
   display: inline;

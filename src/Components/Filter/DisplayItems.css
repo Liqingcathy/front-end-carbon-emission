@@ -33,3 +33,34 @@
   
     /* border: 4px solid gray; */
 }
+
+.title-h2 span{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.title-h3 span{
+    margin-left: 10px;
+}
+
+#car-per-page {
+    display: flex;
+    margin-left: 50px;
+}
+
+#cat-four {
+    
+}
+
+/* #cat-FOUR{
+    margin-top: 5%;
+    border: 2px solid purple;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+} */
+
+
+  
+  
