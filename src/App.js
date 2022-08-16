@@ -48,7 +48,7 @@ function App() {
       .put(`${heroku_backend}/user/models_efficiency/${modelYear}`)
       .then((response) => {
         console.log(`after model name ${JSON.stringify(response.data)}`);
-        setEfficiencyMPG(response.data[0]);
+        setEfficiencyMPG(response.data);
       })
       .catch((error) => {
         console.log("error ", error);

@@ -1,7 +1,7 @@
 import React from "react";
 import SameMakeDiffModel from "./SameMakeDiffModel"
-import SimilarModelDiffMake from "./SimilarModelDiffMake";
-
+// import SimilarModelDiffMake from "./SimilarModelDiffMake";
+import SimilarModelDiffMakePage from "./SimilarModelDiffMakePage";
 
 const DisplayMakeModelRec = ({sortingResult, selectedFilterVal}) => {
   // console.log('inside of filter displays');
@@ -12,7 +12,8 @@ if (selectedFilterVal === "same_make_diff_model"){
   return <SameMakeDiffModel sortingResult={sortingResult} />
 
 }else if (selectedFilterVal === "same_model_diff_make_model") {
-  return <SimilarModelDiffMake sortingResult={sortingResult}/>
+  // return <SimilarModelDiffMake sortingResult={sortingResult}/>
+  return <SimilarModelDiffMakePage sortingResult={sortingResult}/>
 }
 }
 
