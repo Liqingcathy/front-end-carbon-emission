@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Searchbar from "../search/Searchbar";
 import {FaSpinner} from "react-icons/fa";
 import EmissionSocialImpact from "./EmissionSocialImpact";
 import "./EstimateObject.css";
@@ -28,9 +27,7 @@ const EstimateObject = ({emissionData}) => {
       </div>
       </div>
       {/* <hr></hr> */}
-      <div className="searchbar">
-        <Searchbar className="search-comp" />
-      </div>
+
     </div>
   )
 };

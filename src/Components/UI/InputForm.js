@@ -82,7 +82,7 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
                 setPages((currPage) => currPage - 1);
               }}
             >
-              Prev
+             {"<< Prev"}
             </button>
           </div>
           <div className="footer-btn-sep2"> 
@@ -100,8 +100,8 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
               }
             }}
           >
-            {" "}
-            {page === FormTitle.length - 1 ? "Submit" : "Next"}
+            
+            {page === FormTitle.length - 1 ? "Submit" : "Next >>"}
           </button>
           </div>
           {/* >Next</button> */}

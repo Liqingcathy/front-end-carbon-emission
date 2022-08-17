@@ -25,7 +25,7 @@
 
 .category-list button{
     /* border: 2px solid rgb(141, 26, 55); */
-    background-color:  #A6B9AA;
+    background-color:  #809986;
     transition: all .2s ease-in-out;
     width: 580px;
     height: 240px;
@@ -34,11 +34,12 @@
     /* border-radius: 0.4em; */
     margin-bottom: 20px;
     font-family: 'Nunito Sans', sans-serif;
+    border-radius: 0.3em; 
 }
 
 
-.category-list button:hover, button:focus {
-    background-color: #809986;
+.category-list .category-text:hover, .category-text:focus {
+    background-color: #3F5848;
     transform: scale(1);
 }
 
@@ -64,10 +65,16 @@
  .chart-title {
     margin-top: 20px;
     font-family: 'Nunito Sans', sans-serif;
+    
   }
 
   .chart-em-text {
-    font-size: 2em;
+    font-size: 1.5em;
     background-color: unset;
     font-weight: 700;
+  }
+
+  #mission li {
+    background-color: unset;
+    list-style: none;
   }

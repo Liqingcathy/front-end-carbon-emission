@@ -1,3 +1,11 @@
 .footer-seciton {
-    border: 1px solid red;
+    margin-top: 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: large;
+    
+}
+
+.footer-seciton p {
+    color:white;
+    height: 0px;
 }

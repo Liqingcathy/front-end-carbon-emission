@@ -43,10 +43,10 @@ label, input {
     border-radius: 0.4em;
     width: 80px;
     height: 50px;
-    background-color: #913339;
+    /* background-color: #913339; */
     border: none;
     font-weight: bold;
-    color:white;
+    /* color:white; */
     cursor: pointer;
     padding: 10px 5px;
     /* margin:1em 12em; */
@@ -66,11 +66,15 @@ label, input {
 .footer-btn-sep1 {
   width: 80px;
   margin: 0;
+  margin-top: -90px;
+  background-color: unset;
 }
 
 .footer-btn-sep2 {
   width: 80px;
   margin-right: 0;
+  margin-top: -90px;
+  background-color: unset;
 }
 
 .current-total-distance {

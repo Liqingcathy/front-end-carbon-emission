@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Categories.css";
-import { FaBraille, FaRegChartBar} from "react-icons/fa";
+import { FaBraille, FaRegChartBar, FaChartLine} from "react-icons/fa";
 
 import MpgFuelEconomy from "../Insight/MpgFuelEconomy";
 import EmissionInsight from "../Insight/EmissionInsight";
@@ -26,7 +26,7 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
             }}
             >         
             <p className="category-click-p">     
-              <FaRegChartBar className="category-click-icon" size={50}/>
+            <FaRegChartBar className="category-click-icon" size={50}/>
             </p> 
              Click to See Your Vehicle's  <br/> 
              <span className="chart-em-text">CO2 Emission </span>

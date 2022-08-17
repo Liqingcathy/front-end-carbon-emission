@@ -1,32 +1,74 @@
-.missions-container {
-    margin-top: 5%;
-    /* border: 1px solid blue; */
-    height: 100vh;
-    width: 90%;
+.top-container {
+    width: 80%;
+    padding: 50px;
+    font-family: 'Nunito Sans', sans-serif;
     
 }
 
 
-.missions-ul1 li {
-    background-color: #d4e0d7;
-    width: 600px;
-    height: 300px;
-    margin-left: -40px;
-    border: 1px solid #abb6ae;
-
+.mission-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #6E9078;
+   
 }
 
-.missions-ul2 .icons{
-    background-color: #d4e0d7;
-    height: 300px;
-    width: 700px;
-    border: 1px solid #abb6ae;
-    margin-left: -40px;
-} 
+.mission-container  div {
+    border: 1px solid #6E9078;
+    width: 250px;
+    height: 400px;
+    background-color: #1E2B22;
+}
 
-.missions-ul2 .missions-text{
-    background-color: #d4e0d7;
-    height: 300px;
-    width: 900px;
-    border: 1px solid #abb6ae;
-} 
+
+.icon-div {
+    background-color: unset;
+    text-align: left;
+}
+
+.icons {
+    background-color: unset;
+    padding: 30px;
+}
+
+.data {
+    font-size: xx-large;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 7rem;
+    background-color: unset;
+    color: white;
+}
+
+.desc {
+    text-align: left;
+    background-color: unset;
+    color: white;
+    padding: 20px;
+    
+}
+
+.unit {
+    background-color: unset;
+    color: white;
+    margin-left: 20px;
+}
+
+#mission {
+    text-align: left;
+    width: 400px;
+    background-color: #1E2B22;
+    color: white;
+}
+
+#mission h2{
+    background-color: unset;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+#mission li {
+    
+    text-align: left;
+    margin-left: 20px;
+}

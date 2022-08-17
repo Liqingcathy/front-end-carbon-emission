@@ -36,10 +36,6 @@ const handleInputSubmission = (event) => {
            
           </form> 
       </div>
-      <div className="search-suggest">
-        <p>{searchVal}</p>
-        <p></p>
-      </div>
     </div>
   )
 }

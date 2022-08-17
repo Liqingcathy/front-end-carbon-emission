@@ -12,7 +12,6 @@ const Home = ({userData, getEstimateData, emissionData, setEmissionData, getSear
  
   return (
     <div>
-      
       <InputForm  handleFormSubmission={getEstimateData} />
       <EstimateObject  efficiencyMPG={efficiencyMPG} emissionData={emissionData} getFilteredData={getFilteredData} sortingResult={sortingResult} />
       <Categories  userData={userData} emissionData={emissionData} setEmissionData={setEmissionData} efficiencyMPG={efficiencyMPG} getFuelEfficiencyInsight={getFuelEfficiencyInsight} userInput={userInput} />

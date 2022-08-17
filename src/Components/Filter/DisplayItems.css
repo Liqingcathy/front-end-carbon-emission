@@ -8,7 +8,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 20px;
     width: 260px;
     height: 240px;
@@ -16,7 +16,7 @@
     margin-top: 30px;
     border-radius: 0.2em;
     color: #1E2B22;
-    box-shadow: 5px 5px 20px #1E2B22;
+    box-shadow: 5px 5px 20px #3F5848;
     background-color: #1E2B22;
     opacity: 90%;
     transition: all 2s ease;
