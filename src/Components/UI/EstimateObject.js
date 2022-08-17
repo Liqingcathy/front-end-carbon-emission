@@ -1,8 +1,8 @@
 import React, {useState} from "react";
+import Searchbar from "../search/Searchbar";
 import {FaSpinner} from "react-icons/fa";
-// import carbonicon from '../../Assets/carbon-icon.png'
 import EmissionSocialImpact from "./EmissionSocialImpact";
-import "./EstimateObject.css"
+import "./EstimateObject.css";
 // import EstimateValue from "../UI/EstimateValue"
 const EstimateObject = ({emissionData}) => {
   // console.log("inside of estimate object");
@@ -10,7 +10,8 @@ const EstimateObject = ({emissionData}) => {
 
   return (
     <div className="estimate-result-container">
-      <hr className="estimate-hr"></hr>
+      <div className="estimate-result-comp"> 
+      {/* <hr className="estimate-hr"></hr> */}
       {/* <li className="co2-icon">
         <img alt='icon'src={carbonicon} />
       </li> */}
@@ -19,15 +20,17 @@ const EstimateObject = ({emissionData}) => {
         {emissionData[["carbon_g"]]} g
       </div>
 
-      
-      <div className="estimate-comparision">
-      
+      <div className="estimate-comparision">      
         <p className="social-impact-desc">
           <h3>Compare to Annual Impact on Society, Climate Change</h3>
         </p>
         <EmissionSocialImpact emissionToSocial={emissionData['carbon_g']} emissionData={emissionData} />
       </div>
-      <hr></hr>
+      </div>
+      {/* <hr></hr> */}
+      <div className="searchbar">
+        <Searchbar className="search-comp" />
+      </div>
     </div>
   )
 };

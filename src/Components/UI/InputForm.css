@@ -6,7 +6,7 @@
 .inputform {
     margin: 60px auto;
     /* height: 700px; */
-
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .inputform .header {
@@ -34,6 +34,7 @@ label, input {
     border-radius: 0.3em;
     background-color: #1E2B22;
     color: white;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 
@@ -51,6 +52,7 @@ label, input {
     /* margin:1em 12em; */
     margin: 0;
     margin-top: 20px;
+    font-family: 'Nunito Sans', sans-serif;
   }
 
 

@@ -246,7 +246,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
       ))}
 
       <div className='current-total-distance'>
-        Your current distance sum: {totalDistance}
+        Your current distance sum: {totalDistance} mile
       </div>
       {/* <div className="google-map-load">
           <GoogleMap

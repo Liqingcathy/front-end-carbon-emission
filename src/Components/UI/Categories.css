@@ -5,6 +5,7 @@
     margin-top: 10rem ;
     padding-top: 30px;
     /* background-color: #F0F4F1; */
+    
 }
 
 .category-items {
@@ -32,6 +33,7 @@
     color: white;
     /* border-radius: 0.4em; */
     margin-bottom: 20px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 
@@ -61,9 +63,11 @@
 
  .chart-title {
     margin-top: 20px;
+    font-family: 'Nunito Sans', sans-serif;
   }
 
   .chart-em-text {
     font-size: 2em;
     background-color: unset;
+    font-weight: 700;
   }

@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     padding-top: 40px;
     padding-bottom: 60px;
+    
 }
 
 #dummy-square {
@@ -28,6 +29,7 @@
     transition-duration: 2s;
     transition-timing-function: ease;
     transition-delay: 0s;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .more-insights-ul .btn:hover {

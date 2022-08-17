@@ -2,24 +2,29 @@
 .more-info-ul{
   /* border: 1px solid red; */
   /* height: 60px; */
-  padding: 1.5%;
+  padding: 1%;
   list-style: none;
   text-align: right;
   font-size: 4em;
   display: flex;
+}
+
+.sub-page {
   
 }
 
 .web-goals{
   /* display: inline; */
   /* width: 90%; */
-  font-size: 0.6em;
-  font-weight:bolder;
+  font-size: 0.7em;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
 }
 
 .sub-page-link{
   text-decoration: none;
-  color: gray;
-
+  color: #0B2715;
   
+  text-decoration: underline;
+  font-family: 'Nunito Sans', sans-serif;
 }

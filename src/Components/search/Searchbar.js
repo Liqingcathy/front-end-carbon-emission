@@ -16,13 +16,12 @@ const handleInputSubmission = (event) => {
 }
   return (
     <div className="search-bar">
-      <hr></hr>
       <div >
        <form onSubmit={handleInputSubmission}>
         <input 
           className="search" 
           type="text" 
-          placeholder=" 🔍 type keywords and press enter" 
+          placeholder=" 🔍  search..." 
           name="title"
           value={searchVal}
           onChange={(event) => {

@@ -2,12 +2,12 @@
     height: 300px;
 }
 
-.estimate-result-container {
-    
+.estimate-result-comp {
     display: flex;
     /* border: 1px solid red; */
     width: 90%;
     padding: 20px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .estimate-result {
@@ -39,5 +39,17 @@
 
 .social-impact-desc {
     padding: 70px;
+    
+}
+
+
+.searchbar {
+    margin-top: 10%;
+    border: 2px solid red;
+    width: 400px;
+    margin: 10px;
+}
+
+.search-comp {
     
 }

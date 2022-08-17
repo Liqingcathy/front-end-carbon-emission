@@ -1,28 +1,19 @@
-import React, {useState} from "react";
+import React from "react";
 import carbonicon from '../../Assets/carbon-icon.png'
-import { useNavigate, Link} from "react-router-dom";
-import Searchbar from "../search/Searchbar";
-// import Toggle from "./Toggle";
+import { Link} from 'react-router-dom'; //yarn add react-router-dom
 import './Navbar.css';
-import "./Toggle.css";
+
 const Navbar = ({handleSearchSubmission}) => {
-  // const [isToggled, setIsToggled] = useState(false);
-  // let navigate = useNavigate();
-  // const handleToggleChange = () => {
-  //   setIsToggled(!isToggled);
-  //   navigate('/mission')
-  // }
+ 
   return (
     <div>
       <ul className="header-text">
         <li className="logo-title">
-          <Link className='title' to='/'>CARbon E-mission </Link>
+          <Link className='title' to='/'>CARbon e-Mission </Link>
           </li>
           <hr className="vertical-hr"></hr>
         <li className="co2-icon"><img alt='icon' src={carbonicon} /> <img alt='icon' src={carbonicon} /> <img alt='icon'src={carbonicon} /></li>
-        {/* <Toggle 
-          isToggled={isToggled} 
-          onToggle={handleToggleChange}/> */}
+        
         {/* <li>     
            <Searchbar />
       </li> */}
