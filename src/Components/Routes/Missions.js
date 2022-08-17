@@ -13,20 +13,20 @@ const Missions = ({getSearchResult}) => {
         <div className="icon-div">
           {<FaGlobeAmericas className="icons" color="#6E9078" size={50}/>}
           <p className="data">4.71</p>
-          <p className="unit">billion ton</p>
-          <p className="desc">US annual CO2 emissions(2020)</p>
+          <p className="unit">billion ton(2020)</p>
+          <p className="desc">US annual <br /> CO2 emissions</p>
         </div>
         <div className="icon-div">
         {<FaBusAlt className="icons" color="#6E9078" size={50}/>}
           <p className="data">1.82</p>
-          <p className="unit">billion ton</p>
-          <p className="desc">US ground transportation emissions(2019)</p>
+          <p className="unit">billion ton(2019)</p>
+          <p className="desc">US ground transportation emissions</p>
         </div>
         <div className="icon-div">
         {<FaUserCircle className="icons" color="#6E9078" size={50}/>}
-          <p className="data">14.24</p>
-          <p className="unit">Transportation</p>
-          <p className="desc">Per capita CO2 emissions(2020)</p>
+          <p className="data">17.54</p>
+          <p className="unit">ton(2019)</p>
+          <p className="desc">Per capita <br />CO2 emissions</p>
         </div>
         <div id="mission">
         {<FaCheckCircle className="icons" color="#6E9078" size={50}/>}

@@ -22,10 +22,10 @@ const SameMakeDiffModel = ({sortingResult}) => {
             </p>
             <div className="car-desc-content">
             <div className="car-desc-ul">
-            <p className="title-h3">
+            <p className="title-h3">mpg
               <span>{value["_source"]["combMPGSF"]}</span>
               <span>{value['_source']['singleFuelMpgCity']}</span>
-              <span>{value['_source']['highwayMPGSF']} mpg</span></p>
+              <span>{value['_source']['highwayMPGSF']}</span></p>
             </div>
             
             {/* <div className="car-desc-ul">

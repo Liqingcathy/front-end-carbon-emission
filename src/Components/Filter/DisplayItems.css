@@ -96,6 +96,7 @@
 
 #popular-emit{
     margin-left: -10px;
+    background-color: unset;
 }
 
 .data {
@@ -120,3 +121,8 @@
     background-color: unset;
 }
 
+#text-width {
+    margin-left: -30px;
+    width: 160px;
+    background-color: unset;
+}
