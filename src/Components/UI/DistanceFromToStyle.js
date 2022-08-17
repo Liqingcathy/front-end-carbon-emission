@@ -158,6 +158,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
 
   return (
     <div className='top-form-wrapper'>
+        <p id="home-desc">30~100+ Vehicle Makes and 1000+ Models are Available</p>
       {inputFormList.map((inputForm, index) => (
         <div key={index} className='calculate'>
           <div className="calculate-all-box"> 

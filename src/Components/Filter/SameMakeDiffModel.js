@@ -25,7 +25,7 @@ const SameMakeDiffModel = ({sortingResult}) => {
             <p className="title-h3">
               <span>{value["_source"]["combMPGSF"]}</span>
               <span>{value['_source']['singleFuelMpgCity']}</span>
-              <span>{value['_source']['highwayMPGSF']}</span></p>
+              <span>{value['_source']['highwayMPGSF']} mpg</span></p>
             </div>
             
             {/* <div className="car-desc-ul">
@@ -39,13 +39,13 @@ const SameMakeDiffModel = ({sortingResult}) => {
             </div> */}
             <div className="car-desc-ul">
             <p className="title-h3">
-              <p>${value['_source']['annualFuelCostSF($)']}</p>
+              <p>${value['_source']['annualFuelCostSF($)']} fuel</p>
             </p>
             </div>
             <div className="car-desc-ul">
               <p id="oilconsume">{parseFloat(
                 value["_source"]["annualOilConsumption(42gallon)"]
-              ).toFixed(2)}(42 gallons)</p>
+              ).toFixed(2)}(42 gallons oil)</p>
               <p></p>
             </div>
             </div>

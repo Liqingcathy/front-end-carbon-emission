@@ -24,8 +24,9 @@ const InputForm = ({ handleFormSubmission, getFromToDistance }) => {
   //passed down userData
   const [inputData, setInputData] = useState(defaultInputData);
   const [page, setPages] = useState(0);
+  
   const FormTitle = [
-    "Estimate your vehicle's CO2 emission per trip or per week",
+    "Estimate your vehicle's CO2 emission per trip or per week.",
     "Vehicle Brand",
     "Vehicle Model",
     "Vehicle Model Year"
