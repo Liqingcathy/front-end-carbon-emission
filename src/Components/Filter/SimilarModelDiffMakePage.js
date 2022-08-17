@@ -30,7 +30,7 @@ const SimilarModelDiffMake = ({sortingResult}) => {
                 <div className="car-desc-ul">
                 <p className="title-h3">
                   <span>{car["_source"]["combMPGSF"]}mpg</span>
-                  <span>$ {parseFloat(
+                  <span>${parseFloat(
                   car["_source"]["annualOilConsumption(42gallon)"]
                 ).toFixed(2)}</span>
                 </p>

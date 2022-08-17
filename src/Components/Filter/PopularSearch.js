@@ -21,17 +21,17 @@ const PopularModelSearch = ({sortingResult}) => {
               </h2>
               <div className="car-desc-content">
                <div className="car-desc-ul">
-                <p className="data">{value['_source']['emission']}</p>
-                <p className="unit">emission</p> 
+                <p id="popular-data" className="data">{value['_source']['emission']}</p>
+                <p id="popular-emit" className="unit">emission</p> 
               </div> 
               <div className="car-desc-ul">
-                <p className="data">{value['_source']['distance_value']}</p>
-                <p className="unit">mile</p>
+                <p id="popular-data" className="data">{value['_source']['distance_value']}</p>
+                <p id="popular-emit" className="unit">mile</p>
               </div>
-              <div className="car-desc-ul">
+              {/* <div className="car-desc-ul">
                 <p className="data">{value['_source']['emission_per_mile']}</p>
                 <p className="unit">per mile</p>
-              </div>
+              </div> */}
             </div>
             {/* </li> */}
           </ul>

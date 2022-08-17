@@ -32,12 +32,13 @@
 }
 
 .popular-search {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 3%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 90%;
+    
 }
 
 .popular-search-ul img {
@@ -55,6 +56,7 @@
 
 .title-h3 span{
     margin-left: 10px;
+    background-color: unset;
 }
 
 #car-per-page {
@@ -71,27 +73,35 @@
 }
 .icon-p {
     background-color: unset;
-    margin-top: 20px;
+    margin-top: 10px;
     
 }
 .car-icon {
     background-color: unset;
     color: white;
+    
 }
   
 .car-desc-ul {
     /* border: 1px solid green; */
     width: 80px;
     background-color: unset;
-    margin-top: -40px;
     margin-left: 20px;
 }
 
+#popular-data {
+    margin-top: -10px;
+    margin-left: 5px;
+}
 
+#popular-emit{
+    margin-left: -10px;
+}
 
 .data {
     font-size: 1em;
     background-color: unset;
+    margin-top: -40px;
 }
 
 .unit {
@@ -104,3 +114,9 @@
     flex-direction: row;
     background-color: unset;
 }
+
+#oilconsume {
+    margin-right: -100px;
+    background-color: unset;
+}
+

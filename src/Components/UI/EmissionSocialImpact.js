@@ -45,23 +45,29 @@ const EmissionSocialImpact = ({ emissionToSocial, emissionData }) => {
 
   const dataSmall = [
     { name: "electricity", mt: electricityConsumed },
-    { name: "home energy", mt: homeEnergy },
-    { name: "LED", mt: switchToLED },
-    { name: "Forest", mt: acreForest_16tenniscourts },
-    { name: 'Waste', mt: wasteRecycled},
-    { name: "Garbage Truck", mt: garbageTrucksWasteNumber },
-    { name: "TrashBag", mt: trashBagWasteNumber },
+    { name: "energy", mt: homeEnergy },
+    
+    { name: "forest", mt: acreForest_16tenniscourts },
+    { name: 'waste', mt: wasteRecycled},
+    { name: "garb.truck", mt: garbageTrucksWasteNumber },
+   
+    
   ];
 
-  const dataBig = [
-    { name: "Tree", mt: totalTreeSeedlingGrowTenYears },
-    { name: "Coar", mt: coarBurnedPound },
-    { name: "Phone Charge", mt: numberOfPhoneCharged },
+  const data3= [
+    { name: "LED", mt: switchToLED },
+    { name: "trashbag", mt: trashBagWasteNumber }
   ]
 
-  console.log('print data small and big')
-  console.log(dataSmall)
-  console.log(dataBig)
+  const data4= [
+    { name: "coar", mt: coarBurnedPound }
+  ]
+  const dataBig = [
+    { name: "tree/10years", mt: totalTreeSeedlingGrowTenYears },
+    { name: "phonecharge", mt: numberOfPhoneCharged },
+  ]
+
+
   const data = [
     // {'name': 'emission', 'val' : emissionToSocialMT},
     { name: "electricity", val: electricityConsumed },
@@ -80,15 +86,15 @@ const EmissionSocialImpact = ({ emissionToSocial, emissionData }) => {
   const data2 = [
     // {'name': 'emission', 'val' : 33},
     { name: "electricity", val: 44 },
-    { name: "home energy", val: 55 },
+    { name: "energy", val: 55 },
     { name: "LED", val: 66 },
-    { name: "Tree", val: 55 },
-    { name: "Forest", val: 9 },
-    { name: "Coar", val: 890 },
+    { name: "tree", val: 55 },
+    { name: "forest", val: 9 },
+    { name: "coar", val: 890 },
     // {'name': 'Waste', 'val': 333},
-    { name: "GarbageTruck", val: 333 },
-    { name: "TrashBag", val: 222 },
-    { name: "Phone Charge", val: 678 },
+    { name: "g.truck", val: 333 },
+    { name: "trashb", val: 222 },
+    { name: "phonecharge", val: 678 },
   ];
 
   //  console.log('check if emission data or tosocial is null');
@@ -111,7 +117,8 @@ const EmissionSocialImpact = ({ emissionToSocial, emissionData }) => {
     );
   } else {
     return (
-      <div className='chart-weight'>
+      <ul className="social-impact-chart-wrapper">
+      <div className='social-emssion-impact'>
         <BarChart width={400} height={300} data={dataSmall}>
           {/* <CartesianGrid strokeDasharray="3 3" /> */}
           <XAxis dataKey='name' />
@@ -122,7 +129,11 @@ const EmissionSocialImpact = ({ emissionToSocial, emissionData }) => {
           {/* <Bar dataKey="val" fill="#913339" /> */}
           {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
         </BarChart>
-        <BarChart width={400} height={300} data={dataBig}>
+        <div className='social-emssion-impact'>
+
+        </div>
+        <div className='social-emssion-impact'>
+         <BarChart width={200} height={300} data={data3}>
           {/* <CartesianGrid strokeDasharray="3 3" /> */}
           <XAxis dataKey='name' />
           <YAxis />
@@ -132,7 +143,22 @@ const EmissionSocialImpact = ({ emissionToSocial, emissionData }) => {
           {/* <Bar dataKey="val" fill="#913339" /> */}
           {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
         </BarChart>
+        <div className='social-emssion-impact'>
+        <BarChart width={200} height={300} data={dataBig}>
+          {/* <CartesianGrid strokeDasharray="3 3" /> */}
+          <XAxis dataKey='name' />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey='mt' fill='#913339' />
+          {/* <Bar dataKey="val" fill="#913339" /> */}
+          {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
+        </BarChart>
+        </div>
       </div>
+      </div>
+      
+      </ul>
     );
   }
 };

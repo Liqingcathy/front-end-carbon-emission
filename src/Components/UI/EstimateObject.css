@@ -38,6 +38,20 @@
 }
 
 .social-impact-desc {
-    padding: 70px;
+    padding: 40px;
     
+}
+.social-impact-chart-wrapper {
+    /* border: 1px 
+    solid green; */
+    margin-left: 0;
+    margin-top: -5rem;
+
+}
+.social-emssion-impact{
+    /* border: 1px 
+    solid red;
+   */
+    display: flex;
+    flex-direction: row;
 }
