@@ -50,7 +50,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
   const frequencyWeek = [
     {
       value: "",
-      label: "choose frequency/week for this trip & display distance miles",
+      label: "time/week",
       disabled: true,
     },
     { value: "1", label: "1/week" },

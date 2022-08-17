@@ -45,13 +45,12 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
+
 .container input {
     background-color: transparent;
     /* border: none; */
     /* text-align: center; */
-    width: 220px;
-    /* background-color: transparent; */
-    
+    width: 200px;
     
 }
 .autocomplete-div {
@@ -99,7 +98,7 @@
     /* width: 20px; */
     border: none;
     font-size: x-large;
-    margin-left: -3rem;
+    margin-left: -2rem;
     /* border: 1px solid purple; */
     background-color: unset;
     color: #1E2B22;
