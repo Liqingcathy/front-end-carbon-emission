@@ -2,7 +2,7 @@
     /* margin: 30px;
     padding: 20px; */
     /* border: 2px solid red; */
-    margin-top: 30px ;
+    margin-top: 10rem ;
     padding-top: 30px;
     /* background-color: #F0F4F1; */
 }
@@ -13,6 +13,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
+    
 }
 
 .category-list{
@@ -23,14 +24,14 @@
 
 .category-list button{
     /* border: 2px solid rgb(141, 26, 55); */
-    background-color: #A6B9AA;
+    background-color:  #A6B9AA;
     transition: all .2s ease-in-out;
-    width: 600px;
+    width: 580px;
     height: 240px;
     border: none;
     color: white;
     /* border-radius: 0.4em; */
-    
+    margin-bottom: 20px;
 }
 
 
@@ -40,13 +41,6 @@
 }
 
 
-/* hr { 
-    display: block;
-    width: 300px;
-    height: 2px;
-    border-top: 1px solid #b3aeb0;
-  } */
-
   .click-to-see-chart {
     background-color: unset;
     
@@ -54,4 +48,22 @@
 
   .category-text {
     font-size: x-large;
+    background-color:unset;
+  }
+
+  .category-click-p {
+    background-color:unset;
+  }
+
+  .category-click-icon {
+    background-color:unset;
+  }
+
+ .chart-title {
+    margin-top: 20px;
+  }
+
+  .chart-em-text {
+    font-size: 2em;
+    background-color: unset;
   }

@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import "./Categories.css";
-import {FaCarSide, FaHandPointUp} from "react-icons/fa"
+import { FaBraille, FaRegChartBar} from "react-icons/fa";
 
 import MpgFuelEconomy from "../Insight/MpgFuelEconomy";
 import EmissionInsight from "../Insight/EmissionInsight";
-import SocialImpact from "../Insight/SocialImpact";
 
 const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissionData, setEmissionData}) => {
   // console.log("inside of categories component");
@@ -18,20 +17,24 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
   const [emissionToSocial, setEmissionToSocial] = useState(0);
   return (
     <div className='category-container'>
-      <ul className='category-items'>
+      <ul className='category-items'> 
         <li className="category-list">
           <button className="category-text"
             onClick={() => {
               setEmissionData(emissionData);
               setUserEmission(emissionData);
             }}
-            > Carbon dioxide (CO2) emission standards <br /> 
-            Click to see your vehicle's emission <br /> 
-            {/* <FaHandPointUp className="click-to-see-chart" size={30}/>  */}
-             </button> 
+            >         
+            <p className="category-click-p">     
+              <FaRegChartBar className="category-click-icon" size={50}/>
+            </p> 
+             Click to See Your Vehicle's  <br/> 
+             <span className="chart-em-text">CO2 Emission </span>
+            </button> 
+            
           <EmissionInsight userEmission={userEmission} emissionData={emissionData} />
+          <p className="chart-title">Carbon dioxide (CO2) emission standards</p>
           
-          <hr></hr>
         </li>
 
         <li className="category-list">
@@ -41,12 +44,16 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
                 userData["data"]["attributes"]["vehicle_model"] + "-" +userData["data"]["attributes"]["vehicle_year"]
                 );
             }}
-          > Your Vehicle's Fuel Economy <br />
-            Standard CO2 equiv. mpg data <br />
-            Click to see your vehicle's emission <br /> 
+          > 
+            <p className="category-click-p">
+              <FaRegChartBar className="category-click-icon" size={50}/>
+            </p>
+              Click to See Your Vehicle's <br /> 
+              <span className="chart-em-text">Fuel Economy</span>
           </button >
           <MpgFuelEconomy efficiencyMPG={efficiencyMPG} />
-          <hr></hr>
+          <p className="chart-title">Standard CO2 equiv. mpg data</p>
+
         </li>
 
 
