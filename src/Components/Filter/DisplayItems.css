@@ -50,6 +50,7 @@
     margin-left: 10px;
     font-weight: bold;
     background-color: unset;
+   
 }
 
 .title-h3 span{
@@ -65,10 +66,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: unset;
 
 }
 .icon-p {
     background-color: unset;
+    margin-top: 20px;
     
 }
 .car-icon {
@@ -79,15 +82,25 @@
 .car-desc-ul {
     /* border: 1px solid green; */
     width: 80px;
+    background-color: unset;
+    margin-top: -40px;
+    margin-left: 20px;
 }
 
+
+
 .data {
-    font-size: larger;
-    font-weight: bold;
+    font-size: 1em;
+    background-color: unset;
+}
+
+.unit {
+    background-color: unset;
 }
 
 .paginated-cars {
     list-style: none;
     display: flex;
     flex-direction: row;
+    background-color: unset;
 }

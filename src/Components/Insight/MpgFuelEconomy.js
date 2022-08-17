@@ -41,16 +41,16 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
   // };
 
   const data = [
-    {'name': '2023',  'mpg': 54}, 
-    {'name': '2024', 'mpg': 56}, 
-    {'name': '2025','mpg': 60}, 
-    {'name': '2026','mpg': 67}
+    {'name': '2023',  'standard_mpg': 54}, 
+    {'name': '2024', 'standard_mpg': 56}, 
+    {'name': '2025','standard_mpg': 60}, 
+    {'name': '2026','standard_mpg': 67}
     ];
   
   if (efficiencyMPG.length === 0) {
     return (
       <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-      <Line type="monotone" dataKey="mpg" stroke="#913339" />
+      <Line type="monotone" dataKey="standard_mpg" stroke="#913339" />
       {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
       <XAxis dataKey="name" />
       <YAxis />
@@ -59,15 +59,15 @@ const MpgFuelEconomy = ({ efficiencyMPG }) => {
     )
   } else {
     const data2 = [
-      {'name': 'mpg',  'mpg': efficiencyMPG[0]['_source']['combMPGSF']}, 
-      {'name': 'city', 'mpg': efficiencyMPG[0]['_source']['singleFuelMpgCity']}, 
-      {'name': 'highway','mpg': efficiencyMPG[0]['_source']['highwayMPGSF']}, 
-      {'name': 'standard', 'mpg': 54}
+      {'name': 'mpg',  'user_mpg': efficiencyMPG[0]['_source']['combMPGSF']}, 
+      {'name': 'city', 'user_mpg': efficiencyMPG[0]['_source']['singleFuelMpgCity']}, 
+      {'name': 'highway','user_mpg': efficiencyMPG[0]['_source']['highwayMPGSF']}, 
+      {'name': 'standard', 'user_mpg': 54}
     ];
     
     return (
       <LineChart width={600} height={300} data={data2} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-      <Line type="monotone" dataKey="mpg" stroke="#913339" />
+      <Line type="monotone" dataKey="user_mpg" stroke="#913339" />
       {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
       <XAxis dataKey="name" />
       <YAxis />
