@@ -160,10 +160,11 @@ const DistanceFromTo = ({ userData, setUserData }) => {
     <div className='top-form-wrapper'>
       {inputFormList.map((inputForm, index) => (
         <div key={index} className='calculate'>
+          <div className="calculate-all-box"> 
           <div className='container'>
             <Autocomplete className="autocomplete-div">
               {/* <label>drive from</label> */}
-              <input
+              <input id="calc-input-color"
                 // className='from-to-intput'
                 type='text'
                 placeholder='drive from'
@@ -176,7 +177,7 @@ const DistanceFromTo = ({ userData, setUserData }) => {
           </div>
           <div className='container'>
             <Autocomplete className="autocomplete-div">
-              <input
+              <input id="calc-input-color"
                 // className='from-to-intput'
                 type='text'
                 placeholder='drive to'
@@ -210,7 +211,8 @@ const DistanceFromTo = ({ userData, setUserData }) => {
               onClick={calculateDistance}>
               calculate
             </button>
-          </div>
+            </div>
+          
 
           {/* <span>distance {inputFormList[index].mile}</span> */}
 
@@ -235,8 +237,10 @@ const DistanceFromTo = ({ userData, setUserData }) => {
                   <FaRegTimesCircle className="remove-icon" />
                 </button>
               )}
+             
               {/* </ul>  */}
             </ul>
+            </div>
           </div>
         </div>
       ))}

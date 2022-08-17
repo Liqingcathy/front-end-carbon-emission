@@ -18,9 +18,7 @@ const Categories = ({ getFuelEfficiencyInsight, userData, efficiencyMPG, emissio
   const [emissionToSocial, setEmissionToSocial] = useState(0);
   return (
     <div className='category-container'>
-      <p>Insights based on your vehicle's emission result:</p>
       <ul className='category-items'>
-        
         <li className="category-list">
           <button className="category-text"
             onClick={() => {
