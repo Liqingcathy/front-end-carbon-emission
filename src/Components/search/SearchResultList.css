@@ -1,5 +1,6 @@
 .search-result {
     background-color: #F0F4F1;
+    font-family: 'Nunito Sans', sans-serif;
   }
 .search-section {
     height: 100%;
@@ -16,6 +17,7 @@
     /* border: 2px solid brown; */
     display: flex;
     flex-direction: column;
+    
 }
 
 .search-result-items {
@@ -26,6 +28,7 @@
     margin-left: -40px;
     /* width: 1000px; */
     align-items: baseline;
+    list-style: none;
 }
 
 .search-result-titles{

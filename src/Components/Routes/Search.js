@@ -4,7 +4,7 @@ import SearchResultList from "../search/SearchResultList";
 
 const Search = (props) => {
   return (
-    <div>This is search result page 
+    <div>
       <Searchbar handleSearchSubmission={props.getSearchResult}/>
       <SearchResultList displaySearchRes={props.searchResults} />
     </div>

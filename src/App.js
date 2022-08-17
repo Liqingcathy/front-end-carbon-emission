@@ -158,7 +158,7 @@ function App() {
             }
           />
           <Route exact path='/about' element={<About />} />
-          <Route exact path='/mission' element={<Missions />} />
+          <Route exact path='/mission' element={<Missions getSearchResult={getSearchResult}/>} />
           <Route
             exact
             path='/search'

@@ -1,11 +1,14 @@
 import React from "react";
 import "./Missions.css";
+import Searchbar from "../search/Searchbar";
 import {FaBusAlt, FaGlobeAmericas, FaUserCircle, FaCheckCircle, FaPushed} from "react-icons/fa";
+import "../search/Searchbar.css";
+import "../search/SearchResultList.css";
 
-
-const Missions = () => {
+const Missions = ({getSearchResult}) => {
   return (
     <div className="top-container">
+      <Searchbar handleSearchSubmission={getSearchResult}/>
       <div className="mission-container">
         <div className="icon-div">
           {<FaGlobeAmericas className="icons" color="#6E9078" size={50}/>}
