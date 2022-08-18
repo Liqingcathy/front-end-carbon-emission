@@ -108,7 +108,8 @@ function App() {
       }).catch((error) => {console.log('error', error)})
     }else if ( selectOption === 'same_model_diff_make_model'){ //model-mpg-emissionpermile
       const emissionPerMile =  parseFloat(emissionData['carbon_g']/emissionData['distance_value']).toFixed(2);
-      const param = efficiencyMPG['_source']['make'] + "-" + efficiencyMPG['_source']['model'] + "-" + efficiencyMPG['_source']['combMPGSF'] + "-" + emissionPerMile;
+      console.log(efficiencyMPG)
+      const param = efficiencyMPG[0]['_source']['make'] + "-" + efficiencyMPG[0]['_source']['model'] + "-" + efficiencyMPG[0]['_source']['combMPGSF'] + "-" + emissionPerMile;
         axios.get(`${heroku_backend}/${selectOption}/${param}`)
         .then((response) => {
           console.log(`same mpg diff make db ${JSON.stringify(response.data)}`)
