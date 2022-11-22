@@ -40,7 +40,7 @@ function App() {
       });
   };
 
-  //currently not getting result due to some model name is missing in db
+  //get defined vechicle's fuel efficient based on model year
   const getFuelEfficiencyInsight = (modelYear) => {
     console.log("get getFuelEfficiencyInsight api call");
     console.log(`before model name ${JSON.stringify(modelYear)}`);
