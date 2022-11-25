@@ -9,14 +9,14 @@
     border: none;
     /* background-color: rgb(173, 210, 198); */
     /* background-image: linear-gradient(#597962); */
-    
+    width: 7vw;
+    height: 3vw;
 }
 
 .toggle input {
     opacity: 0;
     width: 0;
     height: 0;
-    
 }
 
 .slider {
@@ -41,6 +41,8 @@
     background-color: #E7F1EA;
     transition: 0.4s;
     border-radius: 60%;
+    width: 4vw;
+    height: 4vw;
 }
 
 .toggle input:checked + .slider {
@@ -48,7 +50,7 @@
 }
 
 .toggle input:checked + .slider:before{
-    transform: translateX(57px);
+    transform: translateX(40px);
 
 }
 
