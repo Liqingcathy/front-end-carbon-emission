@@ -6,6 +6,8 @@
 }
 
 .footer-seciton p {
-    color:white;
+    color:wheat;
     height: 0px;
+    position: relative;
+    bottom: -10px;
 }
