@@ -8,6 +8,7 @@ import Home from "./Components/Routes/Home";
 import About from "./Components/Routes/About";
 import Missions from "./Components/Routes/Missions";
 import axios from "axios";
+import {FaYoutube} from "react-icons/fa";
 const heroku_backend = "https://capstone-flask-server.herokuapp.com";
 // const heroku_backend = "http://localhost:5000"
 
@@ -130,46 +131,36 @@ function App() {
 
   return (
     <div className='App'>
-      <Router>
-        <Navbar handleSearchSubmission={getSearchResult}/>
+      <span className="banner-notice">Due to reaching max. calls of Carbon Interface and Google APIs and expiration of Elastic Cloud hosting services, <br /> please click the video icon to see more detailed demo and use cases.<a href="https://www.youtube.com/watch?v=az7RB3GA-iE" > <FaYoutube className="video-icn" size={20} /> </a></span><Router>
+        <Navbar handleSearchSubmission={getSearchResult} />
         <Subpage />
         <Routes>
           <Route
             exact
             path='/'
-            element={
-              <Home
-                userData={userData}
-                getEstimateData={getEstimateData}
-                emissionData={emissionData}
-                getSearchResult={getSearchResult}
-                getFuelEfficiencyInsight={getFuelEfficiencyInsight}
-                efficiencyMPG={efficiencyMPG}
-                getUserEmission={getUserEmission}
-                setEmissionData={setEmissionData}
-                userInput={userInput}
-                userDb={userDb}
-                getFilteredData={getFilteredData}
-                sortingResult={sortingResult}
-                setEfficiencyMPG={setEfficiencyMPG}
-                selectedFilterVal={selectedFilterVal}
-                
-                
-              />
-            }
-          />
+            element={<Home
+              userData={userData}
+              getEstimateData={getEstimateData}
+              emissionData={emissionData}
+              getSearchResult={getSearchResult}
+              getFuelEfficiencyInsight={getFuelEfficiencyInsight}
+              efficiencyMPG={efficiencyMPG}
+              getUserEmission={getUserEmission}
+              setEmissionData={setEmissionData}
+              userInput={userInput}
+              userDb={userDb}
+              getFilteredData={getFilteredData}
+              sortingResult={sortingResult}
+              setEfficiencyMPG={setEfficiencyMPG}
+              selectedFilterVal={selectedFilterVal} />} />
           <Route exact path='/about' element={<About />} />
-          <Route exact path='/mission' element={<Missions getSearchResult={getSearchResult}/>} />
+          <Route exact path='/mission' element={<Missions getSearchResult={getSearchResult} />} />
           <Route
             exact
             path='/search'
-            element={
-              <Search
-                searchResults={searchResults}
-                getSearchResult={getSearchResult}
-              />
-            }
-          />
+            element={<Search
+              searchResults={searchResults}
+              getSearchResult={getSearchResult} />} />
         </Routes>
       </Router>
       
