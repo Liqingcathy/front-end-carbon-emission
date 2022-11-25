@@ -1,6 +1,5 @@
 
 .more-info-ul{
-  /* border: 1px solid red; */
   /* height: 60px; */
   padding: 1%;
   list-style: none;
@@ -9,14 +8,8 @@
   display: flex;
 }
 
-.sub-page {
-  
-}
-
 .web-goals{
-  /* display: inline; */
-  /* width: 90%; */
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
 }
@@ -24,7 +17,14 @@
 .sub-page-link{
   text-decoration: none;
   color: #0B2715;
-  
   text-decoration: underline;
   font-family: 'Nunito Sans', sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .web-goals {
+    width: fit-content;
+    font-size:0.4em;
+    font-weight: 500;
+  }
 }
