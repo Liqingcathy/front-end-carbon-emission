@@ -4,27 +4,20 @@
 }
 
 .inputform {
-    margin: 60px auto;
-    /* height: 700px; */
+  margin: 60px auto;
   font-family: 'Nunito Sans', sans-serif;
 }
 
 .inputform .header {
   padding: 30px;
- 
 }
-
 
 .form-container {
-    /* height: 400px; */
     width: 70%;
     margin-top: 20px;
-    /* border: 1px solid green; */
-   
 }
 
-
-label, input {
+label, input { 
     padding: 10px;
     margin-top: 30px;
     width: 250px;
@@ -37,29 +30,21 @@ label, input {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-
-
 .form-container .footer button{
     border-radius: 0.4em;
     width: 80px;
     height: 50px;
-    /* background-color: #913339; */
     border: none;
     font-weight: bold;
-    /* color:white; */
     cursor: pointer;
     padding: 10px 5px;
-    /* margin:1em 12em; */
     margin: 0;
     margin-top: 20px;
     font-family: 'Nunito Sans', sans-serif;
   }
 
-
-
 .footer {
   width: 100%;
-  /* border: 1px solid green; */
   display: flex;
 }
 
