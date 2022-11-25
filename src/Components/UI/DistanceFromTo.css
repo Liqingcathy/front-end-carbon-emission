@@ -23,7 +23,6 @@
     background-color: #1E2B22;
     border-radius: 1.3em;
     margin-top: 20px;
-    
 }
 
 .container { 
@@ -41,15 +40,18 @@
     border: 1px solid #1E2B22;
     color: #1E2B22;
     font-family: 'Nunito Sans', sans-serif;
+    margin-left: -10px;
+    margin-right: 10px;
 }
 
 .container input {
     background-color: transparent;
     width: 100%;
+    margin-right: 1em;
 }
+
 .autocomplete-div {
     background-color: unset;
-
 }
 
 #calc-input-color {
@@ -65,7 +67,7 @@
     color: white;
     text-transform: uppercase;
     transition: 0.3s ease-in-out;
-    margin-left: 1rem;
+    margin: 0.3rem;
     border: none;
     font-family: 'Nunito Sans', sans-serif;
     width: 100%;
@@ -125,7 +127,8 @@
 
 @media screen and (max-width: 1000px) {
     .container select {
-      width: 40px;
+      width: 30px;
+      margin-left: 6px;
     }
 
     .calculate-btn  {
@@ -133,6 +136,7 @@
         font-size: 0.4em;
         text-transform: none;
         text-align: left;
+        text-indent: -2em;
     }
 
     .add-remove-btn-ul {
@@ -145,8 +149,8 @@
 
   @media screen and (max-width: 1300px) {
     .container select {
-      width: 40px;
-    }
+        width: 40px;
+      }
 
     .add-remove-btn-ul {
         position: relative;
