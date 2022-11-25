@@ -1,18 +1,18 @@
 
 .top-form-wrapper {
-    /* border: 2px solid greenyellow;    */
     width: 100%;
     margin-top: 2rem ;
     
 }
 .calculate-all-box {
+    width: 90%;
     display: flex;
     flex-direction: row;
     border-radius: 0.6em;
     font-family: 'Nunito Sans', sans-serif;
 }
+
 .calculate {
-    /* border: 2px solid red;    */
     height: 190px;
     width: 100%;
     display: flex;
@@ -23,16 +23,14 @@
     background-color: #1E2B22;
     border-radius: 1.3em;
     margin-top: 20px;
-    /* border: 2px solid red; */
     
 }
 
-.container {
+.container { 
     display: flex;
     align-items: center;
     background-color: transparent;
     margin-left: 20px;
-    
 }
 
 .container select {
@@ -45,13 +43,9 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
-
 .container input {
     background-color: transparent;
-    /* border: none; */
-    /* text-align: center; */
-    width: 200px;
-    
+    width: 100%;
 }
 .autocomplete-div {
     background-color: unset;
@@ -74,7 +68,7 @@
     margin-left: 1rem;
     border: none;
     font-family: 'Nunito Sans', sans-serif;
-
+    width: 100%;
 }
 
 .calculate-btn:hover {
@@ -82,34 +76,30 @@
 }
 
 .distance-add-path-btn-wrap {
-    /* border: 1px solid green; */
     background-color: unset;
+    margin-right: 0;
 }
 
 .add-remove-btn-ul{
-    /* margin: 0; */
-    /* text-align: left; */
-    /* border: 1px solid greenyellow; */
     background-color: unset;
-    
+    margin-left: -5rem;
   }
   
 .add-input-box-btn{
-    /* width: 20px; */
     border: none;
     font-size: x-large;
-    margin-left: -2rem;
-    /* border: 1px solid purple; */
+    margin-left: -3rem;
+    margin-right: 0.4em;
     background-color: unset;
+    align-items: center;
     color: #1E2B22;
 }
 
 .remove-input-box-btn {
-    /* width: 20px; */
     border: none;
     font-size: x-large;
     background: unset;
-    /* border: 1px solid purple; */
+    margin-left: -1rem;
     background-color: unset;
     color: #1E2B22;
 }
@@ -126,8 +116,47 @@
     font-size: x-large;
     font-weight: 500;
     padding: 20px;
+    width: 50%;
 }
 
 #home-desc {
     margin-top: -50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container select {
+      width: 40px;
+    }
+
+    .calculate-btn  {
+        width: 40px;
+        font-size: 0.4em;
+        text-transform: none;
+        text-align: left;
+    }
+
+    .add-remove-btn-ul {
+        position: relative;
+        right: -20px;
+        bottom: 40px;
+        font-size:xx-small;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .container select {
+      width: 40px;
+    }
+
+    .add-remove-btn-ul {
+        position: relative;
+        right: -20px;
+        bottom: 40px;
+        font-size:xx-small;
+        margin-right: 2em;
+    }
+
+    .plus-icon, .remove-icon {
+        height: 15px;
+    }
 }
