@@ -18,6 +18,7 @@
     align-items: center;
     letter-spacing: 2px;
     font-family: 'Nunito Sans', sans-serif;
+    font-size:5.5vw;
     /* height: 100px;
     align-items: center; */
 }
@@ -36,7 +37,18 @@
 }
 
 .co2-icon img{
-   /* border: 1px solid red; */
    width: 80px;
-
 }
+
+@media screen and (max-width: 800px) {
+    .logo-title {
+        width: fit-content;
+    }
+    .co2-icon img {
+      display: none;
+    }
+
+    hr {
+        display: none;
+    }
+  }
