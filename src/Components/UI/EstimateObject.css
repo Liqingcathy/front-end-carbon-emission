@@ -4,14 +4,12 @@
 
 .estimate-result-comp {
     display: flex;
-    /* border: 1px solid red; */
     width: 90%;
     padding: 20px;
     font-family: 'Nunito Sans', sans-serif;
 }
 
 .estimate-result {
-    /* border: 1px solid gray; */
     width: 300px;
     height: 250px;
     justify-content: center;
@@ -25,12 +23,12 @@
 }
 
 .estimate-comparision {
-    /* border: 1px solid green; */
     margin-top: 5%;
-    width: 800px;
     height: 350px;
-    
-    /* margin-right: 20px; */
+}
+
+.recharts-surface {
+    width: 100%;
 }
 
 .estimate-comparision p {
@@ -42,19 +40,20 @@
     
 }
 .social-impact-chart-wrapper {
-    /* border: 1px 
-    solid green; */
     margin-left: 0;
     margin-top: -5rem;
-
 }
 .social-emssion-impact{
-    /* border: 1px 
-    solid red;
-   */
     display: flex;
     flex-direction: row;
 }
 
-
+@media screen and (max-width: 1300px) {
+    .estimate-comparision{
+        width: 80%;
+    }
+    .recharts-wrapper {
+       width: 80%;
+    }
+}
 
