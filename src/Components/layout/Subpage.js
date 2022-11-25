@@ -18,10 +18,10 @@ const Header = () => {
     <div>
       <ul className='more-info-ul'>
         <li className='sub-page'></li>
-        <Toggle isToggled={isToggled} onToggle={handleToggleChange} />
+        <Toggle className='toggle-btn' isToggled={isToggled} onToggle={handleToggleChange} />
         <li>
           <h1 className='web-goals'>
-            Estimate {<FaSpinner size={25} />} Search {<FaSpinner size={25} />}{" "}
+            Estimate {<FaSpinner className='spin-icn' size={25} />} Search {<FaSpinner className='spin-icn' size={25} />}{" "}
             Build Carbon Habit
           </h1>
         </li>
