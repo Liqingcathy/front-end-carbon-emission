@@ -26,3 +26,36 @@ hr{
   border-top: 1px solid #A7ACA7;
   padding: 0;
 }
+
+.banner-notice {
+  position: relative;
+  bottom: 55px;
+  background-color: unset;
+  color: wheat;
+  font-family: 'Nunito Sans', sans-serif;
+  width: fit-content;
+  font-size: smaller;
+}
+
+.banner-notice a {
+  background-color: unset;
+  text-decoration: none;
+}
+
+.video-icn {
+  background-color: unset;
+  color: brown;
+  position: relative;
+  top: 6px;
+}
+
+.video-icn:hover {
+  color: #809986;
+}
+
+@media screen and (max-width: 800px) {
+  .banner-notice {
+    top: -65px;
+    font-size: x-small;
+  }
+}
